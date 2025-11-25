@@ -1,0 +1,284 @@
+{
+  "metadata": {
+    "title": "Xavier Adda - Développeur Fullstack PHP & Next.js",
+    "description": "Développeur web fullstack avec 7+ ans d'expérience. Spécialisé en PHP (Symfony, Laravel) et Next.js/React. Freelance disponible."
+  },
+  "nav": {
+    "about": "À propos",
+    "skills": "Compétences",
+    "experience": "Expériences",
+    "projects": "Projets",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Bonjour, je suis",
+    "name": "Xavier Adda",
+    "title": "Développeur Fullstack",
+    "subtitle": "7+ ans d'expérience • Freelance",
+    "available": "Disponible",
+    "flipPrefix": "Je peux",
+    "flipWords": ["développer votre projet", "créer votre SaaS", "moderniser votre code", "débugger votre application", "créer votre MVP", "optimiser vos performances", "développer votre API", "refondre votre interface"],
+    "ctaProjects": "Voir mes projets",
+    "ctaContact": "Me contacter",
+    "ctaDownloadCV": "Télécharger mon CV"
+  },
+  "about": {
+    "title": "À propos",
+    "description": "Développeur fullstack avec plus de 7 ans d'expérience, je conçois des applications web robustes et évolutives. Mon approche : comprendre vos besoins métier pour livrer des solutions qui fonctionnent aujourd'hui et s'adaptent demain.",
+    "value1Title": "Code maintenable",
+    "value1Desc": "Architecture claire, code documenté et bonnes pratiques pour faciliter l'évolution de votre projet",
+    "value1Icon": "code",
+    "value2Title": "Performance",
+    "value2Desc": "Optimisation du temps de chargement, requêtes efficaces et expérience utilisateur fluide",
+    "value2Icon": "zap",
+    "value3Title": "Communication",
+    "value3Desc": "Points réguliers, transparence sur l'avancement et réactivité pour un projet serein",
+    "value3Icon": "messageCircle"
+  },
+  "skills": {
+    "title": "Compétences",
+    "subtitle": "Technologies et outils que je maîtrise",
+    "languages": "Langages",
+    "backend": "Backend",
+    "frontend": "Frontend",
+    "databases": "Bases de données",
+    "devops": "DevOps & Outils",
+    "cmsTools": "CMS & Outils"
+  },
+  "experience": {
+    "title": "Expériences",
+    "subtitle": "Mon parcours professionnel",
+    "current": "Actuel",
+    "items": [
+      {
+        "title": "Développeur Fullstack PHP / Laravel",
+        "company": "Artedas",
+        "type": "Freelance",
+        "period": "Mars 2025 → Juin 2025",
+        "duration": "4 mois",
+        "current": false,
+        "stack": ["Laravel 12", "PHP 8.2", "PostgreSQL", "Figma"],
+        "impacts": [
+          { "icon": "refactor", "text": "Refonte complète d'une application legacy vers Laravel 12" },
+          { "icon": "performance", "text": "Optimisation des requêtes PostgreSQL", "metric": "+40% perf" },
+          { "icon": "feature", "text": "Intégration UI/UX moderne depuis maquettes Figma" }
+        ]
+      },
+      {
+        "title": "Développeur Symfony",
+        "company": "PNS-MOOC",
+        "type": "Freelance",
+        "period": "Janvier 2019",
+        "duration": "6 ans",
+        "current": true,
+        "stack": ["Symfony 3.4", "PHP", "MySQL", "I18n"],
+        "impacts": [
+          { "icon": "performance", "text": "Maintenance évolutive d'une plateforme e-learning" },
+          { "icon": "feature", "text": "Développement de nouvelles fonctionnalités métier" },
+          { "icon": "refactor", "text": "Mise en place d'un système de traduction multilingue" }
+        ]
+      },
+      {
+        "title": "Ingénieur d'études Fullstack",
+        "company": "CGI",
+        "type": "CDI",
+        "period": "Oct. 2022 → Mars 2025",
+        "duration": "2 ans 6 mois",
+        "mission": "Client : Coyote",
+        "stack": ["PHP 8.3", "React", "MySQL", "Redis"],
+        "impacts": [
+          { "icon": "performance", "text": "Temps de réponse API optimisés", "metric": "-30%" },
+          { "icon": "security", "text": "Sécurisation complète : CSRF, XSS, audit sécurité" },
+          { "icon": "refactor", "text": "Migration PHP 5.4 → 8.3 sur 4 ans de codebase" },
+          { "icon": "feature", "text": "Refonte UI du CRM avec composants React" }
+        ]
+      },
+      {
+        "title": "Ingénieur d'études Fullstack",
+        "company": "Alphonse → CGI",
+        "type": "CDI",
+        "period": "Jan. 2019 → Oct. 2022",
+        "duration": "3 ans 9 mois",
+        "mission": "Client : UFC-Que Choisir",
+        "stack": ["PHP", "Magnolia CMS", "JavaScript"],
+        "impacts": [
+          { "icon": "feature", "text": "Développement d'un comparateur d'assurance complet" },
+          { "icon": "performance", "text": "Optimisation des performances front-end" }
+        ]
+      },
+      {
+        "title": "Développeur Web PHP",
+        "company": "Lean.fr",
+        "type": "CDI",
+        "period": "Oct. 2014 → Jan. 2019",
+        "duration": "4 ans 3 mois",
+        "stack": ["Symfony 3", "Laravel", "WordPress", "PrestaShop"],
+        "impacts": [
+          { "icon": "feature", "text": "Développement full-stack multi-frameworks" },
+          { "icon": "performance", "text": "Optimisation SEO et amélioration du trafic organique" }
+        ]
+      }
+    ]
+  },
+  "projects": {
+    "title": "Projets",
+    "subtitle": "Mes réalisations personnelles et missions clients",
+    "visitSite": "Visiter le site",
+    "viewCode": "Code source",
+    "visit": "Visiter",
+    "code": "Code",
+    "statusLive": "En ligne",
+    "statusDevelopment": "En développement",
+    "statusComingSoon": "Bientôt",
+    "featured": {
+      "title": "FlowSolo",
+      "description": "Application de productivité pour solopreneurs",
+      "longDescription": "Espace de travail tout-en-un basé sur la méthodologie PARA et le concept de Second Brain. Gestion de tâches, suivi d'objectifs, sessions Pomodoro et analytiques de productivité dans une interface moderne et intuitive.",
+      "image": "/images/projects/flowsolo.jpg",
+      "tags": ["Next.js 15", "TypeScript", "TailwindCSS", "PostgreSQL", "Prisma", "Better Auth"],
+      "highlights": [
+        "Tableaux Kanban et vues multiples",
+        "Timer Pomodoro et suivi du temps",
+        "Suivi d'objectifs avec progression visuelle",
+        "Analytiques de productivité"
+      ],
+      "links": {
+        "live": "https://flowsolo.app"
+      },
+      "status": "live"
+    },
+    "flipHint": "Survoler pour plus de détails",
+    "items": [
+      {
+        "title": "CitrusForge",
+        "description": "Plateforme SaaS de génération de contenu IA avec les meilleurs modèles du marché.",
+        "longDescription": "Plateforme complète de génération de contenu IA intégrant Sora, Veo 3, Pika et Runway. Système d'abonnements avec Stripe, gestion des crédits et interface utilisateur intuitive.",
+        "image": "/images/projects/citrusforge.jpg",
+        "tags": ["Next.js", "TypeScript", "TailwindCSS", "IA", "Stripe"],
+        "highlights": [
+          "Intégration multi-modèles IA (Sora, Veo 3, Pika, Runway)",
+          "Génération Text-to-Image et Text-to-Video",
+          "Système de crédits et abonnements Stripe",
+          "Dashboard utilisateur personnalisé"
+        ],
+        "role": "Développeur Fullstack",
+        "duration": "3 mois",
+        "links": {
+          "live": "https://citrus-forge.com"
+        },
+        "status": "live"
+      },
+      {
+        "title": "Portfolio",
+        "description": "Portfolio personnel moderne avec animations fluides et thème adaptatif.",
+        "longDescription": "Site portfolio développé avec les dernières technologies. Design moderne, animations au scroll, système de thème clair/sombre et support multilingue français/anglais.",
+        "image": "/images/projects/portfolio.jpg",
+        "tags": ["Next.js 15", "TypeScript", "TailwindCSS", "next-intl"],
+        "highlights": [
+          "Multilingue FR/EN avec next-intl",
+          "Animations au scroll personnalisées",
+          "Thème sombre/clair avec View Transitions",
+          "SEO optimisé avec métadonnées dynamiques"
+        ],
+        "role": "Développeur & Designer",
+        "duration": "2 semaines",
+        "links": {
+          "github": "https://github.com/kingluffyxx/portfolio"
+        },
+        "status": "live"
+      },
+      {
+        "title": "The Red Master",
+        "description": "Portfolio pour un designer spécialisé en illustration et motion design.",
+        "longDescription": "Réalisation complète du site vitrine pour Sékou Bayogo, designer freelance. Site responsive avec slider hero, galerie de projets filtrable et formulaire de contact.",
+        "image": "/images/projects/theredmaster.jpg",
+        "tags": ["HTML", "CSS", "JavaScript", "Design"],
+        "highlights": [
+          "Slider hero interactif avec transitions fluides",
+          "Galerie de projets avec filtres par catégorie",
+          "Design responsive mobile-first",
+          "Intégration formulaire de contact"
+        ],
+        "role": "Développeur Web",
+        "duration": "1 mois",
+        "links": {
+          "live": "https://theredmaster.com"
+        },
+        "status": "live"
+      },
+      {
+        "title": "CroqueRecettes",
+        "description": "Application de gestion de recettes avec authentification et favoris.",
+        "longDescription": "Application web permettant de créer, organiser et partager ses recettes. Système d'authentification complet, gestion des favoris et recherche avancée. Refonte prévue avec Next.js.",
+        "image": "/images/projects/croquerecettes.jpg",
+        "tags": ["Symfony", "PHP", "Twig", "TailwindCSS"],
+        "highlights": [
+          "Authentification et gestion utilisateurs",
+          "CRUD complet des recettes",
+          "Système de favoris et collections",
+          "Recherche et filtres avancés"
+        ],
+        "role": "Développeur Backend",
+        "duration": "2 mois",
+        "links": {
+          "github": "https://github.com/kingluffyxx/CroqueRecettes"
+        },
+        "status": "coming-soon"
+      }
+    ]
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Disponible pour de nouvelles opportunités en freelance",
+    "email": "Email",
+    "phone": "Téléphone",
+    "location": "Localisation",
+    "locationValue": "France",
+    "mobility": "Mobilité",
+    "mobilityValue": "Télétravail ou présentiel",
+    "github": "GitHub",
+    "linkedin": "LinkedIn",
+    "ctaContact": "Me contacter",
+    "tabMessage": "Envoyer un message",
+    "tabBooking": "Réserver un appel",
+    "bookingNotConfigured": "La réservation d'appels sera bientôt disponible.",
+    "formTitle": "Envoyez-moi un message",
+    "formName": "Nom",
+    "formNamePlaceholder": "Votre nom",
+    "formEmail": "Email",
+    "formEmailPlaceholder": "votre@email.com",
+    "formSubject": "Sujet",
+    "formSubjectPlaceholder": "Sujet de votre message",
+    "formMessage": "Message",
+    "formMessagePlaceholder": "Décrivez votre projet ou votre demande...",
+    "formSubmit": "Envoyer le message",
+    "formSending": "Envoi en cours...",
+    "formSuccess": "Message envoyé avec succès !",
+    "formError": "Une erreur est survenue. Veuillez réessayer."
+  },
+  "booking": {
+    "title": "Réserver un appel",
+    "subtitle": "Choisissez un créneau pour discuter de votre projet",
+    "selectDate": "Sélectionnez une date",
+    "noSlots": "Aucun créneau disponible",
+    "continue": "Continuer",
+    "back": "Retour",
+    "formName": "Nom",
+    "formNamePlaceholder": "Votre nom",
+    "formEmail": "Email",
+    "formEmailPlaceholder": "votre@email.com",
+    "formNotes": "Notes (optionnel)",
+    "formNotesPlaceholder": "Décrivez brièvement votre projet...",
+    "confirmBooking": "Confirmer la réservation",
+    "booking": "Réservation en cours...",
+    "bookingError": "Erreur lors de la réservation",
+    "bookingConfirmed": "Réservation confirmée !",
+    "bookingConfirmedDesc": "Vous recevrez un email de confirmation avec les détails.",
+    "confirmationEmailSent": "Un email de confirmation a été envoyé.",
+    "bookAnother": "Réserver un autre appel"
+  },
+  "footer": {
+    "copyright": "© 2025 Xavier Adda • Développeur Fullstack • Built with",
+    "and": "&"
+  }
+}

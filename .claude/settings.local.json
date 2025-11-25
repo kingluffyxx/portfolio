@@ -1,0 +1,27 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install:*)",
+      "Bash(npx shadcn@latest add:*)",
+      "Bash(cat:*)",
+      "WebFetch(domain:next-intl.dev)",
+      "WebFetch(domain:citrus-forge.com)",
+      "WebFetch(domain:flowsolo.app)",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "WebFetch(domain:cdn.jsdelivr.net)",
+      "WebSearch",
+      "Bash(npx ts-node:*)",
+      "Bash(node -e:*)",
+      "WebFetch(domain:simpleicons.org)",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:rocky-shelf-71087-33284251968f.herokuapp.com)",
+      "Bash(npm run build:*)",
+      "WebFetch(domain:theredmaster.com)",
+      "WebFetch(domain:cal.com)",
+      "WebFetch(domain:www.scrollxui.dev)",
+      "Bash(git add:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

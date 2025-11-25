@@ -1,0 +1,284 @@
+{
+  "metadata": {
+    "title": "Xavier Adda - Fullstack Developer PHP & Next.js",
+    "description": "Fullstack web developer with 7+ years of experience. Specialized in PHP (Symfony, Laravel) and Next.js/React. Freelance available."
+  },
+  "nav": {
+    "about": "About",
+    "skills": "Skills",
+    "experience": "Experience",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Hi, I'm",
+    "name": "Xavier Adda",
+    "title": "Fullstack Developer",
+    "subtitle": "7+ years of experience • Freelance",
+    "available": "Available",
+    "flipPrefix": "I can",
+    "flipWords": ["develop your project", "build your SaaS", "modernize your code", "debug your application", "create your MVP", "optimize your performance", "develop your API", "redesign your interface"],
+    "ctaProjects": "View my projects",
+    "ctaContact": "Contact me",
+    "ctaDownloadCV": "Download my resume"
+  },
+  "about": {
+    "title": "About",
+    "description": "Fullstack developer with over 7 years of experience, I build robust and scalable web applications. My approach: understand your business needs to deliver solutions that work today and adapt tomorrow.",
+    "value1Title": "Maintainable code",
+    "value1Desc": "Clean architecture, documented code and best practices to facilitate the evolution of your project",
+    "value1Icon": "code",
+    "value2Title": "Performance",
+    "value2Desc": "Optimized load times, efficient queries and smooth user experience",
+    "value2Icon": "zap",
+    "value3Title": "Communication",
+    "value3Desc": "Regular updates, transparency on progress and responsiveness for a smooth project",
+    "value3Icon": "messageCircle"
+  },
+  "skills": {
+    "title": "Skills",
+    "subtitle": "Technologies and tools I master",
+    "languages": "Languages",
+    "backend": "Backend",
+    "frontend": "Frontend",
+    "databases": "Databases",
+    "devops": "DevOps & Tools",
+    "cmsTools": "CMS & Tools"
+  },
+  "experience": {
+    "title": "Experience",
+    "subtitle": "My professional journey",
+    "current": "Current",
+    "items": [
+      {
+        "title": "Fullstack PHP / Laravel Developer",
+        "company": "Artedas",
+        "type": "Freelance",
+        "period": "March 2025 → June 2025",
+        "duration": "4 months",
+        "current": false,
+        "stack": ["Laravel 12", "PHP 8.2", "PostgreSQL", "Figma"],
+        "impacts": [
+          { "icon": "refactor", "text": "Complete refactoring of a legacy application to Laravel 12" },
+          { "icon": "performance", "text": "PostgreSQL query optimization", "metric": "+40% perf" },
+          { "icon": "feature", "text": "Modern UI/UX integration from Figma mockups" }
+        ]
+      },
+      {
+        "title": "Symfony Developer",
+        "company": "PNS-MOOC",
+        "type": "Freelance",
+        "period": "January 2019",
+        "duration": "6 years",
+        "current": true,
+        "stack": ["Symfony 3.4", "PHP", "MySQL", "I18n"],
+        "impacts": [
+          { "icon": "performance", "text": "Ongoing maintenance of an e-learning platform" },
+          { "icon": "feature", "text": "Development of new business features" },
+          { "icon": "refactor", "text": "Implementation of a multilingual translation system" }
+        ]
+      },
+      {
+        "title": "Fullstack Software Engineer",
+        "company": "CGI",
+        "type": "Permanent",
+        "period": "Oct. 2022 → March 2025",
+        "duration": "2 years 6 months",
+        "mission": "Client: Coyote",
+        "stack": ["PHP 8.3", "React", "MySQL", "Redis"],
+        "impacts": [
+          { "icon": "performance", "text": "Optimized API response times", "metric": "-30%" },
+          { "icon": "security", "text": "Complete security: CSRF, XSS, security audit" },
+          { "icon": "refactor", "text": "PHP 5.4 → 8.3 migration on 4 years of codebase" },
+          { "icon": "feature", "text": "CRM UI overhaul with React components" }
+        ]
+      },
+      {
+        "title": "Fullstack Software Engineer",
+        "company": "Alphonse → CGI",
+        "type": "Permanent",
+        "period": "Jan. 2019 → Oct. 2022",
+        "duration": "3 years 9 months",
+        "mission": "Client: UFC-Que Choisir",
+        "stack": ["PHP", "Magnolia CMS", "JavaScript"],
+        "impacts": [
+          { "icon": "feature", "text": "Development of a complete insurance comparator" },
+          { "icon": "performance", "text": "Front-end performance optimization" }
+        ]
+      },
+      {
+        "title": "PHP Web Developer",
+        "company": "Lean.fr",
+        "type": "Permanent",
+        "period": "Oct. 2014 → Jan. 2019",
+        "duration": "4 years 3 months",
+        "stack": ["Symfony 3", "Laravel", "WordPress", "PrestaShop"],
+        "impacts": [
+          { "icon": "feature", "text": "Multi-framework full-stack development" },
+          { "icon": "performance", "text": "SEO optimization and organic traffic improvement" }
+        ]
+      }
+    ]
+  },
+  "projects": {
+    "title": "Projects",
+    "subtitle": "My personal achievements and client missions",
+    "visitSite": "Visit site",
+    "viewCode": "Source code",
+    "visit": "Visit",
+    "code": "Code",
+    "statusLive": "Live",
+    "statusDevelopment": "In development",
+    "statusComingSoon": "Coming soon",
+    "featured": {
+      "title": "FlowSolo",
+      "description": "Productivity app for solopreneurs",
+      "longDescription": "All-in-one workspace based on the PARA methodology and Second Brain concept. Task management, goal tracking, Pomodoro sessions and productivity analytics in a modern and intuitive interface.",
+      "image": "/images/projects/flowsolo.jpg",
+      "tags": ["Next.js 15", "TypeScript", "TailwindCSS", "PostgreSQL", "Prisma", "Better Auth"],
+      "highlights": [
+        "Kanban boards and multiple views",
+        "Pomodoro timer and time tracking",
+        "Goal tracking with visual progress",
+        "Productivity analytics"
+      ],
+      "links": {
+        "live": "https://flowsolo.app"
+      },
+      "status": "live"
+    },
+    "flipHint": "Hover for more details",
+    "items": [
+      {
+        "title": "CitrusForge",
+        "description": "AI content generation SaaS platform with the best models on the market.",
+        "longDescription": "Complete AI content generation platform integrating Sora, Veo 3, Pika and Runway. Subscription system with Stripe, credits management and intuitive user interface.",
+        "image": "/images/projects/citrusforge.jpg",
+        "tags": ["Next.js", "TypeScript", "TailwindCSS", "AI", "Stripe"],
+        "highlights": [
+          "Multi-model AI integration (Sora, Veo 3, Pika, Runway)",
+          "Text-to-Image and Text-to-Video generation",
+          "Credits system and Stripe subscriptions",
+          "Personalized user dashboard"
+        ],
+        "role": "Fullstack Developer",
+        "duration": "3 months",
+        "links": {
+          "live": "https://citrus-forge.com"
+        },
+        "status": "live"
+      },
+      {
+        "title": "Portfolio",
+        "description": "Modern personal portfolio with smooth animations and adaptive theme.",
+        "longDescription": "Portfolio website built with the latest technologies. Modern design, scroll animations, light/dark theme system and French/English multilingual support.",
+        "image": "/images/projects/portfolio.jpg",
+        "tags": ["Next.js 15", "TypeScript", "TailwindCSS", "next-intl"],
+        "highlights": [
+          "Multilingual FR/EN with next-intl",
+          "Custom scroll animations",
+          "Light/dark theme with View Transitions",
+          "SEO optimized with dynamic metadata"
+        ],
+        "role": "Developer & Designer",
+        "duration": "2 weeks",
+        "links": {
+          "github": "https://github.com/kingluffyxx/portfolio"
+        },
+        "status": "live"
+      },
+      {
+        "title": "The Red Master",
+        "description": "Portfolio for a designer specialized in illustration and motion design.",
+        "longDescription": "Complete showcase website for Sékou Bayogo, freelance designer. Responsive site with hero slider, filterable project gallery and contact form.",
+        "image": "/images/projects/theredmaster.jpg",
+        "tags": ["HTML", "CSS", "JavaScript", "Design"],
+        "highlights": [
+          "Interactive hero slider with smooth transitions",
+          "Project gallery with category filters",
+          "Mobile-first responsive design",
+          "Contact form integration"
+        ],
+        "role": "Web Developer",
+        "duration": "1 month",
+        "links": {
+          "live": "https://theredmaster.com"
+        },
+        "status": "live"
+      },
+      {
+        "title": "CroqueRecettes",
+        "description": "Recipe management application with authentication and favorites.",
+        "longDescription": "Web application for creating, organizing and sharing recipes. Complete authentication system, favorites management and advanced search. Redesign planned with Next.js.",
+        "image": "/images/projects/croquerecettes.jpg",
+        "tags": ["Symfony", "PHP", "Twig", "TailwindCSS"],
+        "highlights": [
+          "Authentication and user management",
+          "Full recipe CRUD",
+          "Favorites and collections system",
+          "Advanced search and filters"
+        ],
+        "role": "Backend Developer",
+        "duration": "2 months",
+        "links": {
+          "github": "https://github.com/kingluffyxx/CroqueRecettes"
+        },
+        "status": "coming-soon"
+      }
+    ]
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Available for new freelance opportunities",
+    "email": "Email",
+    "phone": "Phone",
+    "location": "Location",
+    "locationValue": "France",
+    "mobility": "Mobility",
+    "mobilityValue": "Remote or on-site",
+    "github": "GitHub",
+    "linkedin": "LinkedIn",
+    "ctaContact": "Contact me",
+    "tabMessage": "Send a message",
+    "tabBooking": "Book a call",
+    "bookingNotConfigured": "Call booking will be available soon.",
+    "formTitle": "Send me a message",
+    "formName": "Name",
+    "formNamePlaceholder": "Your name",
+    "formEmail": "Email",
+    "formEmailPlaceholder": "your@email.com",
+    "formSubject": "Subject",
+    "formSubjectPlaceholder": "Subject of your message",
+    "formMessage": "Message",
+    "formMessagePlaceholder": "Describe your project or request...",
+    "formSubmit": "Send message",
+    "formSending": "Sending...",
+    "formSuccess": "Message sent successfully!",
+    "formError": "An error occurred. Please try again."
+  },
+  "booking": {
+    "title": "Book a call",
+    "subtitle": "Choose a slot to discuss your project",
+    "selectDate": "Select a date",
+    "noSlots": "No slots available",
+    "continue": "Continue",
+    "back": "Back",
+    "formName": "Name",
+    "formNamePlaceholder": "Your name",
+    "formEmail": "Email",
+    "formEmailPlaceholder": "your@email.com",
+    "formNotes": "Notes (optional)",
+    "formNotesPlaceholder": "Briefly describe your project...",
+    "confirmBooking": "Confirm booking",
+    "booking": "Booking...",
+    "bookingError": "Booking error",
+    "bookingConfirmed": "Booking confirmed!",
+    "bookingConfirmedDesc": "You will receive a confirmation email with the details.",
+    "confirmationEmailSent": "A confirmation email has been sent.",
+    "bookAnother": "Book another call"
+  },
+  "footer": {
+    "copyright": "© 2025 Xavier Adda • Fullstack Developer • Built with",
+    "and": "&"
+  }
+}
