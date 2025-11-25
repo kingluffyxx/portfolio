@@ -1,14 +1,54 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
+import { createPortal } from "react-dom"
 import Link from "next/link"
 import { useTranslations } from 'next-intl'
 import { ModeToggle } from "@/components/mode-toggle"
 import { LanguageToggle } from "@/components/language-toggle"
-import { Button } from "@/components/ui/button"
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
-import { Menu, User, Briefcase, Code2, FolderGit2, Mail } from "lucide-react"
+import { Button, buttonVariants } from "@/components/ui/button"
+import { Menu, X, User, Briefcase, Code2, FolderGit2, Mail } from "lucide-react"
 import { useActiveSection } from "@/hooks/use-active-section"
+import { cn } from "@/lib/utils"
+
+type MobileMenuProps = React.ComponentProps<"div"> & {
+    open: boolean
+}
+
+function MobileMenu({ open, children, className, ...props }: MobileMenuProps) {
+    const [mounted, setMounted] = useState(false)
+
+    useEffect(() => {
+        setMounted(true)
+    }, [])
+
+    if (!open || !mounted) {
+        return null
+    }
+
+    return createPortal(
+        <div
+            className={cn(
+                "bg-background/95 backdrop-blur-lg supports-[backdrop-filter]:bg-background/50",
+                "fixed top-16 right-0 bottom-0 left-0 z-40 flex flex-col overflow-hidden border-t md:hidden"
+            )}
+            id="mobile-menu"
+        >
+            <div
+                className={cn(
+                    "data-[slot=open]:animate-in data-[slot=open]:fade-in-0 data-[slot=open]:zoom-in-95 ease-out",
+                    "size-full p-4",
+                    className
+                )}
+                data-slot={open ? "open" : "closed"}
+                {...props}
+            >
+                {children}
+            </div>
+        </div>,
+        document.body
+    )
+}
 
 export function Navbar() {
     const t = useTranslations('nav')
@@ -32,25 +72,29 @@ export function Navbar() {
         setIsOpen(false)
     }
 
+    // Lock body scroll when menu is open
+    useEffect(() => {
+        if (isOpen) {
+            document.body.style.overflow = "hidden"
+        } else {
+            document.body.style.overflow = ""
+        }
+        return () => {
+            document.body.style.overflow = ""
+        }
+    }, [isOpen])
+
     return (
         <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-            <div className="container flex h-16 items-center">
-                <div className="mr-4 hidden md:flex">
-                    {/* Logo initiales XA */}
-                    <Link href="/" className="mr-8 flex items-center space-x-3 group">
-                        <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-gradient-to-br from-primary to-accent text-white font-bold text-sm shadow-md group-hover:shadow-lg group-hover:shadow-primary/25 transition-all duration-300 group-hover:scale-105">
-                            XA
-                        </div>
-                        <span className="hidden font-semibold lg:inline-block text-foreground group-hover:text-primary transition-colors">
-                            Xavier Adda
-                        </span>
-                    </Link>
-                    <nav className="flex items-center space-x-6 text-sm font-medium">
+            <nav className="container flex h-16 items-center justify-between">
+                {/* Desktop Navigation */}
+                <div className="hidden md:flex">
+                    <div className="flex items-center space-x-6 text-sm font-medium">
                         {navItems.map((item) => (
                             <Link
                                 key={item.href}
                                 href={item.href}
-                                className={`transition-all duration-200 hover:text-primary hover:scale-105 relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:bg-primary after:transition-all ${
+                                className={`transition-all duration-200 hover:text-primary hover:scale-105 relative pb-1 after:absolute after:bottom-0 after:left-0 after:h-[2px] after:bg-primary after:transition-all ${
                                     isActive(item.href)
                                         ? "text-primary after:w-full"
                                         : "text-foreground/60 after:w-0 hover:after:w-full"
@@ -59,75 +103,28 @@ export function Navbar() {
                                 {item.name}
                             </Link>
                         ))}
-                    </nav>
+                    </div>
                 </div>
 
-                {/* Mobile menu */}
-                <Sheet open={isOpen} onOpenChange={setIsOpen}>
-                    <SheetTrigger asChild>
-                        <Button
-                            variant="ghost"
-                            className="mr-2 px-0 text-base hover:bg-transparent focus-visible:bg-transparent focus-visible:ring-0 focus-visible:ring-offset-0 md:hidden"
-                        >
-                            <Menu className="h-5 w-5" />
-                            <span className="sr-only">Toggle Menu</span>
-                        </Button>
-                    </SheetTrigger>
-                    <SheetContent side="left" className="w-72">
-                        <nav className="flex flex-col gap-4">
-                            {/* Logo mobile */}
-                            <Link href="/" className="flex items-center space-x-3 mb-4" onClick={handleLinkClick}>
-                                <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-gradient-to-br from-primary to-accent text-white font-bold shadow-md">
-                                    XA
-                                </div>
-                                <span className="font-semibold text-foreground">Xavier Adda</span>
-                            </Link>
+                {/* Mobile Menu Button */}
+                <Button
+                    aria-controls="mobile-menu"
+                    aria-expanded={isOpen}
+                    aria-label="Toggle menu"
+                    className="md:hidden"
+                    onClick={() => setIsOpen(!isOpen)}
+                    size="icon"
+                    variant="outline"
+                >
+                    {isOpen ? (
+                        <X className="size-5" />
+                    ) : (
+                        <Menu className="size-5" />
+                    )}
+                </Button>
 
-                            {/* Nav items avec icônes */}
-                            {navItems.map((item, index) => {
-                                const Icon = item.icon
-                                return (
-                                    <Link
-                                        key={item.href}
-                                        href={item.href}
-                                        onClick={handleLinkClick}
-                                        className={`flex items-center gap-3 px-3 py-2 rounded-lg transition-all duration-200 hover:bg-muted ${
-                                            isActive(item.href)
-                                                ? "bg-primary/10 text-primary font-semibold"
-                                                : "text-foreground/70 hover:text-foreground"
-                                        }`}
-                                        style={{ animationDelay: `${index * 0.05}s` }}
-                                    >
-                                        <Icon className="h-5 w-5" />
-                                        {item.name}
-                                    </Link>
-                                )
-                            })}
-
-                            {/* CTA mobile */}
-                            <Link
-                                href="#contact"
-                                onClick={handleLinkClick}
-                                className="mt-4 flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg bg-primary text-primary-foreground font-medium hover:bg-primary/90 transition-colors"
-                            >
-                                <span className="inline-grid *:[grid-area:1/1]">
-                                    <span className="status status-success animate-ping"></span>
-                                    <span className="status status-success"></span>
-                                </span>
-                                {tHero('available')}
-                            </Link>
-                        </nav>
-                    </SheetContent>
-                </Sheet>
-
-                {/* Logo mobile (visible quand menu fermé) */}
-                <Link href="/" className="flex items-center space-x-2 md:hidden">
-                    <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-primary to-accent text-white font-bold text-xs shadow-md">
-                        XA
-                    </div>
-                </Link>
-
-                <div className="flex flex-1 items-center justify-end space-x-2">
+                {/* Right side: CTA + Toggles */}
+                <div className="flex items-center gap-2">
                     {/* CTA Desktop */}
                     <Link
                         href="#contact"
@@ -145,7 +142,48 @@ export function Navbar() {
                         <ModeToggle />
                     </div>
                 </div>
-            </div>
+            </nav>
+
+            {/* Mobile Menu */}
+            <MobileMenu className="flex flex-col justify-between" open={isOpen}>
+                <div className="grid gap-y-2">
+                    {navItems.map((item) => {
+                        const Icon = item.icon
+                        return (
+                            <Link
+                                key={item.href}
+                                href={item.href}
+                                onClick={handleLinkClick}
+                                className={cn(
+                                    buttonVariants({ variant: "ghost" }),
+                                    "justify-start gap-3 h-12 text-base",
+                                    isActive(item.href)
+                                        ? "bg-primary/10 text-primary font-semibold"
+                                        : "text-foreground/70"
+                                )}
+                            >
+                                <Icon className="size-5" />
+                                {item.name}
+                            </Link>
+                        )
+                    })}
+                </div>
+
+                {/* CTA Mobile */}
+                <div className="mt-auto pt-4">
+                    <Link
+                        href="#contact"
+                        onClick={handleLinkClick}
+                        className="flex w-full items-center justify-center gap-2 px-4 py-3 rounded-lg bg-primary text-primary-foreground font-medium hover:bg-primary/90 transition-colors"
+                    >
+                        <span className="inline-grid *:[grid-area:1/1]">
+                            <span className="status status-success animate-ping"></span>
+                            <span className="status status-success"></span>
+                        </span>
+                        {tHero('available')}
+                    </Link>
+                </div>
+            </MobileMenu>
         </header>
     )
 }

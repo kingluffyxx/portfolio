@@ -4,6 +4,7 @@ import { getLocale, getMessages } from 'next-intl/server';
 import { ThemeProvider } from "@/components/theme-provider";
 import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
+import { ScrollToTop } from "@/components/scroll-to-top";
 import type { Metadata } from "next";
 import "./globals.css";
 
@@ -137,7 +138,7 @@ export default async function RootLayout({
   };
 
   return (
-    <html lang={locale} suppressHydrationWarning>
+    <html lang={locale} suppressHydrationWarning data-scroll-behavior="smooth">
       <head>
         <script
           type="application/ld+json"
@@ -165,6 +166,7 @@ export default async function RootLayout({
               <Navbar />
               <main className="z-1 relative flex-1">{children}</main>
               <Footer />
+              <ScrollToTop />
             </div>
           </ThemeProvider>
         </NextIntlClientProvider>
