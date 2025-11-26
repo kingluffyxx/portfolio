@@ -26,8 +26,8 @@ export function Hero() {
                 containerClassName="absolute inset-0"
                 className="w-full h-full"
             >
-                <div className="flex items-center py-24 md:py-32 h-full min-h-[calc(100vh-4rem)] container">
-                    <div className="flex md:flex-row flex-col-reverse md:justify-between items-center gap-12 md:gap-16 w-full">
+                <div className="flex items-start md:items-center pt-8 pb-24 md:py-32 h-full min-h-[calc(100vh-4rem)] container">
+                    <div className="flex md:flex-row flex-col-reverse md:justify-between items-center gap-8 md:gap-16 w-full">
                         {/* Contenu textuel */}
                         <div className="flex flex-col md:flex-1 gap-4 md:text-left text-center animate-slide-in-left">
                             {/* Badge disponible */}
