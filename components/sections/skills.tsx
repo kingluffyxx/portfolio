@@ -91,14 +91,14 @@ export function Skills() {
     const { elementRef, isVisible } = useScrollAnimation()
 
     return (
-        <section id="skills" className="py-12 md:py-24 lg:py-32 container" ref={elementRef as any}>
+        <section id="skills" className="py-12 md:py-24 lg:py-32 container" ref={elementRef}>
             <div className="mx-auto max-w-6xl">
                 {/* En-tête */}
                 <div className="mb-16 text-center">
                     <h2 className={`text-3xl font-bold leading-[1.1] sm:text-4xl md:text-5xl scroll-animate ${isVisible ? 'scroll-animate-visible' : ''}`}>
                         {t('title')}
                     </h2>
-                    <p className={`mt-4 text-lg text-foreground scroll-animate ${isVisible ? 'scroll-animate-visible' : ''}`} style={{ transitionDelay: '0.1s' }}>
+                    <p className={`mt-4 text-lg text-foreground dark:text-muted-foreground scroll-animate ${isVisible ? 'scroll-animate-visible' : ''}`} style={{ transitionDelay: '0.1s' }}>
                         {t('subtitle')}
                     </p>
                 </div>
@@ -115,7 +115,7 @@ export function Skills() {
                             >
                                 {/* En-tête de catégorie */}
                                 <div className="flex items-center gap-3 mb-6">
-                                    <div className={`flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br ${category.gradient} text-white shadow-lg`}>
+                                    <div className={`flex h-10 w-10 items-center justify-center rounded-xl bg-linear-to-br ${category.gradient} text-white shadow-lg`}>
                                         <IconComponent className="w-5 h-5" />
                                     </div>
                                     <h3 className="font-semibold text-lg">{t(category.key)}</h3>

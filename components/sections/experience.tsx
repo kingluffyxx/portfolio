@@ -52,7 +52,7 @@ export function Experience() {
                 {/* Timeline */}
                 <div className="relative">
                     {/* Ligne verticale */}
-                    <div className="top-0 bottom-0 left-[23px] md:left-1/2 absolute bg-gradient-to-b from-primary via-primary/50 to-transparent w-px md:-translate-x-px" />
+                    <div className="top-0 bottom-0 left-[23px] md:left-1/2 absolute bg-linear-to-b from-primary via-primary/50 to-transparent w-px md:-translate-x-px" />
 
                     <div className="space-y-12">
                         {experiences.map((exp, index) => (
