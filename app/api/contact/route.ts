@@ -6,12 +6,78 @@ interface ContactFormData {
   email: string
   subject: string
   message: string
+  turnstileToken?: string
+}
+
+interface TurnstileResponse {
+  success: boolean
+  challenge_ts?: string
+  hostname?: string
+  "error-codes"?: string[]
+}
+
+async function verifyTurnstile(token: string, ip?: string): Promise<boolean> {
+  const secretKey = process.env.TURNSTILE_SECRET_KEY
+
+  if (!secretKey) {
+    console.warn("TURNSTILE_SECRET_KEY not configured, skipping verification")
+    return true
+  }
+
+  try {
+    const response = await fetch(
+      "https://challenges.cloudflare.com/turnstile/v0/siteverify",
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          secret: secretKey,
+          response: token,
+          remoteip: ip,
+        }),
+      }
+    )
+
+    const result: TurnstileResponse = await response.json()
+
+    if (!result.success) {
+      console.error("Turnstile verification failed:", result["error-codes"])
+    }
+
+    return result.success
+  } catch (error) {
+    console.error("Turnstile verification error:", error)
+    return false
+  }
 }
 
 export async function POST(request: NextRequest) {
   try {
     const body: ContactFormData = await request.json()
-    const { name, email, subject, message } = body
+    const { name, email, subject, message, turnstileToken } = body
+
+    // Verify Turnstile token if configured
+    if (process.env.TURNSTILE_SECRET_KEY) {
+      if (!turnstileToken) {
+        return NextResponse.json(
+          { error: "CAPTCHA verification required" },
+          { status: 400 }
+        )
+      }
+
+      const ip = request.headers.get("x-real-ip") ||
+                 request.headers.get("x-forwarded-for") ||
+                 undefined
+
+      const isValid = await verifyTurnstile(turnstileToken, ip)
+
+      if (!isValid) {
+        return NextResponse.json(
+          { error: "CAPTCHA verification failed" },
+          { status: 400 }
+        )
+      }
+    }
 
     // Validation
     if (!name || !email || !subject || !message) {

@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useRef } from "react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
@@ -13,11 +13,14 @@ import { cibLinkedin } from '@coreui/icons'
 import { SiGithub } from "@icons-pack/react-simple-icons"
 import { useScrollAnimation } from "@/hooks/use-scroll-animation"
 import { BookingWidget } from "@/components/booking-calendar/booking-widget"
+import { Turnstile, type TurnstileInstance } from "@marsidev/react-turnstile"
 
 export function Contact() {
     const t = useTranslations('contact')
     const { elementRef, isVisible } = useScrollAnimation()
     const [formState, setFormState] = useState<'idle' | 'loading' | 'success' | 'error'>('idle')
+    const [turnstileToken, setTurnstileToken] = useState<string | null>(null)
+    const turnstileRef = useRef<TurnstileInstance>(null)
     const [formData, setFormData] = useState({
         name: '',
         email: '',
@@ -30,13 +33,23 @@ export function Contact() {
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault()
+
+        if (!turnstileToken) {
+            setFormState('error')
+            setTimeout(() => setFormState('idle'), 5000)
+            return
+        }
+
         setFormState('loading')
 
         try {
             const response = await fetch('/api/contact', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(formData)
+                body: JSON.stringify({
+                    ...formData,
+                    turnstileToken
+                })
             })
 
             if (!response.ok) {
@@ -45,11 +58,15 @@ export function Contact() {
 
             setFormState('success')
             setFormData({ name: '', email: '', subject: '', message: '' })
+            setTurnstileToken(null)
+            turnstileRef.current?.reset()
 
             // Reset après 5 secondes
             setTimeout(() => setFormState('idle'), 5000)
         } catch {
             setFormState('error')
+            turnstileRef.current?.reset()
+            setTurnstileToken(null)
             setTimeout(() => setFormState('idle'), 5000)
         }
     }
@@ -193,6 +210,23 @@ export function Contact() {
                                         />
                                     </div>
 
+                                    {/* Turnstile CAPTCHA */}
+                                    {process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY && (
+                                        <div className="hidden justify-center">
+                                            <Turnstile
+                                                ref={turnstileRef}
+                                                siteKey={process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY}
+                                                onSuccess={(token) => setTurnstileToken(token)}
+                                                onError={() => setTurnstileToken(null)}
+                                                onExpire={() => setTurnstileToken(null)}
+                                                options={{
+                                                    theme: 'auto',
+                                                    size: 'normal'
+                                                }}
+                                            />
+                                        </div>
+                                    )}
+
                                     {/* Message de succès/erreur */}
                                     {formState === 'success' && (
                                         <div className="flex items-center gap-2 bg-green-50 dark:bg-green-950/50 p-3 rounded-lg text-green-600 dark:text-green-400 text-sm">
@@ -211,7 +245,7 @@ export function Contact() {
                                         type="submit"
                                         size="lg"
                                         className="hover:shadow-lg hover:shadow-primary/25 w-full hover:scale-[1.02] transition-all"
-                                        disabled={formState === 'loading'}
+                                        disabled={formState === 'loading' || (!turnstileToken && !!process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY)}
                                     >
                                         {formState === 'loading' ? (
                                             <>
