@@ -37,7 +37,7 @@ export function Experience() {
     const experiences = t.raw('items') as ExperienceItem[]
 
     return (
-        <section id="experience" className="py-12 md:py-24 lg:py-32 container" ref={elementRef as any}>
+        <section id="experience" className="py-12 md:py-24 lg:py-32 container" ref={elementRef}>
             <div className="mx-auto max-w-4xl">
                 {/* En-tête */}
                 <div className="mb-16 text-center">
@@ -57,7 +57,7 @@ export function Experience() {
                     <div className="space-y-12">
                         {experiences.map((exp, index) => (
                             <div
-                                key={index}
+                                key={`${exp.company}-${exp.title}-${exp.period}`}
                                 className={`relative scroll-animate ${isVisible ? 'scroll-animate-visible' : ''}`}
                                 style={{ transitionDelay: `${0.2 + index * 0.15}s` }}
                             >
@@ -107,10 +107,10 @@ export function Experience() {
 
                                         {/* Impacts */}
                                         <div className="space-y-2">
-                                            {exp.impacts.map((impact, i) => {
+                                            {exp.impacts.map((impact) => {
                                                 const Icon = iconMap[impact.icon] || Zap
                                                 return (
-                                                    <div key={i} className="flex items-start gap-2 text-sm">
+                                                    <div key={`${impact.icon}-${impact.text}`} className="flex items-start gap-2 text-sm">
                                                         <Icon className="mt-0.5 w-4 h-4 text-primary shrink-0" />
                                                         <span className="text-foreground dark:text-foreground/80">
                                                             {impact.text}
