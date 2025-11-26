@@ -6,12 +6,12 @@ export function Footer() {
     const t = useTranslations('footer')
 
     return (
-        <footer className="border-t py-6 md:py-0 bg-card/50 backdrop-blur-sm">
-            <div className="container flex flex-col items-center justify-between gap-4 md:h-24 md:flex-row">
-                <p className="text-center text-sm leading-loose text-muted-foreground md:text-left">
+        <footer className="bg-card/50 backdrop-blur-sm py-6 md:py-0 border-t">
+            <div className="flex md:flex-row flex-col justify-between items-center gap-4 md:h-24 container">
+                <p className="text-foreground dark:text-muted-foreground text-sm md:text-left text-center leading-loose">
                     {t('copyright')}{" "}
-                    <span className="text-primary font-semibold">Next.js</span> {t('and')}{" "}
-                    <span className="text-primary font-semibold">TailwindCSS</span>
+                    <span className="font-semibold text-foreground">Next.js</span> {t('and')}{" "}
+                    <span className="font-semibold text-foreground">TailwindCSS</span>
                 </p>
             </div>
         </footer>

@@ -91,20 +91,20 @@ export function Skills() {
     const { elementRef, isVisible } = useScrollAnimation()
 
     return (
-        <section id="skills" className="container py-12 md:py-24 lg:py-32" ref={elementRef as any}>
+        <section id="skills" className="py-12 md:py-24 lg:py-32 container" ref={elementRef as any}>
             <div className="mx-auto max-w-6xl">
                 {/* En-tête */}
-                <div className="text-center mb-16">
+                <div className="mb-16 text-center">
                     <h2 className={`text-3xl font-bold leading-[1.1] sm:text-4xl md:text-5xl scroll-animate ${isVisible ? 'scroll-animate-visible' : ''}`}>
                         {t('title')}
                     </h2>
-                    <p className={`mt-4 text-lg text-muted-foreground scroll-animate ${isVisible ? 'scroll-animate-visible' : ''}`} style={{ transitionDelay: '0.1s' }}>
+                    <p className={`mt-4 text-lg text-foreground scroll-animate ${isVisible ? 'scroll-animate-visible' : ''}`} style={{ transitionDelay: '0.1s' }}>
                         {t('subtitle')}
                     </p>
                 </div>
 
                 {/* Grille de compétences */}
-                <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+                <div className="gap-6 grid md:grid-cols-2 lg:grid-cols-3">
                     {skillCategories.map((category, categoryIndex) => {
                         const IconComponent = category.icon
                         return (
@@ -116,20 +116,20 @@ export function Skills() {
                                 {/* En-tête de catégorie */}
                                 <div className="flex items-center gap-3 mb-6">
                                     <div className={`flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br ${category.gradient} text-white shadow-lg`}>
-                                        <IconComponent className="h-5 w-5" />
+                                        <IconComponent className="w-5 h-5" />
                                     </div>
-                                    <h3 className="text-lg font-semibold">{t(category.key)}</h3>
+                                    <h3 className="font-semibold text-lg">{t(category.key)}</h3>
                                 </div>
 
                                 {/* Grille de skills */}
-                                <div className="grid grid-cols-2 gap-3">
+                                <div className="gap-3 grid grid-cols-2">
                                     {category.skills.map((skill, skillIndex) => (
                                         <div
                                             key={skill.name}
-                                            className="flex items-center gap-3 p-3 rounded-xl bg-muted/50 transition-all duration-200 hover:bg-muted hover:scale-105 group/skill"
+                                            className="group/skill flex items-center gap-3 bg-muted/50 hover:bg-muted p-3 rounded-xl hover:scale-105 transition-all duration-200"
                                             style={{ transitionDelay: `${skillIndex * 0.05}s` }}
                                         >
-                                            <div className="relative h-8 w-8 shrink-0">
+                                            <div className="relative w-8 h-8 shrink-0">
                                                 <Image
                                                     src={skill.icon}
                                                     alt={skill.name}
@@ -137,7 +137,7 @@ export function Skills() {
                                                     className={`object-contain group-hover/skill:scale-110 transition-transform duration-200 ${skill.colorClass || ''}`}
                                                 />
                                             </div>
-                                            <span className="text-sm font-medium truncate">{skill.name}</span>
+                                            <span className="font-medium text-sm truncate">{skill.name}</span>
                                         </div>
                                     ))}
                                 </div>

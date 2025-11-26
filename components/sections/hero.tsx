@@ -90,7 +90,7 @@ export function Hero() {
                                             fill
                                             className="rounded-full object-cover"
                                             sizes="(max-width: 768px) 256px, (max-width: 1024px) 320px, 384px"
-                                            quality={95}
+                                            quality={75}
                                             priority
                                         />
                                     </div>
