@@ -10,6 +10,11 @@ import { SiGithub } from "@icons-pack/react-simple-icons"
 import { useTranslations } from 'next-intl'
 import { useScrollAnimation } from "@/hooks/use-scroll-animation"
 import { ProjectCardFlip } from "@/components/ui/project-card-flip"
+import {
+    CardFlip,
+    CardFlipFront,
+    CardFlipBack,
+} from "@/components/ui/card-flip"
 
 function ProjectImage({ src, alt, className, sizes, loading }: Readonly<{ src: string; alt: string; className?: string; sizes?: string; loading?: "eager" | "lazy" }>) {
     const [hasError, setHasError] = useState(false)
@@ -87,75 +92,136 @@ export function Projects() {
 
                 {/* Projet Featured */}
                 <div className={`mb-12 scroll-animate ${isVisible ? 'scroll-animate-visible' : ''}`} style={{ transitionDelay: '0.2s' }}>
-                    <div className="group relative bg-card hover:shadow-2xl hover:shadow-primary/10 border hover:border-primary/30 rounded-3xl overflow-hidden transition-all duration-500">
-                        <div className="gap-0 grid lg:grid-cols-2">
-                            {/* Image */}
-                            <div className="relative bg-linear-to-br from-primary/5 to-accent/5 lg:min-h-[400px] aspect-video lg:aspect-auto overflow-hidden">
-                                <ProjectImage
-                                    src={featuredProject.image}
-                                    alt={featuredProject.title}
-                                    sizes="(max-width: 1024px) 100vw, 50vw"
-                                    loading="eager"
-                                    className="object-cover object-top group-hover:scale-105 transition-transform duration-500"
-                                />
-                            </div>
+                    <div className="relative" style={{ perspective: "1000px", minHeight: "400px" }}>
+                        <CardFlip className="h-full">
+                            <CardFlipFront className="group relative bg-card hover:shadow-2xl hover:shadow-primary/10 border hover:border-primary/30 rounded-3xl overflow-hidden transition-all duration-500">
+                                <div className="gap-0 grid lg:grid-cols-2">
+                                    {/* Image */}
+                                    <div className="relative bg-linear-to-br from-primary/5 to-accent/5 lg:min-h-[400px] aspect-video lg:aspect-auto overflow-hidden">
+                                        <ProjectImage
+                                            src={featuredProject.image}
+                                            alt={featuredProject.title}
+                                            sizes="(max-width: 1024px) 100vw, 50vw"
+                                            loading="eager"
+                                            className="object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                                        />
+                                    </div>
 
-                            {/* Contenu */}
-                            <div className="flex flex-col justify-center p-8 lg:p-10">
-                                <div className="flex items-center gap-3 mb-4">
-                                    <h3 className="font-bold group-hover:text-primary text-2xl lg:text-3xl transition-colors">
-                                        {featuredProject.title}
-                                    </h3>
-                                    {getStatusBadge(featuredProject.status)}
-                                </div>
-
-                                <p className="mb-6 text-muted-foreground leading-relaxed">
-                                    {featuredProject.longDescription}
-                                </p>
-
-                                {/* Highlights */}
-                                <div className="space-y-2 mb-6">
-                                    {featuredProject.highlights.map((highlight) => (
-                                        <div key={highlight} className="flex items-center gap-2 text-sm">
-                                            <ArrowRight className="w-4 h-4 text-primary shrink-0" />
-                                            <span>{highlight}</span>
+                                    {/* Contenu */}
+                                    <div className="flex flex-col justify-center p-8 lg:p-10">
+                                        <div className="flex items-center gap-3 mb-4">
+                                            <h3 className="font-bold group-hover:text-primary text-2xl lg:text-3xl transition-colors">
+                                                {featuredProject.title}
+                                            </h3>
+                                            {getStatusBadge(featuredProject.status)}
                                         </div>
-                                    ))}
-                                </div>
 
-                                {/* Tags */}
-                                <div className="flex flex-wrap gap-2 mb-6">
-                                    {featuredProject.tags.map((tag) => (
-                                        <span
-                                            key={tag}
-                                            className="bg-muted px-2.5 py-1 rounded-full text-muted-foreground text-xs"
-                                        >
-                                            {tag}
-                                        </span>
-                                    ))}
-                                </div>
+                                        <p className="mb-6 text-muted-foreground leading-relaxed">
+                                            {featuredProject.description}
+                                        </p>
 
-                                {/* Liens */}
-                                <div className="flex gap-3">
-                                    {featuredProject.links?.live && (
-                                        <Button asChild>
-                                            <Link href={featuredProject.links.live} target="_blank" rel="noopener noreferrer">
-                                                <ExternalLink className="mr-2 w-4 h-4" />
-                                                {t('visitSite')}
-                                            </Link>
-                                        </Button>
-                                    )}
-                                    {featuredProject.links?.github && (
-                                        <Button variant="outline" asChild>
-                                            <Link href={featuredProject.links.github} target="_blank" rel="noopener noreferrer">
-                                                <SiGithub className="mr-2 w-4 h-4" />
-                                                {t('viewCode')}
-                                            </Link>
-                                        </Button>
-                                    )}
+                                        {/* Highlights */}
+                                        <div className="space-y-2 mb-6">
+                                            {featuredProject.highlights.slice(0, 3).map((highlight) => (
+                                                <div key={highlight} className="flex items-center gap-2 text-sm">
+                                                    <ArrowRight className="w-4 h-4 text-primary shrink-0" />
+                                                    <span>{highlight}</span>
+                                                </div>
+                                            ))}
+                                        </div>
+
+                                        {/* Tags */}
+                                        <div className="flex flex-wrap gap-2 mb-6">
+                                            {featuredProject.tags.slice(0, 6).map((tag) => (
+                                                <span
+                                                    key={tag}
+                                                    className="bg-muted px-2.5 py-1 rounded-full text-muted-foreground text-xs"
+                                                >
+                                                    {tag}
+                                                </span>
+                                            ))}
+                                        </div>
+
+                                        {/* Liens */}
+                                        <div className="flex gap-3">
+                                            {featuredProject.links?.live && (
+                                                <Button asChild>
+                                                    <Link href={featuredProject.links.live} target="_blank" rel="noopener noreferrer">
+                                                        <ExternalLink className="mr-2 w-4 h-4" />
+                                                        {t('visitSite')}
+                                                    </Link>
+                                                </Button>
+                                            )}
+                                            {featuredProject.links?.github && (
+                                                <Button variant="outline" asChild>
+                                                    <Link href={featuredProject.links.github} target="_blank" rel="noopener noreferrer">
+                                                        <SiGithub className="mr-2 w-4 h-4" />
+                                                        {t('viewCode')}
+                                                    </Link>
+                                                </Button>
+                                            )}
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
+                            </CardFlipFront>
+
+                            <CardFlipBack className="group relative bg-card hover:shadow-2xl hover:shadow-primary/10 border hover:border-primary/30 rounded-3xl overflow-hidden transition-all duration-500 bg-linear-to-br from-card via-card to-primary/5">
+                                <div className="flex flex-col h-full p-8 lg:p-10 overflow-y-auto">
+                                    <div className="flex items-center gap-3 mb-4">
+                                        <h3 className="font-bold text-primary text-2xl lg:text-3xl">
+                                            {featuredProject.title}
+                                        </h3>
+                                        {getStatusBadge(featuredProject.status)}
+                                    </div>
+
+                                    <p className="mb-6 text-muted-foreground leading-relaxed">
+                                        {featuredProject.longDescription || featuredProject.description}
+                                    </p>
+
+                                    {/* Highlights */}
+                                    <div className="space-y-2 mb-6 flex-1">
+                                        {featuredProject.highlights.map((highlight) => (
+                                            <div key={highlight} className="flex items-start gap-2 text-sm">
+                                                <ArrowRight className="mt-0.5 w-4 h-4 text-primary shrink-0" />
+                                                <span>{highlight}</span>
+                                            </div>
+                                        ))}
+                                    </div>
+
+                                    {/* Tags */}
+                                    <div className="flex flex-wrap gap-2 mb-6">
+                                        {featuredProject.tags.map((tag) => (
+                                            <span
+                                                key={tag}
+                                                className="bg-muted px-2.5 py-1 rounded-full text-muted-foreground text-xs"
+                                            >
+                                                {tag}
+                                            </span>
+                                        ))}
+                                    </div>
+
+                                    {/* Liens */}
+                                    <div className="flex gap-3">
+                                        {featuredProject.links?.live && (
+                                            <Button asChild>
+                                                <Link href={featuredProject.links.live} target="_blank" rel="noopener noreferrer">
+                                                    <ExternalLink className="mr-2 w-4 h-4" />
+                                                    {t('visitSite')}
+                                                </Link>
+                                            </Button>
+                                        )}
+                                        {featuredProject.links?.github && (
+                                            <Button variant="outline" asChild>
+                                                <Link href={featuredProject.links.github} target="_blank" rel="noopener noreferrer">
+                                                    <SiGithub className="mr-2 w-4 h-4" />
+                                                    {t('viewCode')}
+                                                </Link>
+                                            </Button>
+                                        )}
+                                    </div>
+                                </div>
+                            </CardFlipBack>
+                        </CardFlip>
                     </div>
                 </div>
 

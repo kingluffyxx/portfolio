@@ -133,7 +133,7 @@
     "featured": {
       "title": "FlowSolo",
       "description": "Productivity app for solopreneurs",
-      "longDescription": "All-in-one workspace based on the PARA methodology and Second Brain concept. Task management, goal tracking, Pomodoro sessions and productivity analytics in a modern and intuitive interface.",
+      "longDescription": "FlowSolo is a comprehensive productivity application designed specifically for solopreneurs and independent entrepreneurs. Based on Tiago Forte's PARA methodology (Projects, Areas, Resources, Archives) and the Second Brain concept, it centralizes all your professional organization in a single workspace. The application integrates advanced task management with customizable Kanban boards, a goal tracking system with progress visualization, a built-in Pomodoro timer to optimize your work sessions, and detailed productivity analytics to identify your patterns and improve your efficiency. The modern and intuitive interface, developed with Next.js 15 and TypeScript, offers a smooth and performant user experience, while the robust backend architecture with PostgreSQL and Prisma ensures the reliability and scalability of your data.",
       "image": "/images/projects/flowsolo.jpg",
       "tags": ["Next.js 15", "TypeScript", "TailwindCSS", "PostgreSQL", "Prisma", "Better Auth"],
       "highlights": [
@@ -190,7 +190,7 @@
       {
         "title": "The Red Master",
         "description": "Portfolio for a designer specialized in illustration and motion design.",
-        "longDescription": "Complete showcase website for Sékou Bayogo, freelance designer. Responsive site with hero slider, filterable project gallery and contact form.",
+        "longDescription": "Professional showcase website design and development for a freelance designer specializing in illustration and motion design. Optimized responsive interface featuring an interactive hero slider, project gallery with dynamic filtering system and customized contact form.",
         "image": "/images/projects/theredmaster.jpg",
         "tags": ["HTML", "CSS", "JavaScript", "Design"],
         "highlights": [

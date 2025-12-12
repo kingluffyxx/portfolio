@@ -133,7 +133,7 @@
     "featured": {
       "title": "FlowSolo",
       "description": "Application de productivité pour solopreneurs",
-      "longDescription": "Espace de travail tout-en-un basé sur la méthodologie PARA et le concept de Second Brain. Gestion de tâches, suivi d'objectifs, sessions Pomodoro et analytiques de productivité dans une interface moderne et intuitive.",
+      "longDescription": "FlowSolo est une application de productivité complète conçue spécifiquement pour les solopreneurs et entrepreneurs indépendants. Basée sur la méthodologie PARA (Projects, Areas, Resources, Archives) de Tiago Forte et le concept de Second Brain, elle centralise toute votre organisation professionnelle en un seul espace de travail. L'application intègre une gestion avancée de tâches avec tableaux Kanban personnalisables, un système de suivi d'objectifs avec visualisation de progression, un timer Pomodoro intégré pour optimiser vos sessions de travail, et des analytiques détaillées de productivité pour identifier vos patterns et améliorer votre efficacité. L'interface moderne et intuitive, développée avec Next.js 15 et TypeScript, offre une expérience utilisateur fluide et performante, tandis que l'architecture backend robuste avec PostgreSQL et Prisma garantit la fiabilité et la scalabilité de vos données.",
       "image": "/images/projects/flowsolo.jpg",
       "tags": ["Next.js 15", "TypeScript", "TailwindCSS", "PostgreSQL", "Prisma", "Better Auth"],
       "highlights": [
@@ -190,7 +190,7 @@
       {
         "title": "The Red Master",
         "description": "Portfolio pour un designer spécialisé en illustration et motion design.",
-        "longDescription": "Réalisation complète du site vitrine pour Sékou Bayogo, designer freelance. Site responsive avec slider hero, galerie de projets filtrable et formulaire de contact.",
+        "longDescription": "Conception et développement d'un site vitrine professionnel pour un designer freelance spécialisé en illustration et motion design. Interface responsive optimisée intégrant un slider hero interactif, une galerie de projets avec système de filtrage dynamique et un formulaire de contact personnalisé.",
         "image": "/images/projects/theredmaster.jpg",
         "tags": ["HTML", "CSS", "JavaScript", "Design"],
         "highlights": [
