@@ -5,6 +5,7 @@
   },
   "nav": {
     "about": "À propos",
+    "services": "Services",
     "skills": "Compétences",
     "experience": "Expériences",
     "projects": "Projets",
@@ -17,7 +18,7 @@
     "subtitle": "7+ ans d'expérience • Freelance",
     "available": "Disponible",
     "flipPrefix": "Je peux",
-    "flipWords": ["développer votre projet", "créer votre SaaS", "moderniser votre code", "débugger votre application", "créer votre MVP", "optimiser vos performances", "développer votre API", "refondre votre interface"],
+    "flipWords": ["développer votre projet", "créer votre SaaS", "moderniser votre code", "créer votre MVP", "développer votre API", "créer votre site vitrine", "lancer votre boutique en ligne", "créer votre landing page", "refondre votre site web"],
     "ctaProjects": "Voir mes projets",
     "ctaContact": "Me contacter",
     "ctaDownloadCV": "Télécharger mon CV"
@@ -276,6 +277,61 @@
     "bookingConfirmedDesc": "Vous recevrez un email de confirmation avec les détails.",
     "confirmationEmailSent": "Un email de confirmation a été envoyé.",
     "bookAnother": "Réserver un autre appel"
+  },
+  "services": {
+    "title": "Services",
+    "subtitle": "Des solutions adaptées à vos besoins, que vous soyez une startup en croissance ou une entreprise locale",
+    "tabStartup": "Startups & ESN",
+    "tabStartupShort": "Startups",
+    "tabTpe": "TPE & Particuliers",
+    "tabTpeShort": "TPE",
+    "ctaStartup": "Discuter de votre projet",
+    "ctaTpe": "Demander un devis gratuit",
+    "startup": {
+      "fullstack": {
+        "title": "Développement Web Full-Stack",
+        "description": "Développement d'applications web sur-mesure, de la conception à la mise en production. Intégration dans vos équipes existantes ou gestion autonome de votre projet.",
+        "price": "400-500€/jour",
+        "feature1": "Applications React / Next.js performantes",
+        "feature2": "APIs robustes avec Symfony ou Laravel",
+        "feature3": "Architecture scalable et maintenable",
+        "feature4": "Intégration CI/CD et bonnes pratiques"
+      }
+    },
+    "tpe": {
+      "vitrine": {
+        "title": "Site Vitrine",
+        "description": "Un site professionnel pour présenter votre activité et attirer de nouveaux clients.",
+        "price": "800 - 1 500€",
+        "feature1": "Design moderne et responsive",
+        "feature2": "Optimisation SEO incluse",
+        "feature3": "Formulaire de contact intégré"
+      },
+      "ecommerce": {
+        "title": "E-commerce",
+        "description": "Votre boutique en ligne clé en main pour vendre vos produits ou services.",
+        "price": "2 000 - 4 000€",
+        "feature1": "Catalogue produits illimité",
+        "feature2": "Paiement sécurisé (Stripe, PayPal)",
+        "feature3": "Gestion des commandes simplifiée"
+      },
+      "refonte": {
+        "title": "Refonte & Modernisation",
+        "description": "Donnez un coup de jeune à votre site existant avec un design actuel et des performances optimisées.",
+        "price": "À partir de 600€",
+        "feature1": "Analyse de l'existant incluse",
+        "feature2": "Migration des contenus",
+        "feature3": "Amélioration des performances"
+      },
+      "maintenance": {
+        "title": "Maintenance & Support",
+        "description": "Gardez votre site à jour, sécurisé et performant avec un accompagnement régulier.",
+        "price": "À partir de 50€/mois",
+        "feature1": "Mises à jour de sécurité",
+        "feature2": "Sauvegardes automatiques",
+        "feature3": "Support réactif par email"
+      }
+    }
   },
   "footer": {
     "copyright": "© 2025 Xavier Adda • Développeur Fullstack • Built with",

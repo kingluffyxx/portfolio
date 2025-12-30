@@ -5,6 +5,7 @@
   },
   "nav": {
     "about": "About",
+    "services": "Services",
     "skills": "Skills",
     "experience": "Experience",
     "projects": "Projects",
@@ -17,7 +18,7 @@
     "subtitle": "7+ years of experience • Freelance",
     "available": "Available",
     "flipPrefix": "I can",
-    "flipWords": ["develop your project", "build your SaaS", "modernize your code", "debug your application", "create your MVP", "optimize your performance", "develop your API", "redesign your interface"],
+    "flipWords": ["develop your project", "build your SaaS", "modernize your code", "create your MVP", "develop your API", "build your business website", "launch your online store", "create your landing page", "redesign your website"],
     "ctaProjects": "View my projects",
     "ctaContact": "Contact me",
     "ctaDownloadCV": "Download my resume"
@@ -276,6 +277,61 @@
     "bookingConfirmedDesc": "You will receive a confirmation email with the details.",
     "confirmationEmailSent": "A confirmation email has been sent.",
     "bookAnother": "Book another call"
+  },
+  "services": {
+    "title": "Services",
+    "subtitle": "Solutions tailored to your needs, whether you're a growing startup or a local business",
+    "tabStartup": "Startups & Tech Companies",
+    "tabStartupShort": "Startups",
+    "tabTpe": "Small Business & Individuals",
+    "tabTpeShort": "SMB",
+    "ctaStartup": "Discuss your project",
+    "ctaTpe": "Get a free quote",
+    "startup": {
+      "fullstack": {
+        "title": "Full-Stack Web Development",
+        "description": "Custom web application development, from design to production deployment. Integration into your existing teams or autonomous project management.",
+        "price": "400-500€/day",
+        "feature1": "High-performance React / Next.js applications",
+        "feature2": "Robust APIs with Symfony or Laravel",
+        "feature3": "Scalable and maintainable architecture",
+        "feature4": "CI/CD integration and best practices"
+      }
+    },
+    "tpe": {
+      "vitrine": {
+        "title": "Business Website",
+        "description": "A professional website to showcase your business and attract new customers.",
+        "price": "€800 - €1,500",
+        "feature1": "Modern and responsive design",
+        "feature2": "SEO optimization included",
+        "feature3": "Integrated contact form"
+      },
+      "ecommerce": {
+        "title": "E-commerce",
+        "description": "Your turnkey online store to sell your products or services.",
+        "price": "€2,000 - €4,000",
+        "feature1": "Unlimited product catalog",
+        "feature2": "Secure payment (Stripe, PayPal)",
+        "feature3": "Simplified order management"
+      },
+      "refonte": {
+        "title": "Redesign & Modernization",
+        "description": "Give your existing website a fresh look with a modern design and optimized performance.",
+        "price": "From €600",
+        "feature1": "Existing site analysis included",
+        "feature2": "Content migration",
+        "feature3": "Performance improvements"
+      },
+      "maintenance": {
+        "title": "Maintenance & Support",
+        "description": "Keep your website up-to-date, secure, and performing well with regular support.",
+        "price": "From €50/month",
+        "feature1": "Security updates",
+        "feature2": "Automatic backups",
+        "feature3": "Responsive email support"
+      }
+    }
   },
   "footer": {
     "copyright": "© 2025 Xavier Adda • Fullstack Developer • Built with",
