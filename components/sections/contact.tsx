@@ -7,6 +7,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
+import dynamic from "next/dynamic";
 import {
   Mail,
   Send,
@@ -21,7 +22,19 @@ import { CIcon } from "@coreui/icons-react";
 import { cibLinkedin } from "@coreui/icons";
 import { SiGithub } from "@icons-pack/react-simple-icons";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
-import { BookingWidget } from "@/components/booking-calendar/booking-widget";
+
+// Lazy load booking widget - only loads when user switches to booking tab
+const BookingWidget = dynamic(
+  () => import("@/components/booking-calendar/booking-widget").then(mod => ({ default: mod.BookingWidget })),
+  {
+    loading: () => (
+      <div className="rounded-2xl border bg-card p-6">
+        <div className="h-[500px] animate-pulse bg-muted rounded-lg" />
+      </div>
+    ),
+    ssr: false,
+  }
+);
 
 export function Contact() {
   const t = useTranslations("contact");

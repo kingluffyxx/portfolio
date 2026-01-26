@@ -56,21 +56,12 @@ export const metadata: Metadata = {
     title: "Xavier Adda - Développeur Fullstack PHP & Next.js",
     description:
       "Développeur web fullstack avec 7+ ans d'expérience. Spécialisé en PHP (Symfony, Laravel) et Next.js/React. Freelance disponible.",
-    images: [
-      {
-        url: "/og-image.png",
-        width: 1200,
-        height: 630,
-        alt: "Xavier Adda - Développeur Fullstack",
-      },
-    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Xavier Adda - Développeur Fullstack PHP & Next.js",
     description:
       "Développeur web fullstack avec 7+ ans d'expérience. Spécialisé en PHP (Symfony, Laravel) et Next.js/React.",
-    images: ["/og-image.png"],
     creator: "@xavier_adda",
   },
   verification: {
@@ -111,7 +102,7 @@ export default async function RootLayout({
     "@type": "Person",
     name: "Xavier Adda",
     url: siteUrl,
-    image: `${siteUrl}/og-image.png`,
+    image: `${siteUrl}/opengraph-image`,
     jobTitle: "Développeur Fullstack",
     worksFor: {
       "@type": "Organization",

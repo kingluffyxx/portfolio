@@ -4,16 +4,30 @@ import { useState, useEffect, useCallback } from "react"
 import { useTranslations } from "next-intl"
 import { format } from "date-fns"
 import { Clock } from "lucide-react"
-import { CalendarGrid } from "./calendar-grid"
-import { TimeSlotsPanel } from "./time-slots-panel"
-import { BookingForm } from "./booking-form"
-import { BookingSuccess } from "./booking-success"
+import dynamic from "next/dynamic"
 import { useCalendarSlots } from "@/lib/booking-calendar/hooks/use-calendar-slots"
 import { useIntersectionObserver } from "@/lib/booking-calendar/hooks/use-intersection-observer"
 import { getUserTimezone } from "@/lib/booking-calendar/utils"
 import type { CalcomSlot, BookingData } from "@/lib/booking-calendar/types"
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
+
+// Lazy load heavy calendar components
+const CalendarGrid = dynamic(() => import("./calendar-grid").then(mod => ({ default: mod.CalendarGrid })), {
+  loading: () => <div className="h-[280px] animate-pulse bg-muted rounded-lg" />,
+})
+
+const TimeSlotsPanel = dynamic(() => import("./time-slots-panel").then(mod => ({ default: mod.TimeSlotsPanel })), {
+  loading: () => <div className="h-[280px] animate-pulse bg-muted rounded-lg" />,
+})
+
+const BookingForm = dynamic(() => import("./booking-form").then(mod => ({ default: mod.BookingForm })), {
+  loading: () => <div className="h-[400px] animate-pulse bg-muted rounded-lg" />,
+})
+
+const BookingSuccess = dynamic(() => import("./booking-success").then(mod => ({ default: mod.BookingSuccess })), {
+  loading: () => <div className="h-[300px] animate-pulse bg-muted rounded-lg" />,
+})
 
 type BookingStep = "calendar" | "form" | "success"
 

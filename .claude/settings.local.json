@@ -1,0 +1,42 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install:*)",
+      "Bash(npx shadcn@latest add:*)",
+      "Bash(cat:*)",
+      "WebFetch(domain:next-intl.dev)",
+      "WebFetch(domain:citrus-forge.com)",
+      "WebFetch(domain:flowsolo.app)",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "WebFetch(domain:cdn.jsdelivr.net)",
+      "WebSearch",
+      "Bash(npx ts-node:*)",
+      "Bash(node -e:*)",
+      "WebFetch(domain:simpleicons.org)",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:rocky-shelf-71087-33284251968f.herokuapp.com)",
+      "Bash(npm run build:*)",
+      "WebFetch(domain:theredmaster.com)",
+      "WebFetch(domain:cal.com)",
+      "WebFetch(domain:www.scrollxui.dev)",
+      "Bash(git add:*)",
+      "Bash(git commit -m \"$(cat <<''EOF''\nfeat: Complete portfolio implementation with i18n, booking calendar, and modern UI\n\n- Add multilingual support (FR/EN) with next-intl\n- Implement all sections: Hero, About, Skills, Experience, Projects, Contact\n- Add Cal.com booking calendar integration with timezone support\n- Add contact form with Resend email integration\n- Implement theme toggle with View Transitions API animation\n- Add project cards with flip animation for more details\n- Add responsive navbar with mobile menu\n- Configure SEO with robots.txt and sitemap\n- Add custom UI components (card-flip, text-flip, vortex background)\n- Style with Tailwind CSS v4 and shadcn/ui components\nEOF\n)\")",
+      "Bash(gh repo create:*)",
+      "Bash(git remote add:*)",
+      "Bash(git push:*)",
+      "Bash(git rm:*)",
+      "Bash(git commit:*)",
+      "Bash(copy \"S:\\dev\\Portfolio\\app\\icon.png\" \"S:\\dev\\Portfolio\\public\\icon.png\")",
+      "Bash(git reset:*)",
+      "Bash(pnpm install:*)",
+      "WebFetch(domain:developers.cloudflare.com)",
+      "WebFetch(domain:medium.com)",
+      "WebFetch(domain:www.npmjs.com)",
+      "WebFetch(domain:www.ryanschiang.com)",
+      "Bash(pnpm add:*)",
+      "WebFetch(domain:vercel.com)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
