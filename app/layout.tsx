@@ -14,7 +14,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://xavier-adda.dev";
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Xavier Adda - Développeur Fullstack PHP & Next.js",
+    default: "Xavier Adda - Développeur Fullstack PHP & Next.js Freelance",
     template: "%s | Xavier Adda",
   },
   description:
@@ -53,15 +53,24 @@ export const metadata: Metadata = {
     alternateLocale: "en_US",
     url: siteUrl,
     siteName: "Xavier Adda - Portfolio",
-    title: "Xavier Adda - Développeur Fullstack PHP & Next.js",
+    title: "Xavier Adda - Développeur Fullstack PHP & Next.js Freelance",
     description:
       "Développeur web fullstack avec 7+ ans d'expérience. Spécialisé en PHP (Symfony, Laravel) et Next.js/React. Freelance disponible.",
+    images: [
+      {
+        url: "/opengraph-image.png",
+        width: 512,
+        height: 512,
+        alt: "Xavier Adda - Logo",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Xavier Adda - Développeur Fullstack PHP & Next.js",
+    title: "Xavier Adda - Développeur Fullstack PHP & Next.js Freelance",
     description:
       "Développeur web fullstack avec 7+ ans d'expérience. Spécialisé en PHP (Symfony, Laravel) et Next.js/React.",
+    images: ["/opengraph-image.png"],
     creator: "@xavier_adda",
   },
   verification: {
