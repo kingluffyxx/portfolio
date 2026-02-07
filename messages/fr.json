@@ -170,6 +170,24 @@
         "status": "live"
       },
       {
+        "title": "I Learn Romanian",
+        "description": "Refonte graphique et SEO d'une plateforme de cours de roumain en ligne (240+ étudiants, 42 pays).",
+        "longDescription": "Refonte complète d'un site WordPress pour une tutrice de roumain certifiée. Nouveau design aux couleurs du drapeau roumain, optimisation SEO, migration d'hébergement vers Hostinger et mise en place d'un système de réservation de cours en ligne.",
+        "image": "/images/projects/ilearnromanian.jpg",
+        "tags": ["WordPress", "Elementor", "WooCommerce", "SEO", "Design"],
+        "highlights": [
+          "Refonte graphique avec identité visuelle drapeau roumain",
+          "Optimisation SEO : Schema.org, Open Graph, métadonnées",
+          "Migration hébergement DreamHost → Hostinger",
+          "Intégration WooCommerce et système de réservation"
+        ],
+        "role": "Développeur & Designer",
+        "links": {
+          "live": "https://ilearnromanian.com"
+        },
+        "status": "live"
+      },
+      {
         "title": "Portfolio",
         "description": "Portfolio personnel moderne avec animations fluides et thème adaptatif.",
         "longDescription": "Site portfolio développé avec les dernières technologies. Design moderne, animations au scroll, système de thème clair/sombre et support multilingue français/anglais.",

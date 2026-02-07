@@ -1,45 +1,19 @@
 "use client"
 
-import { useState } from "react"
-import Image from "next/image"
 import Link from "next/link"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
-import { ExternalLink, ArrowRight, Code2 } from "lucide-react"
+import { ExternalLink, ArrowRight } from "lucide-react"
 import { SiGithub } from "@icons-pack/react-simple-icons"
 import { useTranslations } from 'next-intl'
 import { useScrollAnimation } from "@/hooks/use-scroll-animation"
 import { ProjectCardFlip } from "@/components/ui/project-card-flip"
+import { ProjectImage } from "@/components/ui/project-image"
 import {
     CardFlip,
     CardFlipFront,
     CardFlipBack,
 } from "@/components/ui/card-flip"
-
-function ProjectImage({ src, alt, className, sizes, loading }: Readonly<{ src: string; alt: string; className?: string; sizes?: string; loading?: "eager" | "lazy" }>) {
-    const [hasError, setHasError] = useState(false)
-
-    if (hasError || !src) {
-        return (
-            <div className={`absolute inset-0 flex flex-col items-center justify-center bg-linear-to-br from-primary/10 via-accent/5 to-primary/10 ${className}`}>
-                <Code2 className="mb-2 w-12 h-12 text-primary/40" />
-                <span className="font-medium text-muted-foreground/60 text-sm">{alt}</span>
-            </div>
-        )
-    }
-
-    return (
-        <Image
-            src={src}
-            alt={alt}
-            fill
-            sizes={sizes}
-            loading={loading}
-            className={className}
-            onError={() => setHasError(true)}
-        />
-    )
-}
 
 type Project = {
     title: string

@@ -1,7 +1,7 @@
 "use client"
 
 import { useLocale } from 'next-intl'
-import { useRouter, usePathname } from 'next/navigation'
+import { useRouter } from 'next/navigation'
 import { useTransition } from 'react'
 import { Button } from "@/components/ui/button"
 import { Globe } from "lucide-react"
@@ -34,8 +34,7 @@ const GbFlag = () => (
 export function LanguageToggle() {
   const locale = useLocale()
   const router = useRouter()
-  const pathname = usePathname()
-  const [isPending, startTransition] = useTransition()
+  const startTransition = useTransition()[1]
 
   const languages = [
     { code: "fr", label: "Français", flag: <FrFlag /> },

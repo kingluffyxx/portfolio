@@ -1,9 +1,6 @@
 "use client"
 
-import { useState } from "react"
-import Image from "next/image"
 import Link from "next/link"
-import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import {
     CardFlip,
@@ -15,9 +12,10 @@ import {
     CardFlipContent,
     CardFlipFooter,
 } from "@/components/ui/card-flip"
-import { ExternalLink, Code2, ArrowRight, Clock, User } from "lucide-react"
+import { ExternalLink, ArrowRight, Clock, User } from "lucide-react"
 import { SiGithub } from "@icons-pack/react-simple-icons"
 import { cn } from "@/lib/utils"
+import { ProjectImage } from "@/components/ui/project-image"
 
 type Project = {
     title: string
@@ -44,30 +42,6 @@ interface ProjectCardFlipProps {
     isVisible: boolean
 }
 
-function ProjectImage({ src, alt, className }: { src: string; alt: string; className?: string }) {
-    const [hasError, setHasError] = useState(false)
-
-    if (hasError || !src) {
-        return (
-            <div className={cn("absolute inset-0 flex flex-col items-center justify-center bg-gradient-to-br from-primary/10 via-accent/5 to-primary/10", className)}>
-                <Code2 className="mb-2 w-12 h-12 text-primary/40" />
-                <span className="font-medium text-muted-foreground/60 text-sm">{alt}</span>
-            </div>
-        )
-    }
-
-    return (
-        <Image
-            src={src}
-            alt={alt}
-            fill
-            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-            className={cn("object-cover", className)}
-            onError={() => setHasError(true)}
-        />
-    )
-}
-
 export function ProjectCardFlip({
     project,
     statusBadge,
@@ -92,7 +66,8 @@ export function ProjectCardFlip({
                         <ProjectImage
                             src={project.image}
                             alt={project.title}
-                            className="transition-transform duration-300"
+                            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                            className="object-cover transition-transform duration-300"
                         />
                         {/* Status */}
                         <div className="absolute top-3 left-3 z-10">
@@ -185,7 +160,7 @@ export function ProjectCardFlip({
                         </div>
                     </CardFlipContent>
 
-                    <CardFlipFooter className="border-t mt-auto">
+                    <CardFlipFooter className="border-t mt-auto mb-4">
                         {project.links?.live && (
                             <Button size="sm" asChild className="flex-1 h-8">
                                 <Link href={project.links.live} target="_blank" rel="noopener noreferrer">

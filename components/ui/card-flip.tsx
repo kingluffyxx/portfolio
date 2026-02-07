@@ -148,7 +148,7 @@ function CardFlipContent({ className, ...props }: React.ComponentProps<"div">) {
   return (
     <div
       data-slot="card-content"
-      className={cn("px-5 flex-1", className)}
+      className={cn("px-5 pb-4 flex-1", className)}
       {...props}
     />
   )

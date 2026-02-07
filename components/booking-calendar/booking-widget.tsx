@@ -41,7 +41,7 @@ export function BookingWidget({ eventTypeId, className }: BookingWidgetProps) {
   const { ref, isVisible } = useIntersectionObserver()
 
   const [step, setStep] = useState<BookingStep>("calendar")
-  const [timezone, setTimezone] = useState<string>("")
+  const [timezone, setTimezone] = useState<string>(getUserTimezone())
   const [use24Hour, setUse24Hour] = useState(true)
   const [currentMonth, setCurrentMonth] = useState(new Date())
   const [selectedDate, setSelectedDate] = useState<Date | undefined>()
@@ -57,11 +57,6 @@ export function BookingWidget({ eventTypeId, className }: BookingWidgetProps) {
     fetchSlots
   } = useCalendarSlots(eventTypeId, isVisible)
 
-  // Initialize timezone
-  useEffect(() => {
-    setTimezone(getUserTimezone())
-  }, [])
-
   // Fetch month slots when visible or month changes
   useEffect(() => {
     if (isVisible && timezone) {
@@ -76,19 +71,17 @@ export function BookingWidget({ eventTypeId, className }: BookingWidgetProps) {
     }
   }, [selectedDate, timezone, fetchSlots])
 
-  // Auto-select first available date when month loads
-  useEffect(() => {
-    if (Object.keys(monthSlots).length > 0 && !selectedDate) {
-      const today = format(new Date(), "yyyy-MM-dd")
-      const sortedDates = Object.keys(monthSlots).sort()
-      const firstAvailable = sortedDates.find(
-        date => date >= today && monthSlots[date].length > 0
-      )
-      if (firstAvailable) {
-        setSelectedDate(new Date(firstAvailable))
-      }
+  // Auto-select first available date when month loads (computed during render per React 19 guidelines)
+  if (Object.keys(monthSlots).length > 0 && !selectedDate) {
+    const today = format(new Date(), "yyyy-MM-dd")
+    const sortedDates = Object.keys(monthSlots).sort()
+    const firstAvailable = sortedDates.find(
+      date => date >= today && monthSlots[date].length > 0
+    )
+    if (firstAvailable) {
+      setSelectedDate(new Date(firstAvailable))
     }
-  }, [monthSlots, selectedDate])
+  }
 
   const handleDateSelect = useCallback((date: Date | undefined) => {
     setSelectedDate(date)

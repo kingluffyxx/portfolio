@@ -170,6 +170,24 @@
         "status": "live"
       },
       {
+        "title": "I Learn Romanian",
+        "description": "Visual redesign and SEO optimization of an online Romanian learning platform (240+ students, 42 countries).",
+        "longDescription": "Complete redesign of a WordPress site for a certified Romanian tutor. New Romanian flag-inspired branding, SEO optimization, hosting migration to Hostinger and online course booking system setup.",
+        "image": "/images/projects/ilearnromanian.jpg",
+        "tags": ["WordPress", "Elementor", "WooCommerce", "SEO", "Design"],
+        "highlights": [
+          "Visual redesign with Romanian flag-inspired branding",
+          "SEO optimization: Schema.org, Open Graph, metadata",
+          "Hosting migration from DreamHost to Hostinger",
+          "WooCommerce integration and booking system"
+        ],
+        "role": "Developer & Designer",
+        "links": {
+          "live": "https://ilearnromanian.com"
+        },
+        "status": "live"
+      },
+      {
         "title": "Portfolio",
         "description": "Modern personal portfolio with smooth animations and adaptive theme.",
         "longDescription": "Portfolio website built with the latest technologies. Modern design, scroll animations, light/dark theme system and French/English multilingual support.",

@@ -80,6 +80,7 @@ function sortTimezones(timezones: TimezoneOption[]): TimezoneOption[] {
       }
       return a.label.localeCompare(b.label)
     })
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     .map(({ offsetMinutes, ...tz }) => tz)
 }
 

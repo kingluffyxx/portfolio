@@ -17,9 +17,8 @@ import {
   Calendar,
   MessageSquare,
   MapPin,
+  Linkedin,
 } from "lucide-react";
-import { CIcon } from "@coreui/icons-react";
-import { cibLinkedin } from "@coreui/icons";
 import { SiGithub } from "@icons-pack/react-simple-icons";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 
@@ -160,11 +159,7 @@ export function Contact() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <CIcon
-                    icon={cibLinkedin}
-                    className="w-5 h-5"
-                    style={{ fill: "#0077b5" }}
-                  />
+                  <Linkedin className="w-5 h-5" style={{ color: "#0077b5" }} />
                   <span className="sr-only">{t("linkedin")}</span>
                 </Link>
               </Button>
