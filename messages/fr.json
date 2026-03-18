@@ -151,6 +151,25 @@
     "flipHint": "Survoler pour plus de détails",
     "items": [
       {
+        "title": "SteamHunter",
+        "description": "Application mobile de suivi des succès Steam, statistiques et compétition entre amis.",
+        "longDescription": "SteamHunter est une application mobile complète pour les joueurs Steam. Développée avec React Native et Expo, elle permet de suivre sa progression de succès avec un système de rareté, comparer ses stats avec ses amis, surveiller un rival, et grimper dans les classements. L'app propose 6 thèmes personnalisés, un mode hors-ligne via cache MMKV, des mises à jour en temps réel avec Supabase, et une landing page marketing développée avec Next.js. Disponible sur Google Play.",
+        "image": "/images/projects/steamhunter.jpg",
+        "tags": ["React Native", "Expo", "TypeScript", "Supabase", "Next.js"],
+        "highlights": [
+          "Suivi des succès avec système de rareté",
+          "Comparaison entre amis et système de rival",
+          "6 thèmes personnalisés et mode hors-ligne",
+          "Landing page Next.js avec i18n"
+        ],
+        "role": "Développeur Fullstack",
+        "duration": "2 semaines",
+        "links": {
+          "live": "https://steamhunter.app"
+        },
+        "status": "live"
+      },
+      {
         "title": "CitrusForge",
         "description": "Plateforme SaaS de génération de contenu IA avec les meilleurs modèles du marché.",
         "longDescription": "Plateforme complète de génération de contenu IA intégrant Sora, Veo 3, Pika et Runway. Système d'abonnements avec Stripe, gestion des crédits et interface utilisateur intuitive.",
