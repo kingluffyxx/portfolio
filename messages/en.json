@@ -154,7 +154,7 @@
         "title": "SteamHunter",
         "description": "Mobile app for tracking Steam achievements, stats and competing with friends.",
         "longDescription": "SteamHunter is a comprehensive mobile companion app for Steam gamers. Built with React Native and Expo, it lets users track their achievement progress with rarity classifications, compare stats with friends, monitor a rival player, and climb leaderboards. The app features 6 custom themes, offline support via MMKV cache, real-time updates with Supabase, and a marketing landing page built with Next.js. Available on Google Play.",
-        "image": "/images/projects/steamhunter.jpg",
+        "image": "/images/projects/steamhunter.webp",
         "tags": ["React Native", "Expo", "TypeScript", "Supabase", "Next.js"],
         "highlights": [
           "Achievement tracking with rarity system",
