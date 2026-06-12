@@ -1,8 +1,9 @@
 "use client"
 
-import { useLocale } from 'next-intl'
-import { useRouter } from 'next/navigation'
-import { useTransition } from 'react'
+import { useLocale } from "next-intl"
+import { useRouter } from "@/i18n/navigation"
+import { usePathname as useRawPathname } from "next/navigation"
+import { useTransition } from "react"
 import { Button } from "@/components/ui/button"
 import { Globe } from "lucide-react"
 import {
@@ -11,45 +12,84 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
+import { routing } from "@/i18n/routing"
 
-// SVG Flag Components
 const FrFlag = () => (
   <svg width="20" height="15" viewBox="0 0 640 480" className="inline-block">
-    <path fill="#fff" d="M0 0h640v480H0z"/>
-    <path fill="#002654" d="M0 0h213.3v480H0z"/>
-    <path fill="#ED2939" d="M426.7 0H640v480H426.7z"/>
+    <path fill="#fff" d="M0 0h640v480H0z" />
+    <path fill="#002654" d="M0 0h213.3v480H0z" />
+    <path fill="#ED2939" d="M426.7 0H640v480H426.7z" />
   </svg>
 )
 
 const GbFlag = () => (
   <svg width="20" height="15" viewBox="0 0 640 480" className="inline-block">
-    <path fill="#012169" d="M0 0h640v480H0z"/>
-    <path fill="#FFF" d="m75 0 244 181L562 0h78v62L400 241l240 178v61h-80L320 301 81 480H0v-60l239-178L0 64V0h75z"/>
-    <path fill="#C8102E" d="m424 281 216 159v40L369 281h55zm-184 20 6 35L54 480H0l240-179zM640 0v3L391 191l2-44L590 0h50zM0 0l239 176h-60L0 42V0z"/>
-    <path fill="#FFF" d="M241 0v480h160V0H241zM0 160v160h640V160H0z"/>
-    <path fill="#C8102E" d="M0 193v96h640v-96H0zM273 0v480h96V0h-96z"/>
+    <path fill="#012169" d="M0 0h640v480H0z" />
+    <path fill="#FFF" d="m75 0 244 181L562 0h78v62L400 241l240 178v61h-80L320 301 81 480H0v-60l239-178L0 64V0h75z" />
+    <path fill="#C8102E" d="m424 281 216 159v40L369 281h55zm-184 20 6 35L54 480H0l240-179zM640 0v3L391 191l2-44L590 0h50zM0 0l239 176h-60L0 42V0z" />
+    <path fill="#FFF" d="M241 0v480h160V0H241zM0 160v160h640V160H0z" />
+    <path fill="#C8102E" d="M0 193v96h640v-96H0zM273 0v480h96V0h-96z" />
   </svg>
 )
+
+function stripLocalePrefix(path: string): string {
+  if (!path) return "/"
+  for (const loc of routing.locales) {
+    if (path === `/${loc}`) return "/"
+    if (path.startsWith(`/${loc}/`)) return path.substring(loc.length + 1)
+  }
+  return path
+}
+
+type SupportedLocale = (typeof routing.locales)[number]
 
 export function LanguageToggle() {
   const locale = useLocale()
   const router = useRouter()
-  const startTransition = useTransition()[1]
+  const rawPathname = useRawPathname()
+  const [, startTransition] = useTransition()
 
-  const languages = [
+  const isBlog = rawPathname?.startsWith("/blog") ?? false
+
+  const languages: { code: SupportedLocale; label: string; flag: React.ReactNode }[] = [
     { code: "fr", label: "Français", flag: <FrFlag /> },
     { code: "en", label: "English", flag: <GbFlag /> },
   ]
 
   const currentLanguage = languages.find((lang) => lang.code === locale)
 
-  const switchLanguage = (newLocale: string) => {
+  const switchLanguage = (newLocale: SupportedLocale) => {
+    if (isBlog || locale === newLocale) return
+
+    const hreflangMap: Record<SupportedLocale, string> = {
+      fr: "fr-FR",
+      en: "en-US",
+    }
+    const allLinks = Array.from(
+      document.querySelectorAll('link[rel="alternate"]'),
+    ) as HTMLLinkElement[]
+    const alternateLink = allLinks.find(
+      (link) => link.hreflang === hreflangMap[newLocale],
+    )
+
+    let targetPath = "/"
+    if (alternateLink?.href) {
+      try {
+        targetPath = stripLocalePrefix(new URL(alternateLink.href).pathname)
+      } catch {
+        targetPath = stripLocalePrefix(rawPathname || "/")
+      }
+    } else {
+      targetPath = stripLocalePrefix(rawPathname || "/")
+    }
+
     startTransition(() => {
-      // Set a cookie to store the locale preference
-      document.cookie = `NEXT_LOCALE=${newLocale}; path=/; max-age=31536000`
-      // Refresh the page to apply the new locale
-      router.refresh()
+      router.replace(targetPath, { locale: newLocale })
     })
+  }
+
+  if (isBlog) {
+    return null
   }
 
   return (
@@ -74,7 +114,10 @@ export function LanguageToggle() {
         {languages.map((lang) => (
           <DropdownMenuItem
             key={lang.code}
-            onClick={() => switchLanguage(lang.code)}
+            onSelect={(event) => {
+              event.preventDefault()
+              switchLanguage(lang.code)
+            }}
             className={`cursor-pointer transition-colors ${
               locale === lang.code
                 ? "bg-primary/10 text-primary"

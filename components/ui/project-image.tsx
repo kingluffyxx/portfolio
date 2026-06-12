@@ -11,9 +11,11 @@ interface ProjectImageProps {
     className?: string
     sizes?: string
     loading?: "eager" | "lazy"
+    priority?: boolean
+    fetchPriority?: "high" | "low" | "auto"
 }
 
-export function ProjectImage({ src, alt, className, sizes, loading }: Readonly<ProjectImageProps>) {
+export function ProjectImage({ src, alt, className, sizes, loading, priority, fetchPriority }: Readonly<ProjectImageProps>) {
     const [hasError, setHasError] = useState(false)
 
     if (hasError || !src) {
@@ -31,7 +33,9 @@ export function ProjectImage({ src, alt, className, sizes, loading }: Readonly<P
             alt={alt}
             fill
             sizes={sizes}
-            loading={loading}
+            loading={priority ? undefined : loading}
+            priority={priority}
+            fetchPriority={fetchPriority}
             className={className}
             onError={() => setHasError(true)}
         />

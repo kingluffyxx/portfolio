@@ -6,7 +6,7 @@ import { useTranslations } from 'next-intl'
 import { Button } from "@/components/ui/button"
 import { LayoutTextFlip } from "@/src/components/ui/layout-text-flip"
 import { Vortex } from "@/src/components/ui/vortex"
-import { ArrowRight, Download } from "lucide-react"
+import { ArrowRight, Calendar } from "lucide-react"
 
 export function Hero() {
     const t = useTranslations('hero')
@@ -30,8 +30,8 @@ export function Hero() {
                     <div className="flex md:flex-row flex-col-reverse md:justify-between items-center gap-8 md:gap-16 w-full">
                         {/* Contenu textuel */}
                         <div className="flex flex-col md:flex-1 gap-4 md:text-left text-center animate-slide-in-left">
-                            {/* Badge disponible */}
-                            <div className="flex justify-center md:justify-start">
+                            {/* Badges trust */}
+                            <div className="flex flex-wrap justify-center md:justify-start gap-2">
                                 <div className="inline-flex items-center gap-2 bg-green-500/10 px-3 py-1.5 border border-green-500/20 rounded-full">
                                     <span className="inline-grid *:[grid-area:1/1]">
                                         <span className="animate-ping status status-success"></span>
@@ -39,16 +39,23 @@ export function Hero() {
                                     </span>
                                     <span className="font-medium text-green-600 dark:text-green-400 text-sm">{t('available')}</span>
                                 </div>
+                                <div className="inline-flex items-center gap-2 bg-primary/10 px-3 py-1.5 border border-primary/20 rounded-full">
+                                    <span className="font-medium text-primary text-sm">{t('trustBadge')}</span>
+                                </div>
                             </div>
                             <p className="text-muted-foreground text-lg">{t('greeting')}</p>
                             <h1 className="font-bold text-4xl md:text-6xl lg:text-7xl leading-tight lg:leading-[1.1] tracking-tighter">
                                 <span className="bg-clip-text bg-linear-to-r from-primary to-accent text-transparent">{t('name')}</span>
+                                <span className="sr-only"> · {t('title')}</span>
                             </h1>
-                            <h2 className="font-semibold text-foreground text-2xl md:text-3xl">
+                            <p className="font-semibold text-foreground text-2xl md:text-3xl" aria-hidden="true">
                                 {t('title')}
-                            </h2>
+                            </p>
                             <p className="text-muted-foreground text-lg">
                                 {t('subtitle')}
+                            </p>
+                            <p className="text-muted-foreground/80 text-sm">
+                                {t('location')}
                             </p>
                             {/* Texte flip animé */}
                             <div className="flex flex-wrap justify-center md:justify-start items-center gap-3">
@@ -60,18 +67,20 @@ export function Hero() {
                             </div>
                             <div className="flex sm:flex-row flex-col justify-center md:justify-start gap-4 mt-4">
                                 <Button asChild size="lg" className="hover:shadow-lg hover:shadow-primary/25 hover:scale-105 transition-all">
-                                    <Link href="#projects">
+                                    <Link href="#contact">
                                         {t('ctaProjects')} <ArrowRight className="ml-2 w-4 h-4" />
                                     </Link>
                                 </Button>
                                 <Button variant="outline" size="lg" asChild className="hover:scale-105 transition-all">
-                                    <Link href="#contact">{t('ctaContact')}</Link>
+                                    <Link href="#contact" className="flex items-center gap-2">
+                                        <Calendar className="w-4 h-4" />
+                                        {t('ctaContact')}
+                                    </Link>
                                 </Button>
-                                <Button variant="outline" size="lg" asChild className="hover:scale-105 transition-all">
-                                    <a href="/CV_Xavier_Adda.pdf" download className="flex items-center gap-2">
-                                        <Download className="w-4 h-4" />
+                                <Button variant="ghost" size="lg" asChild className="hover:scale-105 transition-all">
+                                    <Link href="#projects">
                                         {t('ctaDownloadCV')}
-                                    </a>
+                                    </Link>
                                 </Button>
                             </div>
                         </div>

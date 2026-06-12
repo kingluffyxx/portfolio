@@ -2,8 +2,11 @@
 
 import { useState, useEffect, useSyncExternalStore } from "react";
 import { createPortal } from "react-dom";
-import Link from "next/link";
+import Image from "next/image";
+import NextLink from "next/link";
+import { usePathname as useRawPathname } from "next/navigation";
 import { useTranslations } from "next-intl";
+import { Link, usePathname } from "@/i18n/navigation";
 import { ModeToggle } from "@/components/mode-toggle";
 import { LanguageToggle } from "@/components/language-toggle";
 import { Button, buttonVariants } from "@/components/ui/button";
@@ -11,11 +14,11 @@ import {
   Menu,
   X,
   User,
-  Briefcase,
-  Code2,
   FolderGit2,
   Mail,
   HandCoins,
+  Search,
+  BookOpen,
 } from "lucide-react";
 import { useActiveSection } from "@/hooks/use-active-section";
 import { cn } from "@/lib/utils";
@@ -65,19 +68,29 @@ export function Navbar() {
   const t = useTranslations("nav");
   const tHero = useTranslations("hero");
   const activeSection = useActiveSection();
+  const pathname = usePathname();
+  const rawPathname = useRawPathname();
   const [isOpen, setIsOpen] = useState(false);
 
+  const isHome = pathname === "/"
+  const sectionPrefix = isHome ? "" : "/"
+  const isBlog = rawPathname?.startsWith("/blog") ?? false
+
   const navItems = [
-    { name: t("about"), href: "#about", icon: User },
-    { name: t("services"), href: "#services", icon: HandCoins },
-    { name: t("skills"), href: "#skills", icon: Code2 },
-    { name: t("experience"), href: "#experience", icon: Briefcase },
-    { name: t("projects"), href: "#projects", icon: FolderGit2 },
-    { name: t("contact"), href: "#contact", icon: Mail },
+    { name: t("services"), href: `${sectionPrefix}#services`, icon: HandCoins, isSection: true, external: false },
+    { name: t("seo"), href: `${sectionPrefix}#seo`, icon: Search, isSection: true, external: false },
+    { name: t("blog"), href: "/blog", icon: BookOpen, isSection: false, external: true },
+    { name: t("projects"), href: "/realisations", icon: FolderGit2, isSection: false, external: false },
+    { name: t("about"), href: `${sectionPrefix}#about`, icon: User, isSection: true, external: false },
+    { name: t("contact"), href: `${sectionPrefix}#contact`, icon: Mail, isSection: true, external: false },
   ];
 
-  const isActive = (href: string) => {
-    return `#${activeSection}` === href;
+  const isActive = (href: string, isSection: boolean) => {
+    if (!isHome) {
+      return !isSection && (pathname?.startsWith(href) || rawPathname?.startsWith(href))
+    }
+    if (!isSection) return false
+    return `#${activeSection}` === href.replace("/", "")
   };
 
   const handleLinkClick = () => {
@@ -98,27 +111,25 @@ export function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <nav className="container flex h-16 items-center justify-between">
-        {/* Desktop Navigation */}
-        <div className="hidden md:flex">
-          <div className="flex items-center space-x-6 text-sm font-medium">
-            {navItems.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                className={`transition-all duration-200 hover:text-primary hover:scale-105 relative pb-1 after:absolute after:bottom-0 after:left-0 after:h-[2px] after:bg-primary after:transition-all ${
-                  isActive(item.href)
-                    ? "text-primary after:w-full"
-                    : "text-foreground/60 after:w-0 hover:after:w-full"
-                }`}
-              >
-                {item.name}
-              </Link>
-            ))}
-          </div>
-        </div>
+      <nav className="container flex h-16 items-center justify-between gap-4">
+        {/* Logo / Home link — desktop only (mobile shows burger in this slot) */}
+        <Link
+          href="/"
+          className="hidden md:flex items-center gap-2 font-bold tracking-tight hover:text-primary transition-colors shrink-0"
+          aria-label="Retour à l'accueil"
+        >
+          <Image
+            src="/icon.png"
+            alt="Xavier Adda"
+            width={32}
+            height={32}
+            className="rounded-lg"
+            priority
+          />
+          <span>Xavier Adda</span>
+        </Link>
 
-        {/* Mobile Menu Button */}
+        {/* Mobile Menu Button (left slot on mobile) */}
         <Button
           aria-controls="mobile-menu"
           aria-expanded={isOpen}
@@ -131,11 +142,41 @@ export function Navbar() {
           {isOpen ? <X className="size-5" /> : <Menu className="size-5" />}
         </Button>
 
+        {/* Desktop Navigation */}
+        <div className="hidden md:flex flex-1 justify-center">
+          <div className="flex items-center space-x-6 text-sm font-medium">
+            {!isHome && (
+              <Link
+                href="/"
+                className="text-foreground/60 hover:text-primary hover:scale-105 transition-all"
+              >
+                Accueil
+              </Link>
+            )}
+            {navItems.map((item) => {
+              const className = `transition-all duration-200 hover:text-primary hover:scale-105 relative pb-1 after:absolute after:bottom-0 after:left-0 after:h-[2px] after:bg-primary after:transition-all ${
+                isActive(item.href, item.isSection)
+                  ? "text-primary after:w-full"
+                  : "text-foreground/60 after:w-0 hover:after:w-full"
+              }`
+              return item.external ? (
+                <NextLink key={item.href} href={item.href} className={className}>
+                  {item.name}
+                </NextLink>
+              ) : (
+                <Link key={item.href} href={item.href} className={className}>
+                  {item.name}
+                </Link>
+              )
+            })}
+          </div>
+        </div>
+
         {/* Right side: CTA + Toggles */}
         <div className="flex items-center gap-2">
           {/* CTA Desktop */}
           <Link
-            href="#contact"
+            href={`${sectionPrefix}#contact`}
             className="hidden md:inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-green-500/10 border border-green-500/20 text-sm font-medium text-green-600 dark:text-green-400 hover:bg-green-500/20 transition-colors"
           >
             <span className="inline-grid *:[grid-area:1/1]">
@@ -155,21 +196,34 @@ export function Navbar() {
       {/* Mobile Menu */}
       <MobileMenu className="flex flex-col justify-between" open={isOpen}>
         <div className="grid gap-y-2">
+          {!isHome && (
+            <Link
+              href="/"
+              onClick={handleLinkClick}
+              className={cn(
+                buttonVariants({ variant: "ghost" }),
+                "justify-start h-12 text-base border border-primary/30 bg-primary/5 text-primary font-semibold",
+              )}
+            >
+              Accueil
+            </Link>
+          )}
           {navItems.map((item) => {
             const Icon = item.icon;
-            return (
-              <Link
-                key={item.href}
-                href={item.href}
-                onClick={handleLinkClick}
-                className={cn(
-                  buttonVariants({ variant: "ghost" }),
-                  "justify-start gap-3 h-12 text-base",
-                  isActive(item.href)
-                    ? "bg-primary/10 text-primary font-semibold"
-                    : "text-foreground/70",
-                )}
-              >
+            const className = cn(
+              buttonVariants({ variant: "ghost" }),
+              "justify-start gap-3 h-12 text-base",
+              isActive(item.href, item.isSection)
+                ? "bg-primary/10 text-primary font-semibold"
+                : "text-foreground/70",
+            )
+            return item.external ? (
+              <NextLink key={item.href} href={item.href} onClick={handleLinkClick} className={className}>
+                <Icon className="size-5" />
+                {item.name}
+              </NextLink>
+            ) : (
+              <Link key={item.href} href={item.href} onClick={handleLinkClick} className={className}>
                 <Icon className="size-5" />
                 {item.name}
               </Link>
@@ -180,7 +234,7 @@ export function Navbar() {
         {/* CTA Mobile */}
         <div className="mt-auto pt-4">
           <Link
-            href="#contact"
+            href={`${sectionPrefix}#contact`}
             onClick={handleLinkClick}
             className="flex w-full items-center justify-center gap-2 px-4 py-3 rounded-lg bg-primary text-primary-foreground font-medium hover:bg-primary/90 transition-colors"
           >

@@ -1,27 +1,80 @@
 {
   "metadata": {
-    "title": "Xavier Adda - Développeur Fullstack PHP & Next.js",
-    "description": "Développeur web fullstack avec 7+ ans d'expérience. Spécialisé en PHP (Symfony, Laravel) et Next.js/React. Freelance disponible."
+    "title": "Création de sites internet & SEO · Xavier Adda Freelance",
+    "description": "Freelance création de sites internet, e-commerce et applications sur-mesure. SEO inclus. 7+ ans d'expérience. Île-de-France & Remote."
   },
   "nav": {
-    "about": "À propos",
     "services": "Services",
-    "skills": "Compétences",
-    "experience": "Expériences",
-    "projects": "Projets",
-    "contact": "Contact"
+    "seo": "SEO",
+    "blog": "Blog",
+    "projects": "Réalisations",
+    "about": "À propos",
+    "contact": "Contact",
+    "parcours": "Parcours"
+  },
+  "seo": {
+    "badge": "SEO inclus dans toutes mes prestations",
+    "titleHighlight": "SEO inclus",
+    "titleRest": "sur chaque projet",
+    "subtitle": "Indexation, Core Web Vitals, schema.org et structure de pages travaillés dès la conception, pas en option à la fin.",
+    "pillar1Title": "SEO technique",
+    "pillar1Description": "Core Web Vitals, schema.org, sitemap, hreflang, indexation Search Console.",
+    "pillar1Item1": "Lighthouse 95+ sur mobile",
+    "pillar1Item2": "Schema.org Person, Service, Product",
+    "pillar1Item3": "Sitemap et hreflang validés",
+    "pillar1Item4": "Indexation Search Console",
+    "pillar2Title": "SEO contenu",
+    "pillar2Description": "Mots-clés, balisage Hn, signaux E-E-A-T, maillage interne.",
+    "pillar2Item1": "Recherche de mots-clés ciblés",
+    "pillar2Item2": "Structure Hn et balises optimisées",
+    "pillar2Item3": "Signaux E-E-A-T",
+    "pillar2Item4": "Maillage interne",
+    "pillar3Title": "SEO local",
+    "pillar3Description": "Google Business Profile, schema LocalBusiness, citations NAP, pages géolocalisées.",
+    "pillar3Item1": "Google Business Profile optimisé",
+    "pillar3Item2": "Schema LocalBusiness",
+    "pillar3Item3": "Citations NAP cohérentes",
+    "pillar3Item4": "Pages par ville",
+    "exampleTitle": "Ce site comme exemple",
+    "exampleDescription": "Lighthouse 95+, schema.org Person et ProfessionalService, hreflang FR/EN, sitemap dynamique, OG image générée à la volée. Vérifiable en quelques minutes.",
+    "exampleCta": "Auditer mon site",
+    "statLighthouse": "Lighthouse mobile",
+    "statIndexable": "Pages indexables",
+    "statSchemas": "Schemas JSON-LD",
+    "statLanguages": "Langues hreflang"
+  },
+  "parcours": {
+    "metaTitle": "Parcours professionnel",
+    "metaDescription": "Le parcours professionnel de Xavier Adda : 7+ ans d'expérience en développement web, freelance et CDI dans des ESN et startups.",
+    "back": "Retour à l'accueil",
+    "title": "Parcours",
+    "intro": "7+ ans en développement web : ESN, startups, missions freelance."
   },
   "hero": {
     "greeting": "Bonjour, je suis",
     "name": "Xavier Adda",
-    "title": "Développeur Fullstack",
-    "subtitle": "7+ ans d'expérience • Freelance",
+    "title": "Création de sites internet & SEO",
+    "subtitle": "Je conçois des sites qui convertissent et rankent sur Google",
+    "location": "Île-de-France & Remote · Réponse sous 24h",
     "available": "Disponible",
     "flipPrefix": "Je peux",
-    "flipWords": ["développer votre projet", "créer votre SaaS", "moderniser votre code", "créer votre MVP", "développer votre API", "créer votre site vitrine", "lancer votre boutique en ligne", "créer votre landing page", "refondre votre site web"],
-    "ctaProjects": "Voir mes projets",
-    "ctaContact": "Me contacter",
-    "ctaDownloadCV": "Télécharger mon CV"
+    "flipWords": ["créer votre site vitrine", "lancer votre boutique en ligne", "optimiser votre SEO", "refondre votre site", "accélérer votre site", "créer votre application web"],
+    "ctaProjects": "Obtenir un devis gratuit",
+    "ctaContact": "Réserver un appel 15 min",
+    "ctaDownloadCV": "Voir mes réalisations",
+    "trustBadge": "Devis sous 48h · 7+ ans d'expérience"
+  },
+  "whyWebsite": {
+    "eyebrow": "Ce qu'un bon site doit faire",
+    "title": "Votre site doit vous ramener des clients",
+    "lead": "Un beau design ne sert à rien si Google ne vous trouve pas, si le site est lent sur mobile, ou si le visiteur ne sait pas comment vous joindre. Je conçois des sites visibles dans les recherches, rapides à charger et qui poussent à l'action.",
+    "card1Title": "Visible sur Google",
+    "card1Desc": "Référencement technique inclus dès la livraison : balises, structure, schema, sitemap. Vos clients vous trouvent quand ils vous cherchent.",
+    "card2Title": "Rapide même sur mobile",
+    "card2Desc": "Core Web Vitals optimisés, images servies au bon format, code allégé. Plus de 60% du trafic vient du mobile, il doit être impeccable.",
+    "card3Title": "Conçu pour convertir",
+    "card3Desc": "CTA visibles, parcours clair, formulaires courts. Chaque page guide le visiteur vers une action concrète : appeler, réserver, acheter.",
+    "ctaLabel": "Parler de votre projet"
   },
   "about": {
     "title": "À propos",
@@ -30,10 +83,10 @@
     "value1Desc": "Architecture claire, code documenté et bonnes pratiques pour faciliter l'évolution de votre projet",
     "value1Icon": "code",
     "value2Title": "Performance",
-    "value2Desc": "Optimisation du temps de chargement, requêtes efficaces et expérience utilisateur fluide",
+    "value2Desc": "Temps de chargement optimisés et requêtes efficaces pour une expérience utilisateur fluide",
     "value2Icon": "zap",
     "value3Title": "Communication",
-    "value3Desc": "Points réguliers, transparence sur l'avancement et réactivité pour un projet serein",
+    "value3Desc": "Points réguliers et avancement transparent pour un projet sans mauvaise surprise",
     "value3Icon": "messageCircle"
   },
   "skills": {
@@ -165,7 +218,8 @@
         "role": "Développeur Fullstack",
         "duration": "2 semaines",
         "links": {
-          "live": "https://steamhunter.app"
+          "live": "https://steamhunter.app",
+          "android": "https://play.google.com/store/apps/details?id=com.kingluffyxx.steamhunter"
         },
         "status": "live"
       },

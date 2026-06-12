@@ -4,24 +4,77 @@
     "description": "Fullstack web developer with 7+ years of experience. Specialized in PHP (Symfony, Laravel) and Next.js/React. Freelance available."
   },
   "nav": {
-    "about": "About",
     "services": "Services",
-    "skills": "Skills",
-    "experience": "Experience",
-    "projects": "Projects",
-    "contact": "Contact"
+    "seo": "SEO",
+    "blog": "Blog",
+    "projects": "Work",
+    "about": "About",
+    "contact": "Contact",
+    "parcours": "Career"
+  },
+  "seo": {
+    "badge": "SEO included in every engagement",
+    "titleHighlight": "SEO included",
+    "titleRest": "on every project",
+    "subtitle": "Indexing, Core Web Vitals, schema.org and page structure are handled from the start, not bolted on at the end.",
+    "pillar1Title": "Technical SEO",
+    "pillar1Description": "Core Web Vitals, schema.org, sitemap, hreflang, Search Console indexing.",
+    "pillar1Item1": "Lighthouse 95+ on mobile",
+    "pillar1Item2": "Schema.org Person, Service, Product",
+    "pillar1Item3": "Validated sitemap and hreflang",
+    "pillar1Item4": "Search Console indexing",
+    "pillar2Title": "Content SEO",
+    "pillar2Description": "Keywords, Hn tagging, E-E-A-T signals, internal linking.",
+    "pillar2Item1": "Targeted keyword research",
+    "pillar2Item2": "Optimized Hn structure and tags",
+    "pillar2Item3": "E-E-A-T signals",
+    "pillar2Item4": "Internal linking",
+    "pillar3Title": "Local SEO",
+    "pillar3Description": "Google Business Profile, LocalBusiness schema, NAP citations, location pages.",
+    "pillar3Item1": "Optimized Google Business Profile",
+    "pillar3Item2": "LocalBusiness schema",
+    "pillar3Item3": "Consistent NAP citations",
+    "pillar3Item4": "City pages",
+    "exampleTitle": "This site as an example",
+    "exampleDescription": "Lighthouse 95+, schema.org Person and ProfessionalService, FR/EN hreflang, dynamic sitemap, OG image generated on the fly. Verifiable in a few minutes.",
+    "exampleCta": "Audit my site",
+    "statLighthouse": "Lighthouse mobile",
+    "statIndexable": "Indexable pages",
+    "statSchemas": "JSON-LD schemas",
+    "statLanguages": "hreflang languages"
+  },
+  "parcours": {
+    "metaTitle": "Career path",
+    "metaDescription": "Xavier Adda's professional background: 7+ years of web development experience, freelance and permanent roles in tech companies and startups.",
+    "back": "Back to home",
+    "title": "Career",
+    "intro": "7+ years in web development: tech companies, startups, freelance missions."
   },
   "hero": {
     "greeting": "Hi, I'm",
     "name": "Xavier Adda",
-    "title": "Fullstack Developer",
-    "subtitle": "7+ years of experience • Freelance",
+    "title": "Web Design & SEO Freelance",
+    "subtitle": "I build websites that convert and rank on Google",
+    "location": "Paris & Remote · Reply within 24h",
     "available": "Available",
     "flipPrefix": "I can",
-    "flipWords": ["develop your project", "build your SaaS", "modernize your code", "create your MVP", "develop your API", "build your business website", "launch your online store", "create your landing page", "redesign your website"],
-    "ctaProjects": "View my projects",
-    "ctaContact": "Contact me",
-    "ctaDownloadCV": "Download my resume"
+    "flipWords": ["build your business website", "launch your online store", "boost your SEO", "redesign your site", "speed up your site", "build your web app"],
+    "ctaProjects": "Get a free quote",
+    "ctaContact": "Book a 15-min call",
+    "ctaDownloadCV": "See my work",
+    "trustBadge": "Quote within 48h · 7+ years of experience"
+  },
+  "whyWebsite": {
+    "eyebrow": "What a good website should do",
+    "title": "Your website should bring you customers",
+    "lead": "A polished design is worthless if Google can't find you, the mobile version drags, or visitors don't know how to reach you. I build websites that show up in search, load fast and push visitors to act.",
+    "card1Title": "Visible on Google",
+    "card1Desc": "Technical SEO included from day one: meta tags, structure, schema, sitemap. Your customers find you when they search for you.",
+    "card2Title": "Fast on mobile",
+    "card2Desc": "Core Web Vitals optimized, images served in the right format, lean code. Over 60% of traffic comes from mobile, it has to be flawless.",
+    "card3Title": "Built to convert",
+    "card3Desc": "Clear calls to action, focused user journey, short forms. Every page guides the visitor toward something concrete: call, book, buy.",
+    "ctaLabel": "Discuss your project"
   },
   "about": {
     "title": "About",
@@ -30,10 +83,10 @@
     "value1Desc": "Clean architecture, documented code and best practices to facilitate the evolution of your project",
     "value1Icon": "code",
     "value2Title": "Performance",
-    "value2Desc": "Optimized load times, efficient queries and smooth user experience",
+    "value2Desc": "Optimized load times and efficient queries for a smooth user experience",
     "value2Icon": "zap",
     "value3Title": "Communication",
-    "value3Desc": "Regular updates, transparency on progress and responsiveness for a smooth project",
+    "value3Desc": "Regular updates and transparent progress so you always know where the project stands",
     "value3Icon": "messageCircle"
   },
   "skills": {
@@ -165,7 +218,8 @@
         "role": "Fullstack Developer",
         "duration": "2 weeks",
         "links": {
-          "live": "https://steamhunter.app"
+          "live": "https://steamhunter.app",
+          "android": "https://play.google.com/store/apps/details?id=com.kingluffyxx.steamhunter"
         },
         "status": "live"
       },
