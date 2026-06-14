@@ -101,6 +101,7 @@ export function Hero() {
                                             sizes="(max-width: 768px) 256px, (max-width: 1024px) 320px, 384px"
                                             quality={75}
                                             priority
+                                            fetchPriority="high"
                                         />
                                     </div>
                                 </div>
