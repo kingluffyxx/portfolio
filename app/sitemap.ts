@@ -2,8 +2,7 @@ import { MetadataRoute } from "next"
 import { templates } from "@/lib/templates-data"
 import { blogPosts } from "@/lib/blog-data"
 import { services } from "@/lib/services-data"
-
-const PROJECT_SLUGS = ["flowsolo", "steamhunter"] as const
+import { projectSlugs } from "@/lib/projects-data"
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://xavieradda.dev"
@@ -63,7 +62,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }),
   ]
 
-  for (const slug of PROJECT_SLUGS) {
+  for (const slug of projectSlugs) {
     entries.push(
       ...withAlternates(`/projets/${slug}`, {
         lastModified: now,

@@ -33,6 +33,7 @@ export function Footer() {
                         <ul className="space-y-2 text-sm text-muted-foreground">
                             <li><Link href="/projets/flowsolo" className="hover:text-primary transition-colors">FlowSolo</Link></li>
                             <li><Link href="/projets/steamhunter" className="hover:text-primary transition-colors">SteamHunter</Link></li>
+                            <li><Link href="/projets/artedas" className="hover:text-primary transition-colors">Artedas</Link></li>
                             <li><Link href="/realisations" className="hover:text-primary transition-colors">Toutes les réalisations & maquettes</Link></li>
                         </ul>
                     </div>

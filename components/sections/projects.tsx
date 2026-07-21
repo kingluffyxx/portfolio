@@ -216,6 +216,16 @@ export function Projects() {
                         ))}
                     </div>
                 )}
+
+                {/* Voir plus */}
+                <div className={`mt-12 flex justify-center scroll-animate ${isVisible ? 'scroll-animate-visible' : ''}`} style={{ transitionDelay: '0.3s' }}>
+                    <Button asChild size="lg" variant="outline">
+                        <Link href="/realisations">
+                            {t('viewMore')}
+                            <ArrowRight className="ml-2 w-4 h-4" />
+                        </Link>
+                    </Button>
+                </div>
             </div>
         </section>
     )

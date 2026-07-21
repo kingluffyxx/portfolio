@@ -1,4 +1,4 @@
-export type ProjectSlug = "flowsolo" | "steamhunter"
+export type ProjectSlug = "flowsolo" | "steamhunter" | "artedas"
 export type Locale = "fr" | "en"
 
 /** Locale-sensitive prose for a project */
@@ -154,6 +154,69 @@ export const projects: Record<ProjectSlug, ProjectData> = {
         "Published on Google Play Store",
         "EAS CI/CD pipeline for OTA deployments",
         "Offline-first architecture",
+      ],
+      statusLabel: "Live",
+    },
+  },
+  artedas: {
+    slug: "artedas",
+    image: "/images/projects/artedas.jpg",
+    tags: ["Laravel", "Blade", "TailwindCSS", "Vite", "SEO"],
+    stack: [
+      { category: "Backend", items: ["Laravel", "PHP"] },
+      { category: "Frontend", items: ["Blade", "TailwindCSS", "Vite"] },
+      { category: "Prestation", items: ["Refonte", "Intégration", "SEO"] },
+    ],
+    links: { live: "https://www.artedas.fr" },
+    status: "live",
+    datePublished: "2026-06-15",
+    fr: {
+      title: "Artedas : migration d'un framework PHP maison vers Laravel",
+      tagline:
+        "Migration d'un site de 10 ans bâti sur un framework PHP maison vers Laravel et refonte du front à partir de la maquette client.",
+      description:
+        "Reprise complète du site d'Artedas France, partenaire exclusif de Cadence : migration du back d'un framework PHP maison vers Laravel et refonte du front sur maquette fournie.",
+      longDescription:
+        "Artedas France est, depuis plus de 25 ans, le partenaire exclusif de Cadence en France, leader mondial des outils de conception de circuits imprimés (CAO électronique). Le site existant, en production depuis plus de 10 ans, reposait sur un framework PHP maison de l'époque PHP 4, devenu difficile à maintenir et à faire évoluer. Mission freelance : migrer l'ensemble des fonctionnalités back vers Laravel (catalogue solutions et produits, espace client premium avec gestion des licences, téléchargements, mises à jour et tickets de support, formulaires commerciaux et prise de rendez-vous) et refondre entièrement le front à partir d'une maquette fournie par le client, intégrée en Blade + TailwindCSS avec un build Vite.",
+      context:
+        "Prestation client en freelance : reprise d'un site legacy bâti sur un framework PHP maison (10+ ans), réécriture du back sur Laravel et intégration pixel-perfect du front depuis la maquette du client.",
+      highlights: [
+        "Migration d'un framework PHP maison vers Laravel",
+        "Intégration front sur maquette client (Blade + Tailwind)",
+        "Catalogue solutions et produits structuré",
+        "Espace client premium (licences, téléchargements, MAJ)",
+        "Plateforme de tickets de support",
+        "Formulaires commerciaux et prise de rendez-vous",
+      ],
+      results: [
+        "Framework PHP maison legacy remplacé par une base Laravel maintenable",
+        "Front refondu conforme à la maquette client",
+        "Site en production sur artedas.fr",
+      ],
+      statusLabel: "En ligne",
+    },
+    en: {
+      title: "Artedas: migrating a custom PHP framework to Laravel",
+      tagline:
+        "Migrated a 10-year-old site built on a custom PHP framework to Laravel and rebuilt the front-end from the client's mockup.",
+      description:
+        "Full rebuild of the Artedas France website, Cadence's exclusive partner: custom PHP framework back-end migrated to Laravel and front-end redesigned from a provided mockup.",
+      longDescription:
+        "For over 25 years, Artedas France has been the exclusive partner of Cadence in France, the world leader in PCB design tools (EDA). The existing website, in production for more than 10 years, ran on a custom in-house PHP framework from the PHP 4 era that had become hard to maintain and evolve. Freelance mission: migrate all back-end features to Laravel (solutions and products catalog, premium client area with license management, downloads, updates and support tickets, sales forms and booking) and fully rebuild the front-end from a client-provided mockup, integrated with Blade + TailwindCSS and a Vite build.",
+      context:
+        "Freelance client work: taking over a legacy site built on a custom PHP framework (10+ years), rewriting the back-end on Laravel and pixel-perfect integration of the front-end from the client's mockup.",
+      highlights: [
+        "Custom PHP framework migrated to Laravel",
+        "Front-end built from client mockup (Blade + Tailwind)",
+        "Structured solutions and products catalog",
+        "Premium client area (licenses, downloads, updates)",
+        "Support ticketing platform",
+        "Sales forms and booking",
+      ],
+      results: [
+        "Legacy custom PHP framework replaced by a maintainable Laravel base",
+        "Front-end rebuilt to match the client mockup",
+        "Live in production on artedas.fr",
       ],
       statusLabel: "Live",
     },

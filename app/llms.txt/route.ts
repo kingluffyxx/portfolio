@@ -22,6 +22,7 @@ export function GET() {
 
 - [FlowSolo](https://xavieradda.dev/projets/flowsolo): Productivity app for solopreneurs (Next.js + Prisma + Better Auth, live at flowsolo.app)
 - [SteamHunter](https://xavieradda.dev/projets/steamhunter): Mobile app for tracking Steam achievements (React Native + Expo, on Google Play)
+- [Artedas](https://xavieradda.dev/projets/artedas): Migrated a legacy custom PHP framework to Laravel and rebuilt the front-end for Artedas France, Cadence's exclusive EDA partner (Laravel + Blade + Vite, live at artedas.fr)
 
 ## Blog
 
