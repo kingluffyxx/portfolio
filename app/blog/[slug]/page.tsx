@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation"
 import Link from "next/link"
+import Image from "next/image"
 import type { Metadata } from "next"
 import { ArrowLeft, ArrowRight, Clock, Calendar } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
@@ -125,12 +126,23 @@ export default async function BlogPostPage({ params }: Params) {
 
       {/* Header */}
       <header className="mb-12">
-        {post.coverIsEmoji && (
+        {post.coverIsEmoji ? (
           <div
             className="w-20 h-20 mb-8 rounded-2xl bg-linear-to-br from-primary/10 to-accent/5 flex items-center justify-center text-5xl border border-primary/15"
             aria-hidden
           >
             {post.cover}
+          </div>
+        ) : (
+          <div className="relative aspect-[2/1] mb-8 rounded-2xl overflow-hidden border border-primary/15">
+            <Image
+              src={post.cover}
+              alt={post.title}
+              fill
+              priority
+              sizes="(max-width: 768px) 100vw, 800px"
+              className="object-cover"
+            />
           </div>
         )}
 
@@ -207,6 +219,17 @@ export default async function BlogPostPage({ params }: Params) {
                 href={`/blog/${p.slug}`}
                 className="group block p-5 rounded-xl border border-border bg-card hover:border-primary/40 transition-colors"
               >
+                {!p.coverIsEmoji && (
+                  <div className="relative aspect-[16/9] mb-3 rounded-lg overflow-hidden border border-border">
+                    <Image
+                      src={p.cover}
+                      alt={p.title}
+                      fill
+                      sizes="(max-width: 768px) 100vw, 300px"
+                      className="object-cover"
+                    />
+                  </div>
+                )}
                 <div className="flex items-center gap-2 text-xs text-muted-foreground mb-3">
                   {p.coverIsEmoji && (
                     <span className="text-xl" aria-hidden>

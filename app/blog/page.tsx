@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Image from "next/image"
 import type { Metadata } from "next"
 import { ArrowRight, Clock, Tag } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
@@ -104,8 +105,21 @@ export default function BlogIndexPage() {
                 {featured.cover}
               </div>
             </div>
-          ) : null}
-          <div className="md:col-span-9">
+          ) : (
+            <div className="md:col-span-4">
+              <div className="relative aspect-[16/10] rounded-2xl overflow-hidden border border-primary/15">
+                <Image
+                  src={featured.cover}
+                  alt={featured.title}
+                  fill
+                  priority
+                  sizes="(max-width: 768px) 100vw, 400px"
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+            </div>
+          )}
+          <div className={featured.coverIsEmoji ? "md:col-span-9" : "md:col-span-8"}>
             <div className="flex items-center gap-3 mb-3 text-xs">
               <Badge className="bg-primary text-primary-foreground">
                 Dernier article
@@ -156,7 +170,17 @@ export default function BlogIndexPage() {
                     >
                       {post.cover}
                     </div>
-                  ) : null}
+                  ) : (
+                    <div className="relative w-16 h-16 shrink-0 rounded-xl overflow-hidden border border-primary/15">
+                      <Image
+                        src={post.cover}
+                        alt={post.title}
+                        fill
+                        sizes="64px"
+                        className="object-cover"
+                      />
+                    </div>
+                  )}
                   <div className="flex-1 min-w-0">
                     <div className="flex items-center gap-2 text-xs text-muted-foreground mb-2 flex-wrap">
                       <span className="text-primary font-semibold tracking-wide">

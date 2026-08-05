@@ -35,8 +35,8 @@ export const blogPosts: BlogPost[] = [
     category: "SEO",
     tags: ["SEO", "architecture", "blog"],
     readingTime: 6,
-    cover: "🔗",
-    coverIsEmoji: true,
+    cover: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1600&q=80",
+    coverIsEmoji: false,
     content: [
       {
         type: "lead",
@@ -135,8 +135,8 @@ export const blogPosts: BlogPost[] = [
     category: "Création de site",
     tags: ["WordPress", "Next.js", "performance"],
     readingTime: 8,
-    cover: "⚖️",
-    coverIsEmoji: true,
+    cover: "https://images.unsplash.com/photo-1517180102446-f3ece451e9d8?auto=format&fit=crop&w=1600&q=80",
+    coverIsEmoji: false,
     content: [
       {
         type: "lead",
@@ -239,8 +239,8 @@ export const blogPosts: BlogPost[] = [
     category: "SEO",
     tags: ["SEO", "audit", "checklist"],
     readingTime: 7,
-    cover: "🔍",
-    coverIsEmoji: true,
+    cover: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1600&q=80",
+    coverIsEmoji: false,
     content: [
       {
         type: "lead",
@@ -338,8 +338,8 @@ export const blogPosts: BlogPost[] = [
     category: "Création de site",
     tags: ["prix", "freelance", "guide"],
     readingTime: 9,
-    cover: "💶",
-    coverIsEmoji: true,
+    cover: "https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=1600&q=80",
+    coverIsEmoji: false,
     content: [
       {
         type: "lead",
@@ -449,8 +449,8 @@ export const blogPosts: BlogPost[] = [
     category: "Performance",
     tags: ["performance", "Core Web Vitals", "Lighthouse"],
     readingTime: 8,
-    cover: "⚡",
-    coverIsEmoji: true,
+    cover: "https://images.unsplash.com/photo-1487014679447-9f8336841d58?auto=format&fit=crop&w=1600&q=80",
+    coverIsEmoji: false,
     content: [
       {
         type: "lead",
@@ -547,8 +547,8 @@ export const blogPosts: BlogPost[] = [
     category: "Création de site",
     tags: ["création de site", "débutant", "accompagnement"],
     readingTime: 7,
-    cover: "💡",
-    coverIsEmoji: true,
+    cover: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1600&q=80",
+    coverIsEmoji: false,
     content: [
       {
         type: "lead",
@@ -656,8 +656,8 @@ export const blogPosts: BlogPost[] = [
     category: "Création de site",
     tags: ["création de site", "e-commerce", "application"],
     readingTime: 8,
-    cover: "🧭",
-    coverIsEmoji: true,
+    cover: "https://images.unsplash.com/photo-1522542550221-31fd19575a2d?auto=format&fit=crop&w=1600&q=80",
+    coverIsEmoji: false,
     content: [
       {
         type: "lead",

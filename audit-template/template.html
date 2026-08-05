@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<style>
+  @page { size: A4; margin: 0; }
+  * { box-sizing: border-box; }
+  html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  :root {
+    --violet: #6d28d9;
+    --violet2: #7c3aed;
+    --cyan: #22d3ee;
+    --ink: #101014;
+    --grad: linear-gradient(90deg, #6d28d9, #22d3ee);
+    --mono: "SF Mono", "Geist Mono", ui-monospace, Menlo, monospace;
+  }
+  body {
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    color: #26262b; font-size: 11px; line-height: 1.55; margin: 0;
+    background: #d9d9de; padding: 24px 0;
+  }
+
+  /* ---------- feuille A4 ---------- */
+  .page {
+    background: #fff; width: 210mm; min-height: 297mm;
+    margin: 0 auto 24px; padding: 16mm 15mm 12mm;
+    box-shadow: 0 4px 20px rgba(0,0,0,.14);
+    display: flex; flex-direction: column; position: relative; overflow: hidden;
+  }
+  @media print {
+    body { background: #fff; padding: 0; }
+    .page { width: 210mm; min-height: 297mm; margin: 0; box-shadow: none; page-break-after: always; }
+    .page:last-child { page-break-after: auto; }
+  }
+
+  /* ---------- barre de marque (pages contenu) ---------- */
+  .brandbar { display: flex; align-items: center; gap: 9px; }
+  .brandbar img { width: 24px; height: 24px; border-radius: 6px; }
+  .brandbar .nm { font-weight: 800; font-size: 12px; letter-spacing: .2px; color: #18181b; }
+  .brandbar .sp { flex: 1; }
+  .brandbar .doc { font-family: var(--mono); font-size: 8.5px; color: #8a8a93; letter-spacing: 1px; text-transform: uppercase; }
+  .gline { height: 2px; background: var(--grad); border-radius: 2px; margin: 9px 0 20px; }
+
+  /* ---------- pied de page ---------- */
+  .pagefoot {
+    display: flex; align-items: center; gap: 8px; margin-top: auto; padding-top: 8px;
+    border-top: 1px solid #ececef; font-size: 8px; color: #9a9aa2; letter-spacing: .3px;
+  }
+  .pagefoot img { width: 13px; height: 13px; border-radius: 4px; opacity: .9; }
+  .pagefoot .sp { flex: 1; }
+  .pagefoot b { color: #52525b; font-weight: 700; }
+
+  /* ---------- COUVERTURE sombre ---------- */
+  .cover {
+    background:
+      radial-gradient(900px 520px at 10% 6%, rgba(124,58,237,.55), transparent 60%),
+      radial-gradient(780px 560px at 94% 92%, rgba(34,211,238,.30), transparent 62%),
+      radial-gradient(620px 620px at 82% 20%, rgba(109,40,217,.34), transparent 60%),
+      var(--ink);
+    color: #fff; padding: 0; overflow: hidden;
+  }
+  .cover .inner { padding: 20mm 16mm 14mm; display: flex; flex-direction: column; min-height: 297mm; position: relative; z-index: 2; }
+  /* grain */
+  .cover::before {
+    content: ""; position: absolute; inset: 0; z-index: 1; pointer-events: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    opacity: .05;
+  }
+  /* grille fine */
+  .cover::after {
+    content: ""; position: absolute; inset: 0; z-index: 1; pointer-events: none;
+    background-image: radial-gradient(rgba(255,255,255,.05) 1px, transparent 1px);
+    background-size: 26px 26px;
+    -webkit-mask-image: linear-gradient(180deg, #000, transparent 70%);
+            mask-image: linear-gradient(180deg, #000, transparent 70%);
+  }
+  .cover-top { display: flex; align-items: center; gap: 11px; }
+  .cover-top img { width: 40px; height: 40px; border-radius: 10px; box-shadow: 0 0 0 1px rgba(255,255,255,.12); }
+  .cover-top .nm { font-weight: 800; font-size: 16px; letter-spacing: .3px; }
+  .cover-top .tag { font-family: var(--mono); font-size: 8px; letter-spacing: 1.5px; color: #a5b4fc; text-transform: uppercase; margin-top: 1px; }
+  .cover-top .sp { flex: 1; }
+  .cover-top .pill {
+    font-family: var(--mono); font-size: 8px; letter-spacing: 1.5px; text-transform: uppercase;
+    color: #22d3ee; border: 1px solid rgba(34,211,238,.4); border-radius: 20px; padding: 4px 11px;
+  }
+
+  .cover-spacer { flex: 1; }
+  .cover-spacer.small { flex: .55; }
+  .cover-wm {
+    position: absolute; z-index: 1; pointer-events: none;
+    right: -30px; bottom: 150px; width: 400px; opacity: .05;
+  }
+  .cover-hero { }
+  .cover-kicker { font-family: var(--mono); letter-spacing: 5px; font-size: 10px; font-weight: 600; color: var(--cyan); text-transform: uppercase; }
+  .cover-title { font-size: 58px; font-weight: 800; margin: 16px 0 8px; letter-spacing: -1.5px; line-height: 1; }
+  .cover-sub { font-size: 16px; color: #c7c7d1; font-weight: 400; max-width: 90%; }
+  .cover-rule { height: 3px; width: 120px; background: var(--grad); border-radius: 3px; margin: 22px 0 0; }
+
+  .cover-meta { margin-top: 34px; display: grid; grid-template-columns: 1fr 1fr; gap: 0 40px; }
+  .cover-meta .row { display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,.09); }
+  .cover-meta .k { color: #9a9aac; font-size: 10.5px; }
+  .cover-meta .v { color: #fff; font-weight: 700; font-size: 10.5px; text-align: right; }
+
+  .cover-note {
+    margin-top: 26px; background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.08);
+    border-left: 3px solid var(--cyan); border-radius: 6px; padding: 13px 16px;
+    font-size: 10px; color: #c0c0cc; line-height: 1.6;
+  }
+  .cover-foot { margin-top: 28px; display: flex; align-items: center; gap: 8px; font-family: var(--mono); font-size: 8px; letter-spacing: .8px; color: #6b6b78; }
+  .cover-foot .sp { flex: 1; }
+
+  /* ---------- section head ---------- */
+  .sec { display: flex; align-items: center; gap: 10px; margin: 2px 0 0; }
+  .sec .num {
+    background: var(--grad); color: #fff; font-weight: 800; font-size: 12px;
+    width: 24px; height: 24px; border-radius: 7px; display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 2px 6px rgba(109,40,217,.35);
+  }
+  .sec h2 { font-size: 16px; margin: 0; color: #141418; letter-spacing: -.2px; }
+  .rule { border: 0; height: 2px; background: var(--grad); border-radius: 2px; margin: 9px 0 16px; opacity: .9; }
+  .subtitle { font-size: 9.5px; color: #6b6b76; font-family: var(--mono); letter-spacing: .3px; margin: -8px 0 14px; }
+
+  /* ---------- callout ---------- */
+  .callout {
+    background: linear-gradient(180deg, #f7f4ff, #fbfaff); border: 1px solid #ece7fb;
+    border-left: 3px solid var(--violet); padding: 14px 16px; border-radius: 8px; margin: 12px 0 20px;
+  }
+  .callout.plain { background: #f8f8fa; border-color: #ededf1; border-left-color: #cbcbd4; }
+
+  /* ---------- scorecards ---------- */
+  .scores { display: flex; gap: 9px; margin: 16px 0 22px; }
+  .score { flex: 1; border: 1px solid #e7e7ec; border-radius: 9px; padding: 12px 12px; background: #fff; }
+  .score .v { font-size: 15px; font-weight: 800; }
+  .score .l { font-size: 7.5px; letter-spacing: 1px; color: #8a8a93; margin-top: 5px; font-family: var(--mono); text-transform: uppercase; }
+  .v.good { color: var(--violet); } .v.mid { color: #b9770e; } .v.low { color: #b45309; } .v.bad { color: #b91c1c; }
+
+  h4 { color: #141418; font-size: 11.5px; margin: 16px 0 7px; display: flex; align-items: center; gap: 7px; }
+  h4::before { content: ""; width: 8px; height: 8px; border-radius: 2px; background: var(--grad); display: inline-block; }
+  ul { margin: 6px 0 10px; padding-left: 18px; }
+  li { margin: 4px 0; }
+  code { background: #f3f0fb; color: #5b21b6; padding: 1px 5px; border-radius: 4px; font-size: 9.5px; font-family: var(--mono); }
+
+  /* ---------- tables ---------- */
+  table.data { width: 100%; border-collapse: collapse; margin: 4px 0 10px; border-radius: 8px; overflow: hidden; }
+  table.data th {
+    background: var(--ink); color: #fff; text-align: left; font-size: 8.5px;
+    letter-spacing: 1px; padding: 9px 11px; text-transform: uppercase; font-family: var(--mono);
+  }
+  table.data td { padding: 10px 11px; vertical-align: top; border-bottom: 1px solid #eeeef1; }
+  table.data tr:nth-child(even) td { background: #fafafb; }
+  table.data td:first-child { font-weight: 700; width: 24%; color: #1c1c22; }
+  table.data td.grav { width: 14%; }
+  .pill { display: inline-block; font-size: 8px; font-weight: 800; letter-spacing: .4px; padding: 3px 9px; border-radius: 20px; text-transform: uppercase; font-family: var(--mono); }
+  .pill.crit { background: #fdeaea; color: #b91c1c; }
+  .pill.elev { background: #fdeddd; color: #c2410c; }
+  .pill.moy  { background: #fdf4d5; color: #a16207; }
+  .pill.faib { background: #f0f0f3; color: #6b6b76; }
+
+  .note { font-size: 9px; color: #8a8a93; font-style: italic; margin-top: 8px; }
+
+  /* ---------- roadmap ---------- */
+  .rm-lead { font-family: var(--mono); font-size: 9px; letter-spacing: .5px; text-transform: uppercase; color: var(--violet); margin: 18px 0 8px; font-weight: 700; }
+  .roadmap-item { display: flex; gap: 12px; align-items: flex-start; padding: 9px 0; border-bottom: 1px solid #f1f1f4; }
+  .roadmap-item .b { background: var(--grad); color: #fff; width: 19px; height: 19px; border-radius: 10px; font-size: 10px; font-weight: 800; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 1px; }
+</style>
+</head>
+<body>
+
+<!-- ============ PAGE 1 : COUVERTURE ============ -->
+<section class="page cover">
+  <svg class="cover-wm" viewBox="0 0 100 92" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <path d="M12 74 L12 34 L31 52 L50 20 L69 52 L88 34 L88 74 Z" stroke="#fff" stroke-width="3" stroke-linejoin="round"/>
+    <rect x="24" y="82" width="52" height="4" rx="2" fill="#fff"/>
+  </svg>
+  <div class="inner">
+    <div class="cover-top">
+      <img src="logo.png" alt="Xavier Adda">
+      <div>
+        <div class="nm">Xavier Adda</div>
+        <div class="tag">Développeur Fullstack · PHP &amp; Next.js</div>
+      </div>
+      <span class="sp"></span>
+      <span class="pill">Confidentiel</span>
+    </div>
+
+    <div class="cover-spacer"></div>
+
+    <div class="cover-hero">
+      <div class="cover-kicker">Audit technique &amp; design</div>
+      <div class="cover-title">jmmanger.fr</div>
+      <div class="cover-sub">Diagnostic back-end, front-end et design d'interface</div>
+      <div class="cover-rule"></div>
+    </div>
+
+    <div class="cover-spacer small"></div>
+
+    <div class="cover-meta">
+      <div class="row"><span class="k">Site audité</span><span class="v">jmmanger.fr</span></div>
+      <div class="row"><span class="k">Technologie</span><span class="v">Laravel / PHP / Apache</span></div>
+      <div class="row"><span class="k">À l'attention de</span><span class="v">Isabelle Veyan</span></div>
+      <div class="row"><span class="k">Date</span><span class="v">2 août 2026</span></div>
+      <div class="row"><span class="k">Portée</span><span class="v">Analyse externe (boîte noire)</span></div>
+      <div class="row"><span class="k">Auditeur</span><span class="v">Xavier Adda</span></div>
+    </div>
+
+    <div class="cover-note">
+      Cet audit a été réalisé sans accès au code source ni au serveur. Les conclusions back-end reposent sur ce qui est observable de l'extérieur : en-têtes HTTP, cookies, réponses serveur, endpoints exposés. Une confirmation en SSH est recommandée sur les points signalés.
+    </div>
+
+    <div class="cover-foot">
+      <span>xavieradda.dev</span><span class="sp"></span><span>xavier.adda@gmail.com · linkedin.com/in/xavier-adda</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PAGE 2 : SYNTHÈSE ============ -->
+<section class="page">
+  <div class="brandbar"><img src="logo.png" alt=""><span class="nm">Xavier Adda</span><span class="sp"></span><span class="doc">Audit · jmmanger.fr</span></div>
+  <div class="gline"></div>
+
+  <div class="sec"><span class="num">1</span><h2>Synthèse</h2></div>
+  <hr class="rule">
+
+  <div class="callout">
+    Le site est fonctionnel mais présente une faille de configuration notable : le mode debug est resté actif en production et affiche une stacktrace détaillée en cas d'erreur. S'y ajoute une dette technique et graphique réelle : dépendances front anarchiques, en-têtes de sécurité absents et un socle Laravel très probablement en version 5.x, en fin de support. Des correctifs ponctuels ne suffiront pas. Il faut sécuriser la configuration, remettre le socle à niveau et reprendre le front de façon structurée.
+  </div>
+
+  <div class="scores">
+    <div class="score"><div class="v low">Faible</div><div class="l">Sécurité serveur</div></div>
+    <div class="score"><div class="v low">Faible</div><div class="l">Socle PHP / Laravel</div></div>
+    <div class="score"><div class="v low">Faible</div><div class="l">Qualité front</div></div>
+    <div class="score"><div class="v bad">À revoir</div><div class="l">Design / UI</div></div>
+    <div class="score"><div class="v good">Correct</div><div class="l">Contenu / SEO</div></div>
+  </div>
+
+  <h4>Points forts</h4>
+  <ul>
+    <li>Fichiers sensibles protégés : <code>.env</code> et <code>.git/config</code> renvoient 403.</li>
+    <li>En-tête <code>X-Powered-By</code> masqué : pas de fuite de version PHP via les en-têtes.</li>
+    <li>HTTPS valide (Let's Encrypt), HSTS actif, compression gzip active, temps de réponse rapide.</li>
+    <li>Contenu clair et orienté bénéfices, concept de logo mémorable.</li>
+  </ul>
+
+  <h4>Points critiques</h4>
+  <ul>
+    <li><b>Mode debug actif en production.</b> Une erreur affiche une stacktrace complète et les chemins serveur (<code>APP_DEBUG=true</code>). À corriger en priorité.</li>
+    <li><b>Socle Laravel très probablement en version 5.x, en fin de support.</b> Risque de sécurité et d'incompatibilité (version exacte à confirmer en SSH).</li>
+    <li><b>Tous les en-têtes de sécurité HTTP sont absents</b> (CSP, X-Frame-Options, etc.).</li>
+    <li><b>Front désordonné :</b> librairies dupliquées et obsolètes, tout en CDN externe, aucun build.</li>
+    <li><b>Design sans système :</b> palette dispersée, typographie incohérente, imagerie hétéroclite.</li>
+  </ul>
+
+  <div class="pagefoot"><img src="logo.png" alt=""><b>Xavier Adda</b><span>· xavieradda.dev</span><span class="sp"></span><span>Confidentiel · août 2026 · p. 2</span></div>
+</section>
+
+<!-- ============ PAGE 3 : BACK-END ============ -->
+<section class="page">
+  <div class="brandbar"><img src="logo.png" alt=""><span class="nm">Xavier Adda</span><span class="sp"></span><span class="doc">Audit · jmmanger.fr</span></div>
+  <div class="gline"></div>
+
+  <div class="sec"><span class="num">2</span><h2>Audit back-end &amp; serveur</h2></div>
+  <hr class="rule">
+  <p class="subtitle">Stack : Laravel (cookies laravel_session + XSRF-TOKEN), Apache, PHP, hébergement Infomaniak.</p>
+
+  <table class="data">
+    <tr><th>Point</th><th>Gravité</th><th>Constat &amp; impact</th></tr>
+    <tr>
+      <td>Mode debug actif</td><td class="grav"><span class="pill crit">Critique</span></td>
+      <td>Une page inexistante déclenche une stacktrace Laravel complète au lieu d'un 404 propre (<code>APP_DEBUG=true</code>). Elle expose les chemins serveur absolus (<code>/home/clients/&lt;identifiant&gt;/web/jmmanger/…</code>), les noms de contrôleurs et la structure interne. En cas d'erreur base de données, ce mode peut aussi divulguer des identifiants. À corriger en priorité : <code>APP_DEBUG=false</code>.</td>
+    </tr>
+    <tr>
+      <td>Version PHP / Laravel</td><td class="grav"><span class="pill crit">Critique</span></td>
+      <td>Indices concordants vers Laravel 5.x : le middleware <code>CheckForMaintenanceMode</code>, retiré après la 5.x, apparaît dans la stacktrace. Socle et version de PHP associée en fin de support, failles non corrigées, incompatibilité avec les hébergements récents. Principal motif de refonte. Version exacte à confirmer en SSH.</td>
+    </tr>
+    <tr>
+      <td>En-têtes de sécurité</td><td class="grav"><span class="pill elev">Élevée</span></td>
+      <td>Absents : Content-Security-Policy, X-Frame-Options, X-Content-Type-Options, Referrer-Policy, Permissions-Policy. Expose au clickjacking et au MIME-sniffing. Correction rapide via <code>.htaccess</code> ou middleware.</td>
+    </tr>
+    <tr>
+      <td>Flags des cookies</td><td class="grav"><span class="pill moy">Moyenne</span></td>
+      <td><code>laravel_session</code> est bien <code>HttpOnly</code>, mais sans flag <code>Secure</code> ni <code>SameSite</code>. Risque de vol ou de rejeu de session. Réglage dans <code>config/session.php</code>.</td>
+    </tr>
+    <tr>
+      <td>En-tête Cache-Control</td><td class="grav"><span class="pill faib">Faible</span></td>
+      <td>La réponse envoie à la fois <code>no-cache</code> et <code>max-age=7200</code>, soit deux directives contradictoires. Comportement de cache imprévisible.</td>
+    </tr>
+    <tr>
+      <td>HSTS</td><td class="grav"><span class="pill faib">Faible</span></td>
+      <td>Présent mais durée modérée (environ 185 jours). À porter à 1 an et à envisager en <code>preload</code>.</td>
+    </tr>
+  </table>
+
+  <div class="callout plain">
+    <b>Bien configuré.</b> <code>.env</code> (403), <code>.git/config</code> (403), <code>artisan</code> et <code>composer.json</code> (404), en-tête <code>X-Powered-By</code> masqué (pas de fuite de version PHP via les en-têtes).
+  </div>
+
+  <div class="pagefoot"><img src="logo.png" alt=""><b>Xavier Adda</b><span>· xavieradda.dev</span><span class="sp"></span><span>Confidentiel · août 2026 · p. 3</span></div>
+</section>
+
+<!-- ============ PAGE 4 : FRONT TECHNIQUE ============ -->
+<section class="page">
+  <div class="brandbar"><img src="logo.png" alt=""><span class="nm">Xavier Adda</span><span class="sp"></span><span class="doc">Audit · jmmanger.fr</span></div>
+  <div class="gline"></div>
+
+  <div class="sec"><span class="num">3</span><h2>Audit front-end : technique</h2></div>
+  <hr class="rule">
+
+  <table class="data">
+    <tr><th>Point</th><th>Gravité</th><th>Constat</th></tr>
+    <tr>
+      <td>Librairies dupliquées</td><td class="grav"><span class="pill moy">Moyenne</span></td>
+      <td>jQuery 3.5.1 et 3.1.1 chargés ensemble. Bootstrap 4.0.0-alpha.5, alpha.6 et 4.3.1, soit trois versions CSS dont deux alpha jamais destinées à la production. FontAwesome 4.5 et 5.5. Tether et Popper redondants.</td>
+    </tr>
+    <tr>
+      <td>Dépendances externes</td><td class="grav"><span class="pill moy">Moyenne</span></td>
+      <td>Tous les assets sont hébergés sur 10 domaines tiers, dont <code>w3schools.com</code> en hotlink (usage interdit, peut casser sans préavis). Aucun contrôle de version, dépendance réseau, enjeu RGPD (Google / GTM).</td>
+    </tr>
+    <tr>
+      <td>Absence de build</td><td class="grav"><span class="pill faib">Faible</span></td>
+      <td>HTML d'environ 280 Ko non minifié, 4 blocs <code>&lt;style&gt;</code> et 6 scripts inline. Aucun outil de build (Vite, Webpack), pas de séparation structure / style.</td>
+    </tr>
+    <tr>
+      <td>Contenu dupliqué</td><td class="grav"><span class="pill faib">Faible</span></td>
+      <td>Des blocs sont dupliqués dans le HTML pour gérer les tailles d'écran (versions md et lg séparées) au lieu du CSS. Double charge et double maintenance.</td>
+    </tr>
+    <tr>
+      <td>SEO, sitemap</td><td class="grav"><span class="pill faib">Faible</span></td>
+      <td><code>robots.txt</code> pointe vers un sitemap en <code>http://www.</code> (non https). Titre, meta description et Open Graph présents et corrects par ailleurs.</td>
+    </tr>
+  </table>
+
+  <p class="note">Le poids de la page et la multiplication des requêtes CDN pénalisent le temps de chargement perçu, malgré un serveur rapide.</p>
+
+  <div class="pagefoot"><img src="logo.png" alt=""><b>Xavier Adda</b><span>· xavieradda.dev</span><span class="sp"></span><span>Confidentiel · août 2026 · p. 4</span></div>
+</section>
+
+<!-- ============ PAGE 5 : DESIGN ============ -->
+<section class="page">
+  <div class="brandbar"><img src="logo.png" alt=""><span class="nm">Xavier Adda</span><span class="sp"></span><span class="doc">Audit · jmmanger.fr</span></div>
+  <div class="gline"></div>
+
+  <div class="sec"><span class="num">4</span><h2>Audit design &amp; interface</h2></div>
+  <hr class="rule">
+
+  <div class="callout">
+    Esthétique fait maison, fonctionnelle mais datée (Bootstrap 4 alpha, période 2016-2018). Le défaut principal est l'absence de système graphique : chaque élément est appliqué sans règle commune. Résultat, une impression amateur peu compatible avec un produit santé payant.
+  </div>
+
+  <h4>Palette dispersée</h4>
+  <ul>
+    <li>Plus de 6 couleurs d'accent concurrentes (vert chartreuse, 3 bleus ciel différents, jaune, orange) sans hiérarchie ni couleur signature.</li>
+    <li>Le bleu Bootstrap par défaut apparaît sur les liens, signe d'un thème jamais personnalisé.</li>
+  </ul>
+
+  <h4>Typographie incohérente</h4>
+  <ul>
+    <li>Montserrat sur les titres, mais le corps retombe en serif système (façon Times) : la police n'est pas appliquée partout.</li>
+    <li>Pas d'échelle typographique : plus de 12 tailles différentes, jusqu'à du 10 px illisible. Hiérarchie des titres brouillée.</li>
+    <li>Texte justifié sur mobile (rivières de blancs) et sur-emploi du gras : la moitié des mots sont en gras, donc plus rien ne ressort.</li>
+  </ul>
+
+  <h4>Imagerie à harmoniser</h4>
+  <ul>
+    <li>Les visuels changent selon l'appareil (une image sur desktop, une autre sur mobile). Un jeu unique et aligné sur le message santé renforcerait la cohérence.</li>
+  </ul>
+
+  <h4>Mise en page &amp; UX</h4>
+  <ul>
+    <li>Logo et slogan cursif se superposent, lecture brouillonne.</li>
+    <li>Boutons d'action faibles : fond blanc ou crème, quasi aucun contraste, ne ressemblent pas à des boutons.</li>
+    <li>En-tête très haut sur mobile. Bandeau cookies daté, avec une faute (« pour m' assurer »).</li>
+  </ul>
+
+  <div class="callout plain">
+    <b>À conserver.</b> Le concept de logo (cœur multicolore), la clarté du contenu et le duo de couleurs vert et bleu, cohérent avec la thématique santé une fois discipliné.
+  </div>
+
+  <div class="pagefoot"><img src="logo.png" alt=""><b>Xavier Adda</b><span>· xavieradda.dev</span><span class="sp"></span><span>Confidentiel · août 2026 · p. 5</span></div>
+</section>
+
+<!-- ============ PAGE 6 : RECOMMANDATIONS ============ -->
+<section class="page">
+  <div class="brandbar"><img src="logo.png" alt=""><span class="nm">Xavier Adda</span><span class="sp"></span><span class="doc">Audit · jmmanger.fr</span></div>
+  <div class="gline"></div>
+
+  <div class="sec"><span class="num">5</span><h2>Recommandations &amp; feuille de route</h2></div>
+  <hr class="rule">
+
+  <div class="rm-lead">Priorités immédiates · rapides, fort impact</div>
+  <div class="roadmap-item"><span class="b">1</span><div>Désactiver le mode debug en production (<code>APP_DEBUG=false</code>). Priorité absolue : la stacktrace publique expose les chemins serveur et la structure interne.</div></div>
+  <div class="roadmap-item"><span class="b">2</span><div>Confirmer la version exacte de PHP et Laravel en SSH. C'est ce qui conditionne l'ampleur et le coût de la refonte.</div></div>
+  <div class="roadmap-item"><span class="b">3</span><div>Ajouter les en-têtes de sécurité HTTP et les flags <code>Secure</code> et <code>SameSite</code> sur les cookies.</div></div>
+  <div class="roadmap-item"><span class="b">4</span><div>Corriger l'en-tête <code>Cache-Control</code> contradictoire et nettoyer le front : une seule version de jQuery, un seul Bootstrap stable, supprimer les alpha et le hotlink w3schools.</div></div>
+
+  <div class="rm-lead" style="margin-top:20px;">Chantier de fond · la vraie réactualisation</div>
+  <div class="roadmap-item"><span class="b">1</span><div>Migrer le socle vers une version supportée de PHP et de Laravel (sécurité et pérennité).</div></div>
+  <div class="roadmap-item"><span class="b">2</span><div>Mettre en place un design system : une police, une échelle de 5 à 6 tailles, une couleur primaire, une secondaire et un accent d'action.</div></div>
+  <div class="roadmap-item"><span class="b">3</span><div>Unifier la direction artistique (une seule famille visuelle) et retravailler les boutons d'action.</div></div>
+  <div class="roadmap-item"><span class="b">4</span><div>Industrialiser le front : assets auto-hébergés, outil de build, responsive géré en CSS (fin des doublons).</div></div>
+  <div class="roadmap-item"><span class="b">5</span><div>Réintégrer proprement les abonnements supprimés.</div></div>
+
+  <div class="callout" style="margin-top:22px;">
+    <b>Bilan.</b> Les fondations sont là : logo, contenu, duo de couleurs, socle Laravel. Le travail consiste à structurer l'existant et à remettre le socle à niveau, sans tout reconstruire. Les correctifs rapides tiennent le site en attendant le chantier de fond.
+  </div>
+
+  <p class="note">Rapport établi le 2 août 2026, analyse externe. Les points marqués « à confirmer » nécessitent un accès au serveur pour être chiffrés précisément.</p>
+
+  <div class="pagefoot"><img src="logo.png" alt=""><b>Xavier Adda</b><span>· xavieradda.dev · xavier.adda@gmail.com</span><span class="sp"></span><span>Confidentiel · août 2026 · p. 6</span></div>
+</section>
+
+</body>
+</html>
