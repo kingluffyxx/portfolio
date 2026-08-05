@@ -1,8 +1,48 @@
+import type { ReactNode } from "react"
+import Link from "next/link"
 import { Info, AlertTriangle, CheckCircle2 } from "lucide-react"
 import type { BlogBlock } from "@/lib/blog-data"
 
 interface Props {
   blocks: BlogBlock[]
+}
+
+const linkClass =
+  "text-primary font-medium underline underline-offset-2 decoration-primary/40 hover:decoration-primary transition-colors"
+
+// Rend le texte en supportant les liens inline au format markdown [texte](url).
+// Lien interne (commence par "/") → next/link, sinon <a> externe.
+function renderInline(text: string): ReactNode {
+  const re = /\[([^\]]+)\]\(([^)]+)\)/g
+  const parts: ReactNode[] = []
+  let last = 0
+  let m: RegExpExecArray | null
+  let i = 0
+  while ((m = re.exec(text)) !== null) {
+    if (m.index > last) parts.push(text.slice(last, m.index))
+    const [, label, href] = m
+    parts.push(
+      href.startsWith("/") ? (
+        <Link key={i} href={href} className={linkClass}>
+          {label}
+        </Link>
+      ) : (
+        <a
+          key={i}
+          href={href}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={linkClass}
+        >
+          {label}
+        </a>
+      ),
+    )
+    last = m.index + m[0].length
+    i++
+  }
+  if (last < text.length) parts.push(text.slice(last))
+  return parts.length ? parts : text
 }
 
 export function BlogContent({ blocks }: Props) {
@@ -20,14 +60,14 @@ function Block({ block }: { block: BlogBlock }) {
     case "lead":
       return (
         <p className="text-xl md:text-2xl text-foreground/85 leading-relaxed font-light first-letter:text-5xl first-letter:font-semibold first-letter:float-left first-letter:mr-3 first-letter:leading-[0.85] first-letter:text-primary">
-          {block.text}
+          {renderInline(block.text)}
         </p>
       )
 
     case "p":
       return (
         <p className="text-base md:text-lg text-foreground/80 leading-[1.75]">
-          {block.text}
+          {renderInline(block.text)}
         </p>
       )
 
@@ -60,7 +100,7 @@ function Block({ block }: { block: BlogBlock }) {
                 className="mt-3 w-1.5 h-1.5 rounded-full bg-primary shrink-0"
                 aria-hidden
               />
-              <span>{item}</span>
+              <span>{renderInline(item)}</span>
             </li>
           ))}
         </ul>
@@ -77,7 +117,7 @@ function Block({ block }: { block: BlogBlock }) {
               >
                 {String(i + 1).padStart(2, "0")}
               </span>
-              <span>{item}</span>
+              <span>{renderInline(item)}</span>
             </li>
           ))}
         </ol>

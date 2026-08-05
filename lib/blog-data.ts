@@ -325,7 +325,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: "p",
-        text: "Là, un audit SEO sérieux est rentabilisé en quelques semaines. Vous perdez du trafic gratuit à cause de problèmes que vous ne voyez pas. Mon audit à 350 € couvre ces 7 points et 40 autres, et vous repartez avec un plan d'action priorisé.",
+        text: "Là, un audit SEO sérieux est rentabilisé en quelques semaines. Vous perdez du trafic gratuit à cause de problèmes que vous ne voyez pas. [Mon audit SEO à 350 €](/services/audit-seo) couvre ces 7 points et 40 autres, et vous repartez avec un plan d'action priorisé.",
       },
     ],
   },
@@ -621,7 +621,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: "p",
-        text: "La question du budget bloque beaucoup de gens, souvent parce qu'ils n'ont aucun repère. Un site vitrine professionnel n'a pas le même coût qu'une boutique ou qu'une application sur-mesure. J'ai écrit un article complet sur les fourchettes réelles en 2026 pour vous donner des repères clairs avant même de demander un devis.",
+        text: "La question du budget bloque beaucoup de gens, souvent parce qu'ils n'ont aucun repère. Un [site vitrine](/services/site-vitrine) professionnel n'a pas le même coût qu'une [boutique en ligne](/services/boutique-en-ligne) ou qu'une [application sur-mesure](/services/application-sur-mesure). J'ai écrit [un article complet sur les fourchettes réelles en 2026](/blog/combien-coute-site-internet-2026) pour vous donner des repères clairs avant même de demander un devis.",
       },
       {
         type: "callout",
@@ -643,7 +643,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: "p",
-        text: "Une idée de site ne devient un projet qu'au moment où on la pose noir sur blanc. Décrivez à quoi il sert, ce que le visiteur doit faire, rassemblez ce que vous avez, et faites-vous accompagner pour le reste. Le plus dur, c'est la première marche. Une fois posée, tout devient simple.",
+        text: "Une idée de site ne devient un projet qu'au moment où on la pose noir sur blanc. Décrivez à quoi il sert, ce que le visiteur doit faire, rassemblez ce que vous avez, et [faites-vous accompagner](/#contact) pour le reste. Si vous hésitez encore sur le format, [ce guide compare le site vitrine, la boutique et l'application](/blog/site-vitrine-ecommerce-ou-application). Le plus dur, c'est la première marche. Une fois posée, tout devient simple.",
       },
     ],
   },
@@ -669,7 +669,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: "p",
-        text: "C'est le plus courant, et souvent le bon choix pour démarrer. Un site vitrine présente votre activité, vos services, vos réalisations, et pousse le visiteur à vous contacter. Il ne vend rien directement en ligne : son objectif est de générer des appels, des demandes de devis, des réservations.",
+        text: "C'est le plus courant, et souvent le bon choix pour démarrer. Un [site vitrine](/services/site-vitrine) présente votre activité, vos services, vos réalisations, et pousse le visiteur à vous contacter. Il ne vend rien directement en ligne : son objectif est de générer des appels, des demandes de devis, des réservations.",
       },
       {
         type: "ul",
@@ -692,7 +692,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: "p",
-        text: "Dès que vous voulez encaisser un paiement en ligne, vous passez sur une boutique (e-commerce). C'est un cran au-dessus : il faut gérer un catalogue de produits, des stocks, des paiements sécurisés, des livraisons, parfois des comptes clients et des factures. C'est plus puissant, mais aussi plus lourd à maintenir.",
+        text: "Dès que vous voulez encaisser un paiement en ligne, vous passez sur une [boutique en ligne](/services/boutique-en-ligne) (e-commerce). C'est un cran au-dessus : il faut gérer un catalogue de produits, des stocks, des paiements sécurisés, des livraisons, parfois des comptes clients et des factures. C'est plus puissant, mais aussi plus lourd à maintenir.",
       },
       {
         type: "ul",
@@ -713,7 +713,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: "p",
-        text: "C'est le projet le plus ambitieux. Une application (ou SaaS) n'est pas un site qui présente une activité : c'est un outil que les gens utilisent. Un tableau de bord, un espace client, un logiciel en ligne, une plateforme qui met en relation des utilisateurs. C'est là qu'on parle de vraies fonctionnalités : comptes, données, logique métier, abonnements.",
+        text: "C'est le projet le plus ambitieux. Une [application sur-mesure](/services/application-sur-mesure) (ou SaaS) n'est pas un site qui présente une activité : c'est un outil que les gens utilisent. Un tableau de bord, un espace client, un logiciel en ligne, une plateforme qui met en relation des utilisateurs. C'est là qu'on parle de vraies fonctionnalités : comptes, données, logique métier, abonnements.",
       },
       {
         type: "ul",
