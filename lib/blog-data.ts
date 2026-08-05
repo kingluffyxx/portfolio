@@ -538,6 +538,224 @@ export const blogPosts: BlogPost[] = [
       },
     ],
   },
+  {
+    slug: "j-ai-une-idee-de-site-par-ou-commencer",
+    title: "J'ai une idée de site mais je ne sais pas par où commencer",
+    excerpt:
+      "Vous avez le projet en tête depuis des mois, sans jamais franchir le pas. Voici les étapes concrètes pour passer de l'idée à un site en ligne, sans compétence technique.",
+    date: "2026-07-14",
+    category: "Création de site",
+    tags: ["création de site", "débutant", "accompagnement"],
+    readingTime: 7,
+    cover: "💡",
+    coverIsEmoji: true,
+    content: [
+      {
+        type: "lead",
+        text: "C'est la phrase que j'entends le plus souvent au premier rendez-vous : « J'ai une idée depuis longtemps, mais je ne sais pas comment m'y prendre. » Le blocage n'est presque jamais l'idée. C'est le fait de ne pas savoir quelle est la première marche.",
+      },
+      {
+        type: "h2",
+        text: "Le vrai blocage : vous croyez qu'il faut tout savoir avant de commencer",
+      },
+      {
+        type: "p",
+        text: "Beaucoup de gens attendent d'avoir « tout compris » sur les hébergeurs, les noms de domaine, WordPress, le référencement, avant d'oser lancer leur projet. Résultat : le projet reste dans un coin de la tête pendant deux ans. La vérité, c'est que vous n'avez pas besoin de tout savoir. Vous avez besoin de savoir quoi décider, et dans quel ordre.",
+      },
+      {
+        type: "callout",
+        title: "Vous n'êtes pas en retard",
+        text: "La grande majorité des projets qui aboutissent partent d'une idée mal dégrossie et d'un budget serré. Ce qui fait la différence, ce n'est pas la perfection du départ, c'est le fait de commencer.",
+        tone: "info",
+      },
+      {
+        type: "h2",
+        text: "Étape 1 : posez à quoi sert le site en une phrase",
+      },
+      {
+        type: "p",
+        text: "Avant de parler technique, répondez à une seule question : que doit-il se passer quand quelqu'un arrive sur votre site ? Vous appeler ? Acheter un produit ? Réserver un créneau ? Lire vos articles ? Cette phrase oriente absolument tout le reste. Un site fait pour recevoir des appels ne ressemble pas à un site fait pour vendre en ligne.",
+      },
+      {
+        type: "ul",
+        items: [
+          "« Je veux que les gens me contactent pour un devis » → site vitrine avec un formulaire clair.",
+          "« Je veux vendre mes produits » → boutique en ligne.",
+          "« Je veux que les gens réservent un rendez-vous » → site vitrine avec un module de réservation.",
+          "« J'ai une idée d'outil ou de service en ligne » → application ou SaaS, un projet plus ambitieux.",
+        ],
+      },
+      {
+        type: "h2",
+        text: "Étape 2 : listez ce que le visiteur doit pouvoir faire",
+      },
+      {
+        type: "p",
+        text: "Pas besoin de maquette ni de vocabulaire technique. Prenez une feuille et écrivez, comme si vous racontiez à un ami, ce que le visiteur doit voir et faire. « Il arrive, il comprend en dix secondes ce que je propose, il voit mes tarifs, il clique pour me contacter. » Ce petit texte vaut de l'or : c'est le cahier des charges de votre projet, en langage humain.",
+      },
+      {
+        type: "h2",
+        text: "Étape 3 : rassemblez ce que vous avez déjà",
+      },
+      {
+        type: "p",
+        text: "Vous avez probablement plus de matière que vous ne le pensez. Photos, logo, textes de présentation, avis clients, exemples de réalisations. Rassembler tout ça dans un dossier vous fait gagner un temps considérable, et vous fait souvent réaliser ce qui manque.",
+      },
+      {
+        type: "ol",
+        items: [
+          "Un logo, ou au minimum le nom exact et l'orthographe voulue.",
+          "Quelques photos de qualité (vos produits, votre lieu, vous au travail).",
+          "Un texte qui explique ce que vous faites et pour qui.",
+          "Vos coordonnées et vos éventuels tarifs.",
+          "Des exemples de sites que vous aimez, pour donner le ton.",
+        ],
+      },
+      {
+        type: "quote",
+        text: "Vous n'avez pas besoin d'un cahier des charges de vingt pages. Vous avez besoin de savoir ce que le visiteur doit ressentir et faire. Le reste, c'est mon métier.",
+      },
+      {
+        type: "h2",
+        text: "Étape 4 : le budget, plus simple qu'il n'y paraît",
+      },
+      {
+        type: "p",
+        text: "La question du budget bloque beaucoup de gens, souvent parce qu'ils n'ont aucun repère. Un site vitrine professionnel n'a pas le même coût qu'une boutique ou qu'une application sur-mesure. J'ai écrit un article complet sur les fourchettes réelles en 2026 pour vous donner des repères clairs avant même de demander un devis.",
+      },
+      {
+        type: "callout",
+        title: "Le piège des solutions « gratuites »",
+        text: "Les constructeurs de site en glisser-déposer semblent gratuits, mais coûtent en temps, en abonnements cachés et en référencement médiocre. Pour un projet sérieux, l'accompagnement d'un professionnel se rentabilise vite.",
+        tone: "warning",
+      },
+      {
+        type: "h2",
+        text: "Étape 5 : parlez-en à quelqu'un dont c'est le métier",
+      },
+      {
+        type: "p",
+        text: "C'est là que je peux vous aider, même si votre idée est encore floue. Mon travail ne commence pas au code. Il commence en traduisant votre idée en un projet concret : quel type de site, quelles fonctionnalités utiles, quel budget réaliste, dans quel ordre. Vous n'avez rien à préparer de technique. Vous arrivez avec votre idée, je m'occupe du reste.",
+      },
+      {
+        type: "h2",
+        text: "En résumé",
+      },
+      {
+        type: "p",
+        text: "Une idée de site ne devient un projet qu'au moment où on la pose noir sur blanc. Décrivez à quoi il sert, ce que le visiteur doit faire, rassemblez ce que vous avez, et faites-vous accompagner pour le reste. Le plus dur, c'est la première marche. Une fois posée, tout devient simple.",
+      },
+    ],
+  },
+  {
+    slug: "site-vitrine-ecommerce-ou-application",
+    title: "Site vitrine, boutique en ligne ou application : lequel choisir pour votre projet ?",
+    excerpt:
+      "Trois types de sites, trois budgets, trois logiques différentes. Voici comment savoir lequel correspond vraiment à votre besoin, sans payer pour ce qui ne vous servira pas.",
+    date: "2026-08-04",
+    category: "Création de site",
+    tags: ["création de site", "e-commerce", "application"],
+    readingTime: 8,
+    cover: "🧭",
+    coverIsEmoji: true,
+    content: [
+      {
+        type: "lead",
+        text: "« Il me faut un site » veut tout et rien dire. Derrière cette phrase se cachent trois projets très différents, avec des budgets qui vont du simple au vingtuple. Choisir le bon dès le départ vous évite de payer trop, ou de vous retrouver limité six mois plus tard.",
+      },
+      {
+        type: "h2",
+        text: "Le site vitrine : montrer et être contacté",
+      },
+      {
+        type: "p",
+        text: "C'est le plus courant, et souvent le bon choix pour démarrer. Un site vitrine présente votre activité, vos services, vos réalisations, et pousse le visiteur à vous contacter. Il ne vend rien directement en ligne : son objectif est de générer des appels, des demandes de devis, des réservations.",
+      },
+      {
+        type: "ul",
+        items: [
+          "Pour qui : artisans, freelances, professions libérales, restaurants, salons, PME de services.",
+          "Ce qu'il fait : présenter, rassurer, donner envie de vous contacter.",
+          "Ce qu'il ne fait pas : encaisser des paiements, gérer un catalogue, gérer des comptes clients.",
+          "Budget indicatif : le plus accessible des trois.",
+        ],
+      },
+      {
+        type: "callout",
+        title: "Le bon réflexe",
+        text: "Si votre besoin est « qu'on me trouve sur Google et qu'on m'appelle », un site vitrine bien référencé suffit. Inutile de payer pour une boutique dont vous n'utiliserez jamais les fonctions.",
+        tone: "success",
+      },
+      {
+        type: "h2",
+        text: "La boutique en ligne : vendre directement",
+      },
+      {
+        type: "p",
+        text: "Dès que vous voulez encaisser un paiement en ligne, vous passez sur une boutique (e-commerce). C'est un cran au-dessus : il faut gérer un catalogue de produits, des stocks, des paiements sécurisés, des livraisons, parfois des comptes clients et des factures. C'est plus puissant, mais aussi plus lourd à maintenir.",
+      },
+      {
+        type: "ul",
+        items: [
+          "Pour qui : commerçants, créateurs, marques qui vendent des produits physiques ou numériques.",
+          "Ce qu'il fait : catalogue, panier, paiement, gestion des commandes et des stocks.",
+          "Le point de vigilance : une boutique se maintient. Produits, prix, promotions, litiges : c'est un outil vivant.",
+          "Budget indicatif : nettement supérieur au site vitrine.",
+        ],
+      },
+      {
+        type: "p",
+        text: "Un piège fréquent : vouloir une boutique alors qu'on vend peu de produits, ou des prestations sur-mesure. Dans ces cas, un site vitrine avec un simple bouton de paiement ou un formulaire de commande fait souvent mieux le travail, pour bien moins cher.",
+      },
+      {
+        type: "h2",
+        text: "L'application sur-mesure : un outil qui n'existe pas encore",
+      },
+      {
+        type: "p",
+        text: "C'est le projet le plus ambitieux. Une application (ou SaaS) n'est pas un site qui présente une activité : c'est un outil que les gens utilisent. Un tableau de bord, un espace client, un logiciel en ligne, une plateforme qui met en relation des utilisateurs. C'est là qu'on parle de vraies fonctionnalités : comptes, données, logique métier, abonnements.",
+      },
+      {
+        type: "ul",
+        items: [
+          "Pour qui : porteurs de projet avec une idée d'outil ou de service en ligne, entreprises qui veulent digitaliser un processus.",
+          "Ce qu'il fait : ce que rien d'existant ne fait pour vous. C'est du sur-mesure.",
+          "La logique : on part souvent d'une première version simple, puis on l'étoffe selon les retours des utilisateurs.",
+          "Budget indicatif : le plus élevé, et le plus variable selon l'ambition.",
+        ],
+      },
+      {
+        type: "callout",
+        title: "Commencer petit, même pour un gros projet",
+        text: "Si vous avez une idée de SaaS, on ne construit pas tout d'un coup. On identifie le cœur de la valeur, on le sort en version minimale, et on avance par étapes. C'est moins risqué et bien plus efficace.",
+        tone: "info",
+      },
+      {
+        type: "h2",
+        text: "Comment trancher en trois questions",
+      },
+      {
+        type: "ol",
+        items: [
+          "Est-ce que je veux encaisser un paiement directement sur le site ? Si non, un site vitrine suffit probablement.",
+          "Est-ce que je vends un catalogue de produits ? Si oui, c'est une boutique en ligne.",
+          "Est-ce que les gens doivent se connecter et utiliser un outil ? Si oui, c'est une application sur-mesure.",
+        ],
+      },
+      {
+        type: "quote",
+        text: "Le meilleur projet n'est pas le plus gros. C'est celui qui répond à votre besoin réel, sans vous faire payer des fonctions que vous n'utiliserez jamais.",
+      },
+      {
+        type: "h2",
+        text: "En cas de doute, on en parle",
+      },
+      {
+        type: "p",
+        text: "Si vous hésitez encore, c'est normal, et c'est exactement le moment de m'en parler. En un échange, on clarifie votre besoin et on identifie le format juste, ni sous-dimensionné, ni surdimensionné. Vous repartez avec une idée claire de ce qu'il vous faut et de ce que ça coûte.",
+      },
+    ],
+  },
 ]
 
 export const blogCategories = Array.from(
