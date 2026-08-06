@@ -154,6 +154,13 @@ export default async function BlogPostPage({ params }: Params) {
             <Calendar className="w-3.5 h-3.5" />
             <time dateTime={post.date}>{formatDate(post.date)}</time>
           </span>
+          {post.updated && post.updated !== post.date && (
+            <span className="text-muted-foreground/80 inline-flex items-center gap-1.5">
+              <span className="opacity-50">·</span>
+              Mis à jour le{" "}
+              <time dateTime={post.updated}>{formatDate(post.updated)}</time>
+            </span>
+          )}
           <span className="text-muted-foreground inline-flex items-center gap-1.5">
             <Clock className="w-3.5 h-3.5" />
             {post.readingTime} min de lecture

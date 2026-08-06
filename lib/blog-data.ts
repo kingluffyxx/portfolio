@@ -236,6 +236,7 @@ export const blogPosts: BlogPost[] = [
     excerpt:
       "Avant de signer un audit SEO à 800 €, voici les sept points que vous pouvez vérifier vous-même en 30 minutes. Si tout passe, vous avez une bonne base.",
     date: "2026-05-15",
+    updated: "2026-08-06",
     category: "SEO",
     tags: ["SEO", "audit", "checklist"],
     readingTime: 7,
@@ -544,6 +545,7 @@ export const blogPosts: BlogPost[] = [
     excerpt:
       "Vous avez le projet en tête depuis des mois, sans jamais franchir le pas. Voici les étapes concrètes pour passer de l'idée à un site en ligne, sans compétence technique.",
     date: "2026-07-14",
+    updated: "2026-08-06",
     category: "Création de site",
     tags: ["création de site", "débutant", "accompagnement"],
     readingTime: 7,
@@ -653,6 +655,7 @@ export const blogPosts: BlogPost[] = [
     excerpt:
       "Trois types de sites, trois budgets, trois logiques différentes. Voici comment savoir lequel correspond vraiment à votre besoin, sans payer pour ce qui ne vous servira pas.",
     date: "2026-08-04",
+    updated: "2026-08-06",
     category: "Création de site",
     tags: ["création de site", "e-commerce", "application"],
     readingTime: 8,
