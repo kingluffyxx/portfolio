@@ -729,10 +729,10 @@ export const services: Record<ServiceSlug, ServiceData> = {
       h1: "Développeur Laravel freelance ·Île-de-France & Remote",
       metaTitle: "Développeur Laravel Freelance | Xavier Adda",
       metaDescription:
-        "Développeur Laravel freelance pour SaaS, MVP et APIs. 7+ ans d'expérience PHP. Île-de-France et remote. TJM 450€.",
+        "Développeur et expert Laravel freelance pour SaaS, MVP et APIs. 7+ ans d'expérience PHP. Île-de-France et remote. TJM 450€.",
       tagline: "MVP rapides, SaaS scalables et APIs Laravel.",
       intro:
-        "Laravel pour itérer vite sur un MVP ou consolider un SaaS en croissance : auth, abonnements Stripe, dashboards, jobs asynchrones, APIs.",
+        "Expert Laravel avec 7+ ans de PHP : pour itérer vite sur un MVP ou consolider un SaaS en croissance — auth, abonnements Stripe, dashboards, jobs asynchrones, APIs.",
       pricing: "TJM 450€",
       audience: [
         "Fondateurs voulant lancer un MVP en quelques semaines",
@@ -799,9 +799,9 @@ export const services: Record<ServiceSlug, ServiceData> = {
     fr: {
       techName: "Next.js",
       h1: "Développeur Next.js freelance ·Île-de-France & Remote",
-      metaTitle: "Développeur Next.js Freelance | Xavier Adda",
+      metaTitle: "Développeur Next.js Freelance · Alternative à une agence | Xavier Adda",
       metaDescription:
-        "Développeur Next.js / React freelance. SSR, App Router, performance et SEO. 7+ ans d'expérience. Île-de-France & Remote.",
+        "Développeur Next.js / React freelance : l'alternative directe et plus abordable à une agence Next.js. SSR, App Router, performance et SEO. 7+ ans d'expérience. Île-de-France & Remote.",
       tagline: "Applications React/Next.js performantes, App Router, SSR, SEO et Core Web Vitals.",
       intro:
         "Next.js (App Router) pour les SaaS, dashboards, landing pages SEO. Optimisation Core Web Vitals, SSG/SSR adapté, intégration APIs (Symfony, Laravel, headless CMS).",
@@ -810,6 +810,7 @@ export const services: Record<ServiceSlug, ServiceData> = {
         "Startups SaaS construites sur Next.js",
         "Marques cherchant un site marketing performant SEO",
         "Équipes WordPress migrant vers headless",
+        "Ceux qui cherchent une agence Next.js mais préfèrent un contact direct, moins cher",
       ],
       deliverables: [
         "Next.js 15+ en App Router et TypeScript strict",
@@ -827,6 +828,7 @@ export const services: Record<ServiceSlug, ServiceData> = {
       faqs: [
         { q: "Pourquoi Next.js ?", a: "SSR, SSG, routing, images, fonts, SEO et edge sans config." },
         { q: "Migration WordPress ?", a: "Oui, en headless (WP CMS + Next.js front) ou réécriture complète." },
+        { q: "Freelance ou agence Next.js ?", a: "Une agence Next.js facture la structure (chef de projet, marge, intermédiaires). En freelance senior, vous avez le développeur en direct, un devis plus clair et souvent 30 à 50% moins cher. Pour un site ou une app Next.js, c'est le plus souvent suffisant." },
       ],
     },
     en: {

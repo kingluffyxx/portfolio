@@ -759,6 +759,91 @@ export const blogPosts: BlogPost[] = [
       },
     ],
   },
+  {
+    slug: "freelance-ou-agence-nextjs",
+    title: "Freelance ou agence Next.js : que choisir pour votre projet ?",
+    excerpt:
+      "Une agence Next.js facture une structure entière. Un freelance senior livre le même code, en direct et souvent 30 à 50 % moins cher. Voici comment trancher.",
+    date: "2026-08-06",
+    category: "Création de site",
+    tags: ["next.js", "freelance", "agence"],
+    readingTime: 6,
+    cover: "🤝",
+    coverIsEmoji: true,
+    content: [
+      {
+        type: "lead",
+        text: "Vous avez un projet Next.js et vous cherchez qui pour le construire. La première idée, c'est souvent « une agence ». Mais entre une agence Next.js et un développeur freelance senior, la différence de prix va du simple au double, pour un résultat technique souvent identique. Voici comment choisir sans vous tromper.",
+      },
+      {
+        type: "h2",
+        text: "Ce que vous payez dans une agence Next.js",
+      },
+      {
+        type: "p",
+        text: "Une agence, ce n'est pas seulement des développeurs. C'est aussi un chef de projet, un commercial, des locaux, une marge, et parfois plusieurs intermédiaires entre vous et la personne qui écrit réellement le code. Tout ça se retrouve sur la facture. Ce n'est pas du gaspillage en soi : sur un très gros projet avec plusieurs équipes à coordonner, cette structure a du sens.",
+      },
+      {
+        type: "p",
+        text: "Le problème, c'est quand vous payez cette structure pour un projet qui n'en a pas besoin : un site vitrine performant, une landing page SEO, un dashboard, un SaaS en phase de lancement. Là, vous financez de l'organisation dont votre projet ne tirera aucune valeur.",
+      },
+      {
+        type: "h2",
+        text: "Ce que change un freelance senior",
+      },
+      {
+        type: "ul",
+        items: [
+          "Vous parlez directement à la personne qui code. Pas de téléphone arabe entre vous et la technique.",
+          "Le devis est plus clair : vous payez du développement, pas une chaîne d'intermédiaires.",
+          "Le tarif est souvent 30 à 50 % inférieur à une agence pour un périmètre équivalent.",
+          "Les décisions vont plus vite : une question technique trouve sa réponse dans l'heure, pas dans le prochain point projet.",
+        ],
+      },
+      {
+        type: "callout",
+        title: "Le code est le même",
+        text: "Next.js, l'App Router, TypeScript, le SSR, les Core Web Vitals : ce sont les mêmes outils et les mêmes bonnes pratiques, que le développeur soit en agence ou en freelance. La qualité dépend du développeur, pas de la structure autour.",
+        tone: "info",
+      },
+      {
+        type: "h2",
+        text: "Quand l'agence reste le bon choix",
+      },
+      {
+        type: "p",
+        text: "Soyons honnêtes : le freelance n'est pas toujours la réponse. L'agence garde l'avantage dans quelques cas précis.",
+      },
+      {
+        type: "ul",
+        items: [
+          "Projet très gros nécessitant plusieurs développeurs en parallèle, sur une longue durée.",
+          "Besoin de garanties contractuelles lourdes et d'une continuité d'équipe imposée par votre direction.",
+          "Vous voulez déléguer aussi le design, le contenu, le marketing, et pas seulement le développement.",
+        ],
+      },
+      {
+        type: "h2",
+        text: "Comment trancher en une question",
+      },
+      {
+        type: "p",
+        text: "Demandez-vous : « Ai-je besoin d'une équipe, ou d'un bon développeur ? » Si votre projet tient dans la tête d'une personne compétente — un site, une app, un SaaS de lancement — le freelance vous fera économiser sans rien perdre en qualité. Si vous devez coordonner plusieurs chantiers en même temps sur des mois, l'agence se justifie.",
+      },
+      {
+        type: "quote",
+        text: "Vous ne payez pas pour un logo d'agence sur un devis. Vous payez pour du code qui marche et un site rapide. Choisissez en fonction de ça.",
+      },
+      {
+        type: "h2",
+        text: "En pratique",
+      },
+      {
+        type: "p",
+        text: "Si votre projet Next.js peut être porté par une personne, un [développeur Next.js freelance](/services/developpement-nextjs) est presque toujours le meilleur rapport qualité-prix : le même niveau technique, un contact direct, un budget maîtrisé. Décrivez-moi votre besoin, je vous dis franchement si un freelance suffit ou si vous avez vraiment besoin d'une agence — [on en parle ici](/#contact).",
+      },
+    ],
+  },
 ]
 
 export const blogCategories = Array.from(
