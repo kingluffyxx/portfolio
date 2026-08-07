@@ -131,6 +131,9 @@ export default async function ProjectPage({ params }: Params) {
             author: {
               "@type": "Person",
               name: pc.testimonial.author ?? "Artedas France",
+              ...(pc.testimonial.authorUrl
+                ? { sameAs: pc.testimonial.authorUrl }
+                : {}),
             },
           },
         }
@@ -318,7 +321,19 @@ export default async function ProjectPage({ params }: Params) {
             </blockquote>
             {(pc.testimonial.author || pc.testimonial.role) && (
               <figcaption className="mt-5 text-sm font-medium text-muted-foreground not-italic">
-                — {pc.testimonial.author}
+                —{" "}
+                {pc.testimonial.authorUrl && pc.testimonial.author ? (
+                  <a
+                    href={pc.testimonial.authorUrl}
+                    target="_blank"
+                    rel="noopener noreferrer nofollow"
+                    className="text-primary underline underline-offset-2 decoration-primary/40 hover:decoration-primary"
+                  >
+                    {pc.testimonial.author}
+                  </a>
+                ) : (
+                  pc.testimonial.author
+                )}
                 {pc.testimonial.author && pc.testimonial.role ? ", " : ""}
                 {pc.testimonial.role}
               </figcaption>
