@@ -11,6 +11,7 @@ export interface ProjectContent {
   highlights: string[]
   results: string[]
   statusLabel: string
+  testimonial?: { quote: string; author?: string; role?: string }
 }
 
 export interface ProjectData {
@@ -194,6 +195,11 @@ export const projects: Record<ProjectSlug, ProjectData> = {
         "Site en production sur artedas.fr",
       ],
       statusLabel: "En ligne",
+      testimonial: {
+        quote:
+          "J'ai eu l'occasion de travailler avec Xavier dans le cadre du développement de la nouvelle version du site web de notre entreprise.\n\nXavier a pris en charge la mise en place du projet avec beaucoup de professionnalisme. Il a développé rapidement les différentes pages tout en assurant une excellente qualité d'exécution, aussi bien sur la gestion du responsive que de l'intégration avec notre base de données.\n\nIl a également porté une attention particulière aux performances du site, notamment en optimisant les images et le chargement des pages, ce qui a permis d'obtenir un résultat fluide et efficace.\n\nAu-delà de ses compétences techniques, j'ai particulièrement apprécié sa capacité à transmettre ses connaissances. Lors de la livraison du projet, il a pris le temps de m'expliquer en détail l'architecture du projet, ainsi que les différentes commandes et bonnes pratiques permettant d'optimiser son déploiement et son fonctionnement.\n\nXavier est un développeur sérieux, réactif et compétent, avec une excellente maîtrise et un véritable souci de la qualité. Je le recommande sans hésitation à toute entreprise recherchant un développeur freelance fiable et efficace.",
+        role: "Client — Artedas France",
+      },
     },
     en: {
       title: "Artedas: migrating a custom PHP framework to Laravel",
@@ -219,6 +225,11 @@ export const projects: Record<ProjectSlug, ProjectData> = {
         "Live in production on artedas.fr",
       ],
       statusLabel: "Live",
+      testimonial: {
+        quote:
+          "I had the opportunity to work with Xavier on the development of the new version of our company website.\n\nXavier handled the project setup with great professionalism. He quickly built the different pages while ensuring excellent execution quality, both in responsive handling and in the integration with our database.\n\nHe also paid particular attention to the site's performance, notably by optimizing images and page loading, which delivered a smooth and efficient result.\n\nBeyond his technical skills, I especially appreciated his ability to share his knowledge. On delivery, he took the time to explain the project architecture in detail, along with the various commands and best practices to optimize its deployment and operation.\n\nXavier is a serious, responsive and skilled developer, with excellent mastery and a genuine concern for quality. I recommend him without hesitation to any company looking for a reliable and efficient freelance developer.",
+        role: "Client — Artedas France",
+      },
     },
   },
 }

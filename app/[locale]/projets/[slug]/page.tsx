@@ -81,6 +81,7 @@ export default async function ProjectPage({ params }: Params) {
         keyFeatures: "Key features",
         stack: "Tech stack",
         results: "Results",
+        testimonial: "What the client says",
         similar: "A similar project?",
         ctaDesc: "Available to build your web or mobile application.",
         cta: "Start a project",
@@ -96,6 +97,7 @@ export default async function ProjectPage({ params }: Params) {
         keyFeatures: "Fonctionnalités clés",
         stack: "Stack technique",
         results: "Résultats",
+        testimonial: "Ce qu'en dit le client",
         similar: "Un projet similaire ?",
         ctaDesc: "Disponible pour développer votre application web ou mobile.",
         cta: "Démarrer un projet",
@@ -115,6 +117,18 @@ export default async function ProjectPage({ params }: Params) {
     creator: { "@id": `${siteUrl}/#person` },
     keywords: project.tags.join(", "),
     inLanguage: loc === "en" ? "en-US" : "fr-FR",
+    ...(pc.testimonial
+      ? {
+          review: {
+            "@type": "Review",
+            reviewBody: pc.testimonial.quote,
+            author: {
+              "@type": "Organization",
+              name: pc.testimonial.author ?? "Artedas France",
+            },
+          },
+        }
+      : {}),
   }
 
   const projectLd =
@@ -279,6 +293,24 @@ export default async function ProjectPage({ params }: Params) {
           ))}
         </ul>
       </section>
+
+      {pc.testimonial && (
+        <section className="mb-12">
+          <h2 className="text-3xl font-bold mb-6">{labels.testimonial}</h2>
+          <figure className="rounded-xl border border-primary/20 bg-primary/5 p-8">
+            <blockquote className="text-lg leading-relaxed text-foreground/90 whitespace-pre-line italic">
+              « {pc.testimonial.quote} »
+            </blockquote>
+            {(pc.testimonial.author || pc.testimonial.role) && (
+              <figcaption className="mt-5 text-sm font-medium text-muted-foreground not-italic">
+                — {pc.testimonial.author}
+                {pc.testimonial.author && pc.testimonial.role ? ", " : ""}
+                {pc.testimonial.role}
+              </figcaption>
+            )}
+          </figure>
+        </section>
+      )}
 
       <section className="rounded-xl border border-border bg-card p-8 text-center">
         <h2 className="text-2xl font-bold mb-3">{labels.similar}</h2>
