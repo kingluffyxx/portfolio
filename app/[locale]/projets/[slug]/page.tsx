@@ -2,7 +2,7 @@ import { notFound } from "next/navigation"
 import Image from "next/image"
 import Link from "next/link"
 import type { Metadata } from "next"
-import { ArrowLeft, ExternalLink, Calendar, CheckCircle2 } from "lucide-react"
+import { ArrowLeft, ExternalLink, Calendar, CheckCircle2, Star } from "lucide-react"
 import { setRequestLocale } from "next-intl/server"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
@@ -122,8 +122,14 @@ export default async function ProjectPage({ params }: Params) {
           review: {
             "@type": "Review",
             reviewBody: pc.testimonial.quote,
+            reviewRating: {
+              "@type": "Rating",
+              ratingValue: "5",
+              bestRating: "5",
+              worstRating: "1",
+            },
             author: {
-              "@type": "Organization",
+              "@type": "Person",
               name: pc.testimonial.author ?? "Artedas France",
             },
           },
@@ -298,6 +304,15 @@ export default async function ProjectPage({ params }: Params) {
         <section className="mb-12">
           <h2 className="text-3xl font-bold mb-6">{labels.testimonial}</h2>
           <figure className="rounded-xl border border-primary/20 bg-primary/5 p-8">
+            <div className="flex gap-1 mb-5" aria-label="5 sur 5">
+              {Array.from({ length: 5 }).map((_, i) => (
+                <Star
+                  key={i}
+                  className="w-5 h-5 fill-amber-400 text-amber-400"
+                  aria-hidden
+                />
+              ))}
+            </div>
             <blockquote className="text-lg leading-relaxed text-foreground/90 whitespace-pre-line italic">
               « {pc.testimonial.quote} »
             </blockquote>
