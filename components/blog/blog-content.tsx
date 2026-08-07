@@ -177,7 +177,7 @@ function Block({ block }: { block: BlogBlock }) {
           <div>
             <p className="font-semibold text-base mb-1">{block.title}</p>
             <p className="text-sm md:text-base text-foreground/75 leading-relaxed">
-              {block.text}
+              {renderInline(block.text)}
             </p>
           </div>
         </aside>

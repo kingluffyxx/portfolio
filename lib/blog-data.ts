@@ -48,7 +48,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: "p",
-        text: "Pour Google, blog.exemple.fr et exemple.fr/blog ne sont pas la même chose. Le sous-domaine est analysé comme un site séparé. Il a sa propre autorité, ses propres backlinks, son propre historique. Le sous-dossier, lui, fait partie du domaine principal et contribue à son autorité globale.",
+        text: "Pour [Google](https://developers.google.com/search/docs/crawling-indexing/consolidate-duplicate-urls), blog.exemple.fr et exemple.fr/blog ne sont pas la même chose. Le sous-domaine est analysé comme un site séparé. Il a sa propre autorité, ses propres backlinks, son propre historique. Le sous-dossier, lui, fait partie du domaine principal et contribue à son autorité globale.",
       },
       {
         type: "callout",
@@ -108,7 +108,7 @@ export const blogPosts: BlogPost[] = [
           "Faites un export complet du contenu du blog (articles, médias, métadonnées).",
           "Préparez la nouvelle structure d'URL en sous-dossier sur le site principal.",
           "Mettez en place des redirections 301 de chaque ancienne URL vers la nouvelle.",
-          "Mettez à jour la Search Console et soumettez le nouveau sitemap.",
+          "Mettez à jour la [Search Console](https://search.google.com/search-console/about) et soumettez le nouveau sitemap.",
           "Surveillez le trafic pendant 4 à 6 semaines, le temps que Google ré-indexe.",
         ],
       },
@@ -179,7 +179,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: "p",
-        text: "Next.js prend l'avantage dès que votre site devient un produit : une application avec authentification, des fonctionnalités custom, des intégrations API multiples, un dashboard utilisateur. C'est aussi le bon choix si la performance est une question stratégique, par exemple pour un site e-commerce où chaque dixième de seconde se traduit en chiffre d'affaires.",
+        text: "[Next.js](https://nextjs.org) prend l'avantage dès que votre site devient un produit : une application avec authentification, des fonctionnalités custom, des intégrations API multiples, un dashboard utilisateur. C'est aussi le bon choix si la performance est une question stratégique, par exemple pour un site e-commerce où chaque dixième de seconde se traduit en chiffre d'affaires.",
       },
       {
         type: "ul",
@@ -307,7 +307,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: "p",
-        text: "Testez votre page d'accueil sur Rich Results Test de Google. Pour un freelance, vous devriez voir au minimum un schema Person ou ProfessionalService. Pour une PME locale, un LocalBusiness. Sans schema, vous laissez Google deviner, et il devine moins bien que vous.",
+        text: "Testez votre page d'accueil sur [Rich Results Test de Google](https://search.google.com/test/rich-results). Pour un freelance, vous devriez voir au minimum un schema Person ou ProfessionalService. Pour une PME locale, un LocalBusiness. Sans schema, vous laissez Google deviner, et il devine moins bien que vous.",
       },
       {
         type: "hr",
@@ -455,7 +455,7 @@ export const blogPosts: BlogPost[] = [
     content: [
       {
         type: "lead",
-        text: "Depuis mars 2024, l'INP a remplacé le FID dans les Core Web Vitals. Ça change concrètement ce sur quoi vous devez travailler. Voici la check 2026, avec ce qui marche vraiment et ce qui ne sert à rien.",
+        text: "Depuis mars 2024, l'INP a remplacé le FID dans les [Core Web Vitals](https://web.dev/articles/vitals). Ça change concrètement ce sur quoi vous devez travailler. Voici la check 2026, avec ce qui marche vraiment et ce qui ne sert à rien.",
       },
       {
         type: "h2",
@@ -803,7 +803,7 @@ export const blogPosts: BlogPost[] = [
       {
         type: "callout",
         title: "Le code est le même",
-        text: "Next.js, l'App Router, TypeScript, le SSR, les Core Web Vitals : ce sont les mêmes outils et les mêmes bonnes pratiques, que le développeur soit en agence ou en freelance. La qualité dépend du développeur, pas de la structure autour.",
+        text: "Next.js, l'[App Router](https://nextjs.org/docs/app), TypeScript, le SSR, les Core Web Vitals : ce sont les mêmes outils et les mêmes bonnes pratiques, que le développeur soit en agence ou en freelance. La qualité dépend du développeur, pas de la structure autour.",
         tone: "info",
       },
       {
