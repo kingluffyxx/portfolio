@@ -344,7 +344,7 @@ export const blogPosts: BlogPost[] = [
     content: [
       {
         type: "lead",
-        text: "Demander un site internet en 2026, c'est obtenir des devis entre 800 € et 80 000 €. La fourchette n'est pas aberrante : elle reflète des projets qui n'ont rien à voir. Voici comment lire un devis et savoir si le prix est juste.",
+        text: "Demander un site internet en 2026, c'est obtenir des devis entre 800 € et 80 000 €. La fourchette n'est pas aberrante : elle reflète des projets qui n'ont rien à voir. Voici comment lire un devis et savoir si le prix est juste. Et si vous ne savez pas encore quel budget prévoir, commencez par [cette méthode pour budgéter votre projet](/blog/comment-budgeter-projet-site-web).",
       },
       {
         type: "h2",
@@ -841,6 +841,114 @@ export const blogPosts: BlogPost[] = [
       {
         type: "p",
         text: "Si votre projet Next.js peut être porté par une personne, un [développeur Next.js freelance](/services/developpement-nextjs) est presque toujours le meilleur rapport qualité-prix : le même niveau technique, un contact direct, un budget maîtrisé. Décrivez-moi votre besoin, je vous dis franchement si un freelance suffit ou si vous avez vraiment besoin d'une agence — [on en parle ici](/#contact).",
+      },
+    ],
+  },
+  {
+    slug: "comment-budgeter-projet-site-web",
+    title: "Comment budgéter votre projet de site web avant de contacter un freelance",
+    excerpt:
+      "Vous avez une idée de site mais aucune idée du budget ? Voici la méthode simple pour estimer votre fourchette vous-même, avant même de demander un devis.",
+    date: "2026-08-07",
+    category: "Création de site",
+    tags: ["budget", "création de site", "débutant"],
+    readingTime: 8,
+    cover: "💰",
+    coverIsEmoji: true,
+    content: [
+      {
+        type: "lead",
+        text: "C'est une situation que je vois presque chaque semaine : quelqu'un a une idée claire de site, il veut avancer, il contacte un freelance… mais quand j'ai la question « quel budget avez-vous prévu ? », c'est le silence. Pas parce que la personne cache son budget : parce qu'elle n'en a aucune idée. Et c'est normal. Voici comment vous en construire un, tout seul, avant même de m'écrire.",
+      },
+      {
+        type: "h2",
+        text: "Pourquoi arriver sans budget vous dessert",
+      },
+      {
+        type: "p",
+        text: "Beaucoup de gens n'osent pas annoncer un budget par peur de « dire une bêtise » ou de se faire surfacturer. En réalité, c'est l'inverse. Un projet sans budget, c'est un projet flou, et un projet flou reçoit des devis flous. Le freelance ne sait pas s'il doit vous proposer une solution à 2 000 € ou à 20 000 €, alors il temporise, pose dix questions, ou pire, part sur une hypothèse à côté de vos moyens.",
+      },
+      {
+        type: "callout",
+        title: "Une fourchette suffit",
+        text: "Vous n'avez pas besoin d'un chiffre exact. Dire « je pense à quelque chose entre 2 000 et 4 000 € » suffit à orienter tout l'échange. Ça ne vous engage pas, ça cadre la discussion.",
+        tone: "info",
+      },
+      {
+        type: "h2",
+        text: "Les 5 questions qui déterminent votre prix",
+      },
+      {
+        type: "p",
+        text: "Le prix d'un site ne tombe pas du ciel. Il dépend de choix concrets que vous êtes le mieux placé pour connaître. Répondez à ces cinq questions et vous aurez déjà 80 % de l'estimation.",
+      },
+      {
+        type: "ol",
+        items: [
+          "Combien de pages ? Une page unique, cinq pages, ou un site avec des dizaines de fiches produits ? Plus il y a de contenu à structurer, plus le temps de travail monte.",
+          "Vendez-vous en ligne ? Encaisser un paiement (boutique) change complètement le projet par rapport à un simple site de présentation.",
+          "Avez-vous déjà le contenu ? Textes, photos, logo prêts, ou tout à créer ? Le contenu manquant est le premier poste qui gonfle un devis.",
+          "Est-ce du standard ou du sur-mesure ? Un site classique coûte moins qu'une fonctionnalité qui n'existe nulle part ailleurs et qu'il faut développer.",
+          "Quel délai ? Un besoin « pour hier » impose de prioriser votre projet et se paie plus cher qu'un planning souple.",
+        ],
+      },
+      {
+        type: "h2",
+        text: "Traduire vos réponses en fourchette",
+      },
+      {
+        type: "p",
+        text: "Une fois ces questions répondues, vous pouvez vous positionner sur une fourchette réaliste. Pour les chiffres concrets par type de projet, j'ai détaillé les montants dans un article dédié : [combien coûte un site internet en 2026](/blog/combien-coute-site-internet-2026). Croisez vos réponses avec ces fourchettes et vous obtenez votre budget de départ.",
+      },
+      {
+        type: "ul",
+        items: [
+          "Site de présentation simple, contenu prêt, pas de vente : bas de la fourchette.",
+          "Plusieurs pages, contenu à créer, quelques fonctionnalités : milieu de fourchette.",
+          "Vente en ligne, sur-mesure, ou délai serré : haut de la fourchette, voire au-delà.",
+        ],
+      },
+      {
+        type: "h2",
+        text: "Ce qui fait exploser le budget (et qu'on peut couper au départ)",
+      },
+      {
+        type: "p",
+        text: "Le réflexe classique est de vouloir tout, tout de suite. C'est le meilleur moyen de faire gonfler la facture et de retarder le lancement. La bonne approche : identifier le cœur de votre projet, le sortir en premier, et ajouter le reste ensuite selon les retours réels.",
+      },
+      {
+        type: "quote",
+        text: "Un site n'est jamais figé. Mieux vaut lancer une version simple qui marche et l'enrichir, que d'attendre six mois et de tout payer d'un coup pour des fonctions dont vous n'êtes même pas sûr.",
+      },
+      {
+        type: "h2",
+        text: "Le coût qu'on oublie toujours : le récurrent",
+      },
+      {
+        type: "p",
+        text: "Un site n'est pas un achat unique. Il faut l'héberger, le maintenir à jour, le sécuriser. Ce coût récurrent est modeste mais réel, et l'ignorer au moment de budgéter mène à de mauvaises surprises. Prévoyez-le dès le départ, au même titre que la création.",
+      },
+      {
+        type: "callout",
+        title: "Ordre de grandeur",
+        text: "L'hébergement et la maintenance d'un site professionnel se situent généralement entre 50 et 250 € par mois selon la complexité. À intégrer dans votre budget annuel, pas seulement dans le devis initial.",
+        tone: "warning",
+      },
+      {
+        type: "h2",
+        text: "Comment présenter votre budget à un freelance",
+      },
+      {
+        type: "p",
+        text: "Une fois votre fourchette en tête, annoncez-la simplement. « Voici mon projet, voici ce que le site doit faire, et je pense à un budget entre X et Y. » Cette phrase fait gagner un temps énorme : le freelance vous dit tout de suite si c'est réaliste, ce qui rentre dans l'enveloppe, et ce qu'il faut éventuellement décaler à plus tard. C'est le contraire de se faire avoir : c'est reprendre la main sur la discussion.",
+      },
+      {
+        type: "h2",
+        text: "En résumé",
+      },
+      {
+        type: "p",
+        text: "Budgéter un site n'a rien de sorcier : répondez aux cinq questions, croisez avec les fourchettes du marché, gardez le cœur du projet pour la première version, et n'oubliez pas le récurrent. Vous arriverez chez le freelance avec un projet clair et un budget cadré, et vous obtiendrez un bien meilleur devis. Si vous voulez qu'on estime ensemble le budget de votre projet, [écrivez-moi](/#contact) : je vous donne une fourchette honnête, sans engagement.",
       },
     ],
   },
