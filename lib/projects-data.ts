@@ -1,4 +1,4 @@
-export type ProjectSlug = "flowsolo" | "steamhunter" | "artedas"
+export type ProjectSlug = "flowsolo" | "steamhunter" | "artedas" | "ilearnromanian"
 export type Locale = "fr" | "en"
 
 /** Locale-sensitive prose for a project */
@@ -233,6 +233,83 @@ export const projects: Record<ProjectSlug, ProjectData> = {
         author: "Aurélien Jouanisson",
         role: "DevOps Engineer, Artedas France",
         authorUrl: "https://www.linkedin.com/in/aur%C3%A9lien-jouanisson-5729b5a8/",
+      },
+    },
+  },
+
+  ilearnromanian: {
+    slug: "ilearnromanian",
+    image: "/images/projects/ilearnromanian.jpg",
+    tags: ["WordPress", "Elementor", "WooCommerce", "SEO", "Design"],
+    stack: [
+      { category: "CMS", items: ["WordPress", "Elementor"] },
+      { category: "E-commerce", items: ["WooCommerce"] },
+      { category: "SEO", items: ["Schema.org", "Open Graph", "Métadonnées"] },
+      { category: "Infra", items: ["Hostinger"] },
+    ],
+    links: { live: "https://ilearnromanian.com" },
+    status: "live",
+    datePublished: "2026-05-01",
+    fr: {
+      title: "I Learn Romanian : refonte et SEO d'une plateforme de cours de roumain",
+      tagline:
+        "Refonte graphique et optimisation SEO d'une plateforme de cours de roumain en ligne (240+ étudiants, 42 pays).",
+      description:
+        "Refonte complète d'un site WordPress pour une tutrice de roumain certifiée : nouveau design, SEO, migration d'hébergement et réservation de cours en ligne.",
+      longDescription:
+        "I Learn Romanian est la plateforme d'une tutrice de roumain certifiée qui enseigne à plus de 240 étudiants répartis dans 42 pays. Le site WordPress existant avait besoin d'une refonte complète : nouvelle identité visuelle aux couleurs du drapeau roumain, optimisation SEO technique, migration d'hébergement et mise en place d'un système de réservation de cours en ligne. Mission freelance couvrant le design et l'intégration sous WordPress / Elementor, l'intégration WooCommerce pour la réservation et le paiement des cours, l'optimisation SEO (Schema.org, Open Graph, métadonnées) et la migration de l'hébergement de DreamHost vers Hostinger pour de meilleures performances.",
+      context:
+        "Prestation freelance récurrente : refonte d'un site WordPress existant, nouvelle identité visuelle, optimisation SEO, migration d'hébergement et mise en place de la réservation de cours en ligne. Collaboration toujours en cours.",
+      highlights: [
+        "Refonte graphique avec identité visuelle aux couleurs du drapeau roumain",
+        "Optimisation SEO : Schema.org, Open Graph, métadonnées",
+        "Migration d'hébergement DreamHost → Hostinger",
+        "Intégration WooCommerce et système de réservation de cours",
+      ],
+      results: [
+        "Nouveau design en ligne, cohérent avec l'identité de la marque",
+        "Réservation et paiement des cours opérationnels",
+        "Hébergement migré vers Hostinger, site plus rapide",
+        "Site en production sur ilearnromanian.com",
+      ],
+      statusLabel: "En ligne",
+      testimonial: {
+        quote:
+          "Travailler avec Xavier a été une expérience formidable ! Non seulement il est professionnel et a fait un travail remarquable sur mon site, mais il est aussi très réactif et résout les problèmes très rapidement, garantissant une expérience fluide sur ma plateforme, pour moi comme pour mes clients. Il a résolu chaque problème et chaque demande que j'ai eus, a communiqué de façon excellente et s'est assuré que tout soit livré à la hauteur de mes exigences. Je collabore toujours avec lui et je continuerai, parce qu'il est le meilleur ! Je le recommande de tout cœur à quiconque cherche une personne professionnelle, créative, excellente en communication et fiable. Merci pour tout ton travail formidable, Xav !",
+        author: "Sefora Geantă",
+        role: "Fondatrice & tutrice, I Learn Romanian",
+        authorUrl: "https://www.linkedin.com/in/sefora-geant%C4%83/",
+      },
+    },
+    en: {
+      title: "I Learn Romanian: redesign and SEO of an online Romanian courses platform",
+      tagline:
+        "Visual redesign and SEO optimization of an online Romanian courses platform (240+ students, 42 countries).",
+      description:
+        "Full redesign of a WordPress site for a certified Romanian tutor: new design, SEO, hosting migration and online lesson booking.",
+      longDescription:
+        "I Learn Romanian is the platform of a certified Romanian tutor teaching more than 240 students across 42 countries. The existing WordPress site needed a full overhaul: a new visual identity in the colors of the Romanian flag, technical SEO optimization, a hosting migration and an online lesson booking system. Freelance mission covering design and integration on WordPress / Elementor, WooCommerce integration for booking and paying for lessons, SEO optimization (Schema.org, Open Graph, metadata) and migrating hosting from DreamHost to Hostinger for better performance.",
+      context:
+        "Ongoing freelance work: redesign of an existing WordPress site, new visual identity, SEO optimization, hosting migration and online lesson booking. Collaboration still active.",
+      highlights: [
+        "Visual redesign with an identity in the colors of the Romanian flag",
+        "SEO optimization: Schema.org, Open Graph, metadata",
+        "Hosting migration DreamHost → Hostinger",
+        "WooCommerce integration and lesson booking system",
+      ],
+      results: [
+        "New design live, consistent with the brand identity",
+        "Lesson booking and payment fully operational",
+        "Hosting migrated to Hostinger, faster site",
+        "Live in production on ilearnromanian.com",
+      ],
+      statusLabel: "Live",
+      testimonial: {
+        quote:
+          "Working with Xavier has been an amazing experience! Not only he is professional and did an amazing job with my website, but he is also very responsive and troubleshoots the issues very quickly ensuring both me and my clients have a smooth experience on my platform. He has solved every single problem or request I had, communicated extremely well, and made sure everything was completed up to my standards. I am still collaborating with him and I will continue to do so because he is the best! I wholeheartedly recommend him to anyone who needs someone professional, creative, great at communication and reliable. Thank you for all your amazing work Xav!",
+        author: "Sefora Geantă",
+        role: "Founder & tutor, I Learn Romanian",
+        authorUrl: "https://www.linkedin.com/in/sefora-geant%C4%83/",
       },
     },
   },

@@ -7,6 +7,7 @@ import { Services } from "@/components/sections/services";
 import { SeoExpertise } from "@/components/sections/seo-expertise";
 import { Skills } from "@/components/sections/skills";
 import { Projects } from "@/components/sections/projects";
+import { Testimonials } from "@/components/sections/testimonials";
 import { Contact } from "@/components/sections/contact";
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://xavieradda.dev";
@@ -43,6 +44,7 @@ export default async function Home({
       <Services />
       <SeoExpertise />
       <Projects />
+      <Testimonials />
       <About />
       <Skills />
       <Contact />
