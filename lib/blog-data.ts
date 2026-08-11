@@ -768,8 +768,8 @@ export const blogPosts: BlogPost[] = [
     category: "Création de site",
     tags: ["next.js", "freelance", "agence"],
     readingTime: 6,
-    cover: "🤝",
-    coverIsEmoji: true,
+    cover: "/blog/freelance-agence.jpg",
+    coverIsEmoji: false,
     content: [
       {
         type: "lead",
@@ -853,8 +853,8 @@ export const blogPosts: BlogPost[] = [
     category: "Création de site",
     tags: ["budget", "création de site", "débutant"],
     readingTime: 8,
-    cover: "💰",
-    coverIsEmoji: true,
+    cover: "/blog/budget-site.jpg",
+    coverIsEmoji: false,
     content: [
       {
         type: "lead",
