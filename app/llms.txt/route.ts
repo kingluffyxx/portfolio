@@ -3,7 +3,7 @@ export const dynamic = "force-static"
 export function GET() {
   const body = `# Xavier Adda · Création de sites internet & SEO
 
-> Freelance web developer based in Paris (France), 7+ years of experience. Specialized in building professional websites, online stores, custom web apps, and SEO. Tech stack: Next.js, React, Symfony, Laravel. Quote within 48h, projects from €2,500.
+> Freelance web developer based in Paris (France), 9+ years of experience. Specialized in building professional websites, online stores, custom web apps, and SEO. Tech stack: Next.js, React, Symfony, Laravel. Quote within 48h, projects from €2,500.
 
 ## Services
 
@@ -34,7 +34,7 @@ export function GET() {
 
 ## Career
 
-- [Career path](https://xavieradda.dev/parcours): 7+ years in web development, ESN and startups, current freelance
+- [Career path](https://xavieradda.dev/parcours): 9+ years in web development, ESN and startups, current freelance
 
 ## English version
 

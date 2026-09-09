@@ -1,7 +1,7 @@
 {
   "metadata": {
     "title": "Création de sites internet & SEO · Xavier Adda Freelance",
-    "description": "Freelance création de sites internet, e-commerce et applications sur-mesure. SEO inclus. 7+ ans d'expérience. Île-de-France & Remote."
+    "description": "Freelance création de sites internet, e-commerce et applications sur-mesure. SEO inclus. 9+ ans d'expérience. Île-de-France & Remote."
   },
   "nav": {
     "services": "Services",
@@ -45,10 +45,10 @@
   },
   "parcours": {
     "metaTitle": "Parcours professionnel",
-    "metaDescription": "Le parcours professionnel de Xavier Adda : 7+ ans d'expérience en développement web, freelance et CDI dans des ESN et startups.",
+    "metaDescription": "Le parcours professionnel de Xavier Adda : 9+ ans d'expérience en développement web, freelance et CDI dans des ESN et startups.",
     "back": "Retour à l'accueil",
     "title": "Parcours",
-    "intro": "7+ ans en développement web : ESN, startups, missions freelance."
+    "intro": "9+ ans en développement web : ESN, startups, missions freelance."
   },
   "hero": {
     "greeting": "Bonjour, je suis",
@@ -62,7 +62,7 @@
     "ctaProjects": "Obtenir un devis gratuit",
     "ctaContact": "Réserver un appel 15 min",
     "ctaDownloadCV": "Voir mes réalisations",
-    "trustBadge": "Devis sous 48h · 7+ ans d'expérience"
+    "trustBadge": "Devis sous 48h · {years}+ ans d'expérience"
   },
   "whyWebsite": {
     "eyebrow": "Ce qu'un bon site doit faire",
@@ -78,7 +78,7 @@
   },
   "about": {
     "title": "À propos",
-    "description": "Développeur fullstack avec plus de 7 ans d'expérience, je conçois des applications web robustes et évolutives. Mon approche : comprendre vos besoins métier pour livrer des solutions qui fonctionnent aujourd'hui et s'adaptent demain.",
+    "description": "Développeur fullstack avec plus de 9 ans d'expérience, je conçois des applications web robustes et évolutives. Mon approche : comprendre vos besoins métier pour livrer des solutions qui fonctionnent aujourd'hui et s'adaptent demain.",
     "value1Title": "Code maintenable",
     "value1Desc": "Architecture claire, code documenté et bonnes pratiques pour faciliter l'évolution de votre projet",
     "value1Icon": "code",
@@ -426,7 +426,7 @@
     }
   },
   "footer": {
-    "copyright": "© 2025 Xavier Adda • Développeur Fullstack • Built with",
+    "copyright": "Réalisé avec",
     "and": "&"
   }
 }

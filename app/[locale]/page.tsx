@@ -19,6 +19,14 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   return {
+    title:
+      locale === "fr"
+        ? "Création de sites internet & SEO · Xavier Adda Freelance"
+        : "Web development & SEO · Xavier Adda Freelance",
+    description:
+      locale === "fr"
+        ? "Développeur web freelance en Île-de-France et à distance : création de sites vitrines, boutiques en ligne et applications sur-mesure. SEO inclus, 9+ ans d'expérience, devis sous 48h."
+        : "Freelance web developer in the Paris area and remote: showcase sites, online stores and custom web apps. SEO included, 9+ years of experience, quote within 48h.",
     alternates: {
       canonical: locale === "fr" ? siteUrl : `${siteUrl}/en`,
       languages: {

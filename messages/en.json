@@ -1,7 +1,7 @@
 {
   "metadata": {
     "title": "Xavier Adda - Fullstack Developer PHP & Next.js",
-    "description": "Fullstack web developer with 7+ years of experience. Specialized in PHP (Symfony, Laravel) and Next.js/React. Freelance available."
+    "description": "Fullstack web developer with 9+ years of experience. Specialized in PHP (Symfony, Laravel) and Next.js/React. Freelance available."
   },
   "nav": {
     "services": "Services",
@@ -45,10 +45,10 @@
   },
   "parcours": {
     "metaTitle": "Career path",
-    "metaDescription": "Xavier Adda's professional background: 7+ years of web development experience, freelance and permanent roles in tech companies and startups.",
+    "metaDescription": "Xavier Adda's professional background: 9+ years of web development experience, freelance and permanent roles in tech companies and startups.",
     "back": "Back to home",
     "title": "Career",
-    "intro": "7+ years in web development: tech companies, startups, freelance missions."
+    "intro": "9+ years in web development: tech companies, startups, freelance missions."
   },
   "hero": {
     "greeting": "Hi, I'm",
@@ -62,7 +62,7 @@
     "ctaProjects": "Get a free quote",
     "ctaContact": "Book a 15-min call",
     "ctaDownloadCV": "See my work",
-    "trustBadge": "Quote within 48h · 7+ years of experience"
+    "trustBadge": "Quote within 48h · {years}+ years of experience"
   },
   "whyWebsite": {
     "eyebrow": "What a good website should do",
@@ -78,7 +78,7 @@
   },
   "about": {
     "title": "About",
-    "description": "Fullstack developer with over 7 years of experience, I build robust and scalable web applications. My approach: understand your business needs to deliver solutions that work today and adapt tomorrow.",
+    "description": "Fullstack developer with over 9 years of experience, I build robust and scalable web applications. My approach: understand your business needs to deliver solutions that work today and adapt tomorrow.",
     "value1Title": "Maintainable code",
     "value1Desc": "Clean architecture, documented code and best practices to facilitate the evolution of your project",
     "value1Icon": "code",
@@ -426,7 +426,7 @@
     }
   },
   "footer": {
-    "copyright": "© 2025 Xavier Adda • Fullstack Developer • Built with",
+    "copyright": "Built with",
     "and": "&"
   }
 }

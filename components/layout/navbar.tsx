@@ -120,7 +120,7 @@ export function Navbar() {
         >
           <Image
             src="/icon.png"
-            alt="Xavier Adda"
+            alt=""
             width={32}
             height={32}
             className="rounded-lg"
@@ -145,14 +145,6 @@ export function Navbar() {
         {/* Desktop Navigation */}
         <div className="hidden md:flex flex-1 justify-center">
           <div className="flex items-center space-x-6 text-sm font-medium">
-            {!isHome && (
-              <Link
-                href="/"
-                className="text-foreground/60 hover:text-primary hover:scale-105 transition-all"
-              >
-                Accueil
-              </Link>
-            )}
             {navItems.map((item) => {
               const className = `transition-all duration-200 hover:text-primary hover:scale-105 relative pb-1 after:absolute after:bottom-0 after:left-0 after:h-[2px] after:bg-primary after:transition-all ${
                 isActive(item.href, item.isSection)

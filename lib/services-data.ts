@@ -259,7 +259,7 @@ export const services: Record<ServiceSlug, ServiceData> = {
       h1: "Création d'application web sur-mesure ·Next.js & React",
       metaTitle: "Création Application Web Sur-Mesure | Xavier Adda Freelance",
       metaDescription:
-        "Création d'applications web sur-mesure : SaaS, dashboards, MVP. Next.js, React, API. 7+ ans d'expérience. Freelance Île-de-France & Remote.",
+        "Création d'applications web sur-mesure : SaaS, dashboards, MVP. Next.js, React, API. 9+ ans d'expérience. Freelance Île-de-France & Remote.",
       tagline:
         "Application web sur-mesure : SaaS, MVP, dashboard métier, plateforme.",
       intro:
@@ -306,7 +306,7 @@ export const services: Record<ServiceSlug, ServiceData> = {
       h1: "Custom web application development, Next.js and React",
       metaTitle: "Custom Web Application Development | Xavier Adda",
       metaDescription:
-        "Custom web applications: SaaS, dashboards, MVPs. Next.js, React, APIs. 7+ years of experience. Freelance, Paris area and remote.",
+        "Custom web applications: SaaS, dashboards, MVPs. Next.js, React, APIs. 9+ years of experience. Freelance, Paris area and remote.",
       tagline: "Custom web application: SaaS, MVP, internal dashboard, platform.",
       intro:
         "Next.js + TypeScript on the front, Symfony, Laravel or Node for the API, PostgreSQL + Prisma. Auth, Stripe payments, async jobs, tests and CI/CD. Deployed on Vercel or self-hosted Docker depending on your needs.",
@@ -655,7 +655,7 @@ export const services: Record<ServiceSlug, ServiceData> = {
       h1: "Développeur Symfony freelance ·Île-de-France & Remote",
       metaTitle: "Développeur Symfony Freelance | Xavier Adda",
       metaDescription:
-        "Développeur Symfony freelance avec 7+ ans d'expérience. APIs, migrations Symfony 3→7, audit. Île-de-France & Remote. TJM 450€.",
+        "Développeur Symfony freelance avec 9+ ans d'expérience. APIs, migrations Symfony 3→7, audit. Île-de-France & Remote. TJM 450€.",
       tagline: "APIs robustes, migrations de version et applications métier sur Symfony 5, 6 et 7.",
       intro:
         "Je conçois et maintiens des applications Symfony depuis 2017. APIs REST/GraphQL, migrations legacy (Symfony 3.4 → 6.4 en production) et applications métier. En mission longue ou en renfort ponctuel.",
@@ -689,7 +689,7 @@ export const services: Record<ServiceSlug, ServiceData> = {
       h1: "Freelance Symfony developer, Paris area and remote",
       metaTitle: "Freelance Symfony Developer | Xavier Adda",
       metaDescription:
-        "Freelance Symfony developer with 7+ years of experience. APIs, Symfony 3 to 7 migrations, audits. Paris area and remote. €450/day.",
+        "Freelance Symfony developer with 9+ years of experience. APIs, Symfony 3 to 7 migrations, audits. Paris area and remote. €450/day.",
       tagline: "Robust APIs, version migrations and business apps on Symfony 5, 6 and 7.",
       intro:
         "I have been designing and maintaining Symfony applications since 2017. REST/GraphQL APIs, legacy migrations (Symfony 3.4 to 6.4 in production) and business apps. Long-term engagements or short reinforcement.",
@@ -729,10 +729,10 @@ export const services: Record<ServiceSlug, ServiceData> = {
       h1: "Développeur Laravel freelance ·Île-de-France & Remote",
       metaTitle: "Développeur Laravel Freelance | Xavier Adda",
       metaDescription:
-        "Développeur et expert Laravel freelance pour SaaS, MVP et APIs. 7+ ans d'expérience PHP. Île-de-France et remote. TJM 450€.",
+        "Développeur et expert Laravel freelance pour SaaS, MVP et APIs. 9+ ans d'expérience PHP. Île-de-France et remote. TJM 450€.",
       tagline: "MVP rapides, SaaS scalables et APIs Laravel.",
       intro:
-        "Expert Laravel avec 7+ ans de PHP : pour itérer vite sur un MVP ou consolider un SaaS en croissance — auth, abonnements Stripe, dashboards, jobs asynchrones, APIs.",
+        "Expert Laravel avec 9+ ans de PHP : pour itérer vite sur un MVP ou consolider un SaaS en croissance — auth, abonnements Stripe, dashboards, jobs asynchrones, APIs.",
       pricing: "TJM 450€",
       audience: [
         "Fondateurs voulant lancer un MVP en quelques semaines",
@@ -762,7 +762,7 @@ export const services: Record<ServiceSlug, ServiceData> = {
       h1: "Freelance Laravel developer, Paris area and remote",
       metaTitle: "Freelance Laravel Developer | Xavier Adda",
       metaDescription:
-        "Freelance Laravel developer for SaaS, MVP and APIs. 7+ years of PHP experience. Paris area and remote. €450/day.",
+        "Freelance Laravel developer for SaaS, MVP and APIs. 9+ years of PHP experience. Paris area and remote. €450/day.",
       tagline: "Fast MVPs, scalable SaaS and Laravel APIs.",
       intro:
         "Laravel to iterate fast on an MVP or consolidate a growing SaaS: auth, Stripe subscriptions, dashboards, async jobs, APIs.",
@@ -801,7 +801,7 @@ export const services: Record<ServiceSlug, ServiceData> = {
       h1: "Développeur Next.js freelance ·Île-de-France & Remote",
       metaTitle: "Développeur Next.js Freelance · Alternative à une agence | Xavier Adda",
       metaDescription:
-        "Développeur Next.js / React freelance : l'alternative directe et plus abordable à une agence Next.js. SSR, App Router, performance et SEO. 7+ ans d'expérience. Île-de-France & Remote.",
+        "Développeur Next.js / React freelance : l'alternative directe et plus abordable à une agence Next.js. SSR, App Router, performance et SEO. 9+ ans d'expérience. Île-de-France & Remote.",
       tagline: "Applications React/Next.js performantes, App Router, SSR, SEO et Core Web Vitals.",
       intro:
         "Next.js (App Router) pour les SaaS, dashboards, landing pages SEO. Optimisation Core Web Vitals, SSG/SSR adapté, intégration APIs (Symfony, Laravel, headless CMS).",
@@ -836,7 +836,7 @@ export const services: Record<ServiceSlug, ServiceData> = {
       h1: "Freelance Next.js developer, Paris area and remote",
       metaTitle: "Freelance Next.js Developer | Xavier Adda",
       metaDescription:
-        "Freelance Next.js / React developer. SSR, App Router, performance and SEO. 7+ years of experience. Paris area and remote.",
+        "Freelance Next.js / React developer. SSR, App Router, performance and SEO. 9+ years of experience. Paris area and remote.",
       tagline: "High-performance React/Next.js apps, App Router, SSR, SEO and Core Web Vitals.",
       intro:
         "Next.js (App Router) for SaaS, dashboards, SEO landing pages. Core Web Vitals optimization, fitting SSG/SSR strategy, API integration (Symfony, Laravel, headless CMS).",

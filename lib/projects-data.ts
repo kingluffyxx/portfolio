@@ -1,4 +1,4 @@
-export type ProjectSlug = "flowsolo" | "steamhunter" | "artedas" | "ilearnromanian"
+export type ProjectSlug = "flowsolo" | "steamhunter" | "artedas" | "ilearnromanian" | "theredmaster"
 export type Locale = "fr" | "en"
 
 /** Locale-sensitive prose for a project */
@@ -233,6 +233,76 @@ export const projects: Record<ProjectSlug, ProjectData> = {
         author: "Aurélien Jouanisson",
         role: "DevOps Engineer, Artedas France",
         authorUrl: "https://www.linkedin.com/in/aur%C3%A9lien-jouanisson-5729b5a8/",
+      },
+    },
+  },
+
+  // TODO Xavier : confirmer/compléter — URL live, image (public/images/projects/theredmaster.jpg),
+  // stack réelle, et idéalement le nom + LinkedIn de l'auteur de l'avis (authenticité).
+  theredmaster: {
+    slug: "theredmaster",
+    image: "/images/projects/theredmaster.jpg",
+    tags: ["Portfolio", "Design", "SEO"],
+    stack: [
+      { category: "Prestation", items: ["Intégration", "Responsive", "SEO"] },
+    ],
+    links: {},
+    status: "live",
+    datePublished: "2026-08-31",
+    fr: {
+      title: "The Red Master : portfolio d'un designer illustration & motion design",
+      tagline:
+        "Portfolio sur-mesure pour un designer spécialisé en illustration et motion design, pensé pour mettre en valeur ses réalisations.",
+      description:
+        "Création du portfolio de The Red Master, designer spécialisé en illustration et motion design : un site épuré, dynamique et parfaitement responsive pour présenter son travail.",
+      longDescription:
+        "The Red Master est un designer spécialisé en illustration et motion design. L'objectif du projet : un portfolio en ligne qui met son travail en avant sans le parasiter, avec une navigation claire, un rendu soigné et une expérience fluide aussi bien sur mobile que sur ordinateur. Le site a été finalisé et livré, épuré et fonctionnel sur tous les écrans.",
+      context:
+        "Prestation freelance : conception et intégration du portfolio d'un designer, avec un soin particulier sur la mise en valeur des visuels, le responsive et les performances.",
+      highlights: [
+        "Portfolio pensé pour un designer illustration & motion design",
+        "Mise en avant des réalisations visuelles",
+        "Design épuré et dynamique",
+        "Parfaitement responsive (mobile et ordinateur)",
+      ],
+      results: [
+        "Site épuré, dynamique et fonctionnel sur mobile comme sur PC",
+        "Portfolio finalisé et livré au client",
+      ],
+      statusLabel: "En ligne",
+      testimonial: {
+        quote:
+          "Je remercie Xavier pour ses compétences techniques qui ont permis la finalisation de mon portfolio, ses compétences m'ont permis d'avoir un site épuré, dynamique et fonctionnel aussi bien en format mobile que PC.",
+        author: "The Red Master",
+        role: "Designer illustration & motion design",
+      },
+    },
+    en: {
+      title: "The Red Master: portfolio for an illustration & motion designer",
+      tagline:
+        "Custom portfolio for a designer specialized in illustration and motion design, built to showcase their work.",
+      description:
+        "Building The Red Master's portfolio, a designer specialized in illustration and motion design: a clean, dynamic and fully responsive site to present their work.",
+      longDescription:
+        "The Red Master is a designer specialized in illustration and motion design. The goal of the project: an online portfolio that highlights their work without getting in the way, with clear navigation, a polished look and a smooth experience on both mobile and desktop. The site was finalized and delivered, clean and functional on every screen.",
+      context:
+        "Freelance work: design and integration of a designer's portfolio, with particular care given to showcasing the visuals, responsiveness and performance.",
+      highlights: [
+        "Portfolio built for an illustration & motion designer",
+        "Showcase of visual work",
+        "Clean and dynamic design",
+        "Fully responsive (mobile and desktop)",
+      ],
+      results: [
+        "Clean, dynamic and functional site on both mobile and desktop",
+        "Portfolio finalized and delivered to the client",
+      ],
+      statusLabel: "Live",
+      testimonial: {
+        quote:
+          "I want to thank Xavier for his technical skills, which made it possible to finalize my portfolio. His skills gave me a clean, dynamic and functional site, on mobile as well as on desktop.",
+        author: "The Red Master",
+        role: "Illustration & motion designer",
       },
     },
   },
