@@ -57,6 +57,10 @@ export const blogPosts: BlogPost[] = [
         tone: "info",
       },
       {
+        type: "p",
+        text: "Sa recommandation est constante : garder le contenu regroupé sur un même site autant que possible, et réserver le sous-domaine aux parties vraiment différentes. C'est ce qu'il détaille dans [cette prise de position relayée par Search Engine Journal](https://www.searchenginejournal.com/google-treats-subdomains-subdirectories-john-mueller-says/254687/). Pour un blog qui parle du même métier que votre site, le sous-dossier coche exactement cette case.",
+      },
+      {
         type: "h2",
         text: "Pourquoi le sous-dossier gagne en pratique",
       },
@@ -121,6 +125,22 @@ export const blogPosts: BlogPost[] = [
         text: "Pour 90 % des sites freelance et PME que je vois passer, la bonne réponse est : sous-dossier, point. Vous évitez de fragmenter votre autorité, vous simplifiez la maintenance et vous accélérez le ranking sur les requêtes commerciales.",
       },
       {
+        type: "h2",
+        text: "Pour aller plus loin",
+      },
+      {
+        type: "p",
+        text: "Trois ressources fiables pour creuser la question de l'architecture d'URL et suivre l'indexation de votre blog :",
+      },
+      {
+        type: "ul",
+        items: [
+          "[Consolider les URL en double (Google Search Central)](https://developers.google.com/search/docs/crawling-indexing/consolidate-duplicate-urls) : la documentation officielle sur la façon dont Google regroupe les URL et l'autorité.",
+          "[Subdomain vs. subdirectory, l'avis de John Mueller (Search Engine Journal)](https://www.searchenginejournal.com/google-treats-subdomains-subdirectories-john-mueller-says/254687/) : la position de Google expliquée en clair.",
+          "[Guide du débutant en référencement (France Num)](https://www.francenum.gouv.fr/guides-et-conseils/communication-et-publicite/referencement/guide-du-debutant-en-referencement) : les bases du SEO par le programme gouvernemental pour les TPE et PME.",
+        ],
+      },
+      {
         type: "p",
         text: "Si vous hésitez sur votre cas particulier, écrivez-moi. Je regarde et je vous dis honnêtement ce qui a le plus de chance de payer dans les six prochains mois.",
       },
@@ -162,6 +182,10 @@ export const blogPosts: BlogPost[] = [
       {
         type: "p",
         text: "WordPress garde un avantage massif sur les sites où le client doit éditer en autonomie sans appeler son développeur. Avec un thème propre et un builder bien choisi (Bricks, Breakdance, ou Gutenberg natif), une PME peut publier des pages produit, des actualités, des landing pages sans aucune compétence technique.",
+      },
+      {
+        type: "p",
+        text: "Ce n'est pas un hasard si WordPress fait tourner environ 41 % de tous les sites web dans le monde et détient près de 60 % du marché des CMS, d'après le [baromètre W3Techs](https://w3techs.com/technologies/overview/content_management). Cet écosystème géant veut dire un vivier de thèmes, de plugins et de prestataires que Next.js n'a pas.",
       },
       {
         type: "p",
@@ -225,6 +249,22 @@ export const blogPosts: BlogPost[] = [
         text: "Le piège, c'est de choisir la techno avant d'avoir clarifié qui publie et à quelle vitesse. J'ai vu des PME se lancer dans Next.js et abandonner après six mois parce qu'éditer une page demandait un développeur. J'ai vu des startups bricoler des plugins WordPress alors qu'un Next.js propre leur aurait coûté deux fois moins en maintenance.",
       },
       {
+        type: "h2",
+        text: "Pour aller plus loin",
+      },
+      {
+        type: "p",
+        text: "Trois ressources pour comparer sur des faits plutôt que sur des modes :",
+      },
+      {
+        type: "ul",
+        items: [
+          "[Part de marché des CMS (W3Techs)](https://w3techs.com/technologies/overview/content_management) : les chiffres à jour sur qui utilise quoi, mis à jour en continu.",
+          "[Documentation officielle Next.js](https://nextjs.org/docs) : pour comprendre ce que la techno permet vraiment côté performance et applicatif.",
+          "[Web Vitals (web.dev, Google)](https://web.dev/articles/vitals) : les critères de performance qui comptent pour Google, quelle que soit la techno choisie.",
+        ],
+      },
+      {
         type: "p",
         text: "La bonne question à se poser, ce n'est pas « Quelle est la meilleure techno en 2026 ? », mais « Qui va publier, à quelle fréquence, et qu'est-ce qui doit aller vite ? ».",
       },
@@ -246,6 +286,10 @@ export const blogPosts: BlogPost[] = [
       {
         type: "lead",
         text: "Un audit SEO complet coûte entre 350 et 1 500 €. Avant de le payer, vous pouvez déjà détecter les fuites les plus communes en une demi-heure. Voici le check minimum.",
+      },
+      {
+        type: "p",
+        text: "Un audit SEO, c'est un état des lieux : on vérifie si Google peut lire votre site, le comprendre et le proposer aux internautes qui cherchent ce que vous vendez. Le référencement naturel reste l'un des leviers les plus rentables pour une TPE ou une PME, comme le rappelle le [guide du débutant de France Num](https://www.francenum.gouv.fr/guides-et-conseils/communication-et-publicite/referencement/guide-du-debutant-en-referencement). Bonne nouvelle : les sept points ci-dessous se contrôlent sans aucun outil payant, directement dans votre navigateur.",
       },
       {
         type: "h2",
@@ -294,6 +338,10 @@ export const blogPosts: BlogPost[] = [
         text: "Testez sur PageSpeed Insights de Google. Pour ranker correctement aujourd'hui, votre LCP (Largest Contentful Paint) doit être sous 2,5 secondes sur mobile. Le CLS (Cumulative Layout Shift) doit être sous 0,1. L'INP doit être sous 200ms.",
       },
       {
+        type: "p",
+        text: "Ces trois seuils ne sont pas des inventions de prestataire : ce sont les valeurs officielles publiées par Google sur [web.dev](https://web.dev/articles/vitals), mesurées sur vos vrais visiteurs (au 75e centile). L'INP est le critère le plus souvent raté sur mobile, alors regardez-le en priorité.",
+      },
+      {
         type: "h2",
         text: "06. Vos images ont-elles toutes un alt ?",
       },
@@ -322,6 +370,22 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: "h2",
+        text: "Pour aller plus loin",
+      },
+      {
+        type: "p",
+        text: "Trois sources officielles pour approfondir chaque point de la checklist :",
+      },
+      {
+        type: "ul",
+        items: [
+          "[Web Vitals (web.dev, Google)](https://web.dev/articles/vitals) : les seuils de performance LCP, INP et CLS expliqués par Google.",
+          "[Test de résultats enrichis (Google)](https://search.google.com/test/rich-results) : pour vérifier votre balisage Schema.org page par page.",
+          "[Guide du référencement de France Num](https://www.francenum.gouv.fr/guides-et-conseils/communication-et-publicite/referencement) : les fondamentaux du SEO pour TPE et PME, côté institution publique.",
+        ],
+      },
+      {
+        type: "h2",
         text: "Si plusieurs points échouent",
       },
       {
@@ -345,6 +409,10 @@ export const blogPosts: BlogPost[] = [
       {
         type: "lead",
         text: "Demander un site internet en 2026, c'est obtenir des devis entre 800 € et 80 000 €. La fourchette n'est pas aberrante : elle reflète des projets qui n'ont rien à voir. Voici comment lire un devis et savoir si le prix est juste. Et si vous ne savez pas encore quel budget prévoir, commencez par [cette méthode pour budgéter votre projet](/blog/comment-budgeter-projet-site-web).",
+      },
+      {
+        type: "p",
+        text: "Pourquoi un tel écart ? Parce qu'un site n'est pas un produit standard : c'est du temps humain. Un développeur fullstack freelance expérimenté facture en moyenne 557 € par jour en France selon le [baromètre Malt 2026](https://www.malt.fr/t/barometre-tarifs/tech/developpeur-backend/developpeur-fullstack). À partir de là, tout dépend du nombre de jours de travail que votre projet demande. Un site vitrine, c'est quelques jours. Une application sur-mesure, c'est plusieurs semaines. Le prix suit cette logique, pas une grille magique.",
       },
       {
         type: "h2",
@@ -393,6 +461,10 @@ export const blogPosts: BlogPost[] = [
         text: "Sur cette tranche, vous ne payez pas seulement le développement initial. Vous payez aussi l'architecture qui doit tenir à 10x votre trafic actuel et qui doit pouvoir évoluer sans refonte.",
       },
       {
+        type: "p",
+        text: "Pour situer l'ordre de grandeur : sur un projet de cette taille, la part de développement pur se compte souvent en dizaines de jours. Avec un TJM moyen de 557 € pour un développeur fullstack expérimenté ([baromètre Malt 2026](https://www.malt.fr/t/barometre-tarifs/tech/developpeur-backend/developpeur-fullstack)), 30 à 60 jours de travail expliquent à eux seuls l'essentiel du budget. Le reste, c'est le cadrage, le design et les tests.",
+      },
+      {
         type: "h2",
         text: "Refonte d'un site existant : 4 000 à 12 000 €",
       },
@@ -439,6 +511,22 @@ export const blogPosts: BlogPost[] = [
         type: "p",
         text: "Trois questions à poser à chaque devis : « Le SEO technique est-il inclus ? », « Qui paie l'hébergement et la maintenance, sur quelle base ? », « Que se passe-t-il si je veux changer de prestataire dans 2 ans ? ». Les réponses vous diront si vous travaillez avec un partenaire ou avec un piège.",
       },
+      {
+        type: "h2",
+        text: "Pour aller plus loin",
+      },
+      {
+        type: "p",
+        text: "Pour comparer les tarifs du marché et vérifier qu'un devis est cohérent, quelques ressources fiables et indépendantes :",
+      },
+      {
+        type: "ul",
+        items: [
+          "[Baromètre des tarifs freelances Malt](https://www.malt.fr/t/barometre-tarifs/tech) : les TJM réels des développeurs par technologie et par niveau d'expérience, mis à jour chaque année.",
+          "[France Num](https://www.francenum.gouv.fr), le portail public de la Direction générale des Entreprises : conseils, diagnostic et aides pour financer votre projet numérique.",
+          "[Étude Afnic « Réussir avec le web »](https://www.francenum.gouv.fr/magazine-du-numerique/presence-en-ligne-des-tpe-pme-une-progression-qui-marque-legerement-le-pas) : où en sont vraiment les TPE-PME françaises côté site internet.",
+        ],
+      },
     ],
   },
   {
@@ -458,6 +546,10 @@ export const blogPosts: BlogPost[] = [
         text: "Depuis mars 2024, l'INP a remplacé le FID dans les [Core Web Vitals](https://web.dev/articles/vitals). Ça change concrètement ce sur quoi vous devez travailler. Voici la check 2026, avec ce qui marche vraiment et ce qui ne sert à rien.",
       },
       {
+        type: "p",
+        text: "Un rappel pour ceux qui découvrent le sujet : les Core Web Vitals sont trois notes que Google attribue à votre site pour mesurer l'expérience réelle de vos visiteurs (vitesse d'affichage, réactivité au clic, stabilité visuelle). Elles comptent dans le classement de Google et, surtout, elles décident si un visiteur reste ou repart. Point important : Google ne juge pas un test isolé, mais les [données réelles de vos visiteurs, au 75e centile](https://developers.google.com/search/docs/appearance/core-web-vitals). Autrement dit, votre site doit être bon pour au moins trois utilisateurs sur quatre.",
+      },
+      {
         type: "h2",
         text: "Les 3 métriques qui comptent en 2026",
       },
@@ -468,6 +560,10 @@ export const blogPosts: BlogPost[] = [
           "INP (Interaction to Next Paint) : votre site doit répondre en moins de 200 ms à une interaction.",
           "CLS (Cumulative Layout Shift) : la mise en page ne doit pas sauter pendant le chargement (score sous 0,1).",
         ],
+      },
+      {
+        type: "p",
+        text: "Ces trois seuils (2,5 s, 200 ms, 0,1) ne sont pas arbitraires. Ils correspondent aux valeurs que Google considère comme « bonnes » et qu'il faut tenir sur au moins 75 % des visites réelles pour valider une page. Le détail de la méthode est documenté par [web.dev](https://web.dev/articles/defining-core-web-vitals-thresholds), l'équipe de Google dédiée à la performance web.",
       },
       {
         type: "h2",
@@ -537,6 +633,22 @@ export const blogPosts: BlogPost[] = [
         type: "p",
         text: "« 100/100 sur PageSpeed » n'est pas le but. Ce qui compte, c'est de passer au vert sur les 3 métriques en données réelles. Un site à 85/100 mais avec un LCP réel à 1,8s rankera mieux qu'un site à 95/100 avec un LCP réel à 3,2s.",
       },
+      {
+        type: "h2",
+        text: "Pour aller plus loin",
+      },
+      {
+        type: "p",
+        text: "Pour creuser le sujet à la source, sans passer par des articles de seconde main :",
+      },
+      {
+        type: "ul",
+        items: [
+          "[Google Search Central — Core Web Vitals](https://developers.google.com/search/docs/appearance/core-web-vitals) : la documentation officielle sur ce que Google mesure et pourquoi.",
+          "[web.dev — Comment les seuils ont été définis](https://web.dev/articles/defining-core-web-vitals-thresholds) : la méthode derrière les 2,5 s, 200 ms et 0,1.",
+          "[Google — Introducing INP to Core Web Vitals](https://developers.google.com/search/blog/2023/05/introducing-inp) : l'annonce officielle du remplacement du FID par l'INP.",
+        ],
+      },
     ],
   },
   {
@@ -569,6 +681,10 @@ export const blogPosts: BlogPost[] = [
         title: "Vous n'êtes pas en retard",
         text: "La grande majorité des projets qui aboutissent partent d'une idée mal dégrossie et d'un budget serré. Ce qui fait la différence, ce n'est pas la perfection du départ, c'est le fait de commencer.",
         tone: "info",
+      },
+      {
+        type: "p",
+        text: "Et vous êtes moins seul que vous ne le pensez à hésiter. Selon l'[étude Afnic « Réussir avec le web » 2025](https://www.francenum.gouv.fr/magazine-du-numerique/presence-en-ligne-des-tpe-pme-une-progression-qui-marque-legerement-le-pas), 99 % des dirigeants jugent internet utile ou indispensable à leur activité, mais seulement 61 % des TPE-PME françaises disposent réellement d'un site web. L'écart entre les deux, c'est exactement ce blocage de la première marche.",
       },
       {
         type: "h2",
@@ -641,6 +757,22 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: "h2",
+        text: "Pour aller plus loin",
+      },
+      {
+        type: "p",
+        text: "Avant même de me contacter, quelques ressources publiques et gratuites peuvent vous aider à y voir clair :",
+      },
+      {
+        type: "ul",
+        items: [
+          "[France Num](https://www.francenum.gouv.fr), le service public d'accompagnement au numérique : guides, diagnostic gratuit et liste d'aides pour financer votre projet.",
+          "[Étude Afnic « Réussir avec le web »](https://www.francenum.gouv.fr/magazine-du-numerique/presence-en-ligne-des-tpe-pme-une-progression-qui-marque-legerement-le-pas) : ce que font (et ne font pas) les autres TPE-PME en ligne, pour vous situer.",
+          "[Baromètre France Num 2025](https://www.francenum.gouv.fr/guides-et-conseils/strategie-numerique/comprendre-le-numerique/barometre-france-num-2025-le) : les usages numériques réels des petites entreprises françaises, données officielles à l'appui.",
+        ],
+      },
+      {
+        type: "h2",
         text: "En résumé",
       },
       {
@@ -665,6 +797,10 @@ export const blogPosts: BlogPost[] = [
       {
         type: "lead",
         text: "« Il me faut un site » veut tout et rien dire. Derrière cette phrase se cachent trois projets très différents, avec des budgets qui vont du simple au vingtuple. Choisir le bon dès le départ vous évite de payer trop, ou de vous retrouver limité six mois plus tard.",
+      },
+      {
+        type: "p",
+        text: "Avant d'entrer dans le détail, une précision utile : la présence en ligne est devenue la norme, pas un luxe. D'après l'étude Afnic relayée par [France Num](https://www.francenum.gouv.fr/magazine-du-numerique/presence-en-ligne-des-tpe-pme-une-progression-qui-marque-legerement-le-pas), 99 % des dirigeants de TPE-PME jugent internet utile ou indispensable à leur activité, et 61 % disposent d'un site web. La vraie question n'est donc pas « faut-il un site ? », mais « lequel ? ». Voici les trois familles, du plus simple au plus ambitieux.",
       },
       {
         type: "h2",
@@ -696,6 +832,10 @@ export const blogPosts: BlogPost[] = [
       {
         type: "p",
         text: "Dès que vous voulez encaisser un paiement en ligne, vous passez sur une [boutique en ligne](/services/boutique-en-ligne) (e-commerce). C'est un cran au-dessus : il faut gérer un catalogue de produits, des stocks, des paiements sécurisés, des livraisons, parfois des comptes clients et des factures. C'est plus puissant, mais aussi plus lourd à maintenir.",
+      },
+      {
+        type: "p",
+        text: "Le marché justifie l'investissement quand la vente en ligne est votre cœur d'activité. Selon le [bilan 2024 de la FEVAD](https://www.fevad.com/bilan-du-e-commerce-en-france-en-2024-les-ventes-sur-internet-franchissent-le-cap-des-175-milliards-deuros-en-hausse-de-96-sur-un-an/), les ventes en ligne en France ont dépassé 175 milliards d'euros (+9,6 % sur un an), avec 41,6 millions d'acheteurs. Un chiffre qui rassure, mais qui ne doit pas vous pousser à ouvrir une boutique si vous vendez peu de références : l'outil doit coller à votre volume réel.",
       },
       {
         type: "ul",
@@ -751,6 +891,22 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: "h2",
+        text: "Pour aller plus loin",
+      },
+      {
+        type: "p",
+        text: "Pour affiner votre réflexion avec des sources fiables avant de vous décider :",
+      },
+      {
+        type: "ul",
+        items: [
+          "[Créer votre boutique en ligne : mode d'emploi (economie.gouv.fr)](https://www.economie.gouv.fr/entreprises/creer-boutique-en-ligne-demarches) pour comprendre ce qu'implique concrètement une activité e-commerce.",
+          "[Le bilan 2024 du e-commerce (FEVAD)](https://www.fevad.com/bilan-du-e-commerce-en-france-en-2024-les-ventes-sur-internet-franchissent-le-cap-des-175-milliards-deuros-en-hausse-de-96-sur-un-an/) pour situer votre projet dans les tendances du marché.",
+          "[La présence en ligne des TPE-PME (France Num)](https://www.francenum.gouv.fr/magazine-du-numerique/presence-en-ligne-des-tpe-pme-une-progression-qui-marque-legerement-le-pas) pour voir où en sont les entreprises de votre taille.",
+        ],
+      },
+      {
+        type: "h2",
         text: "En cas de doute, on en parle",
       },
       {
@@ -776,6 +932,10 @@ export const blogPosts: BlogPost[] = [
         text: "Vous avez un projet Next.js et vous cherchez qui pour le construire. La première idée, c'est souvent « une agence ». Mais entre une agence Next.js et un développeur freelance senior, la différence de prix va du simple au double, pour un résultat technique souvent identique. Voici comment choisir sans vous tromper.",
       },
       {
+        type: "p",
+        text: "Le freelance n'est pas une solution au rabais : c'est un mode de travail répandu et structuré. Pour situer les ordres de grandeur, le [baromètre des tarifs Tech de Malt](https://www.malt.fr/t/barometre-tarifs/tech) publie les tarifs journaliers moyens réels par métier et par ville. C'est un bon point de repère pour comprendre ce que vous payez vraiment, en direct, sans intermédiaire.",
+      },
+      {
         type: "h2",
         text: "Ce que vous payez dans une agence Next.js",
       },
@@ -799,6 +959,10 @@ export const blogPosts: BlogPost[] = [
           "Le tarif est souvent 30 à 50 % inférieur à une agence pour un périmètre équivalent.",
           "Les décisions vont plus vite : une question technique trouve sa réponse dans l'heure, pas dans le prochain point projet.",
         ],
+      },
+      {
+        type: "p",
+        text: "Ce que vous payez avec un freelance, c'est un tarif journalier lisible. Le [baromètre Malt](https://www.malt.fr/t/barometre-tarifs/tech) situe le TJM médian d'un développeur autour de 500 € par jour, davantage pour des expertises rares. Avec une agence, ce même temps de développement est majoré par la structure (chef de projet, commercial, marge). Sur un projet porté par une seule personne, l'écart se voit directement sur le devis.",
       },
       {
         type: "callout",
@@ -836,6 +1000,22 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: "h2",
+        text: "Pour aller plus loin",
+      },
+      {
+        type: "p",
+        text: "Trois ressources pour comparer en connaissance de cause avant de choisir :",
+      },
+      {
+        type: "ul",
+        items: [
+          "[Le baromètre des tarifs Tech (Malt)](https://www.malt.fr/t/barometre-tarifs/tech) pour connaître les tarifs réels des développeurs freelances par métier et par ville.",
+          "[La documentation officielle Next.js App Router](https://nextjs.org/docs/app) pour comprendre la technologie sur laquelle repose votre projet.",
+          "[Le portail officiel de l'auto-entrepreneur (URSSAF)](https://www.autoentrepreneur.urssaf.fr/portail/accueil.html) pour savoir ce qu'implique concrètement le statut d'un freelance avec qui vous travaillez.",
+        ],
+      },
+      {
+        type: "h2",
         text: "En pratique",
       },
       {
@@ -867,6 +1047,10 @@ export const blogPosts: BlogPost[] = [
       {
         type: "p",
         text: "Beaucoup de gens n'osent pas annoncer un budget par peur de « dire une bêtise » ou de se faire surfacturer. En réalité, c'est l'inverse. Un projet sans budget, c'est un projet flou, et un projet flou reçoit des devis flous. Le freelance ne sait pas s'il doit vous proposer une solution à 2 000 € ou à 20 000 €, alors il temporise, pose dix questions, ou pire, part sur une hypothèse à côté de vos moyens.",
+      },
+      {
+        type: "p",
+        text: "Poser un budget, c'est aussi assumer que le site est un investissement, pas une dépense subie. Le [baromètre France Num 2024](https://www.francenum.gouv.fr/barometre-france-num) montre que 79 % des dirigeants de TPE-PME estiment que le numérique apporte de réels bénéfices à leur activité. Un projet web se raisonne comme n'importe quel investissement : on fixe une enveloppe, on regarde ce qu'elle permet, on ajuste.",
       },
       {
         type: "callout",
@@ -944,11 +1128,820 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: "h2",
+        text: "Pour aller plus loin",
+      },
+      {
+        type: "p",
+        text: "Pour préparer votre budget avec des repères fiables et vérifier les aides possibles :",
+      },
+      {
+        type: "ul",
+        items: [
+          "[Le baromètre France Num 2024](https://www.francenum.gouv.fr/barometre-france-num) pour situer votre projet dans les usages numériques des entreprises françaises.",
+          "[Les aides financières à la numérisation (France Num)](https://www.francenum.gouv.fr/aides-financieres) pour vérifier si votre projet est éligible à un accompagnement ou un financement.",
+          "[La présence en ligne des TPE-PME (France Num)](https://www.francenum.gouv.fr/magazine-du-numerique/presence-en-ligne-des-tpe-pme-une-progression-qui-marque-legerement-le-pas) pour comparer vos objectifs à ceux des entreprises de votre taille.",
+        ],
+      },
+      {
+        type: "h2",
         text: "En résumé",
       },
       {
         type: "p",
         text: "Budgéter un site n'a rien de sorcier : répondez aux cinq questions, croisez avec les fourchettes du marché, gardez le cœur du projet pour la première version, et n'oubliez pas le récurrent. Vous arriverez chez le freelance avec un projet clair et un budget cadré, et vous obtiendrez un bien meilleur devis. Si vous voulez qu'on estime ensemble le budget de votre projet, [écrivez-moi](/#contact) : je vous donne une fourchette honnête, sans engagement.",
+      },
+    ],
+  },
+  {
+    slug: "site-non-maintenu-risques",
+    title: "Un site qu'on ne met jamais à jour : ce que vous risquez vraiment",
+    excerpt:
+      "Un site laissé sans maintenance ne reste pas figé : il se dégrade en silence. Failles, pannes, référencement qui chute. Voici ce qui se passe vraiment, et quand ça vous coûte cher.",
+    date: "2026-08-11",
+    category: "Maintenance",
+    tags: ["maintenance", "sécurité", "WordPress"],
+    readingTime: 7,
+    cover: "/blog/site-non-maintenu-risques.jpg",
+    coverIsEmoji: false,
+    content: [
+      {
+        type: "lead",
+        text: "« Mon site marche, pourquoi je paierais une maintenance ? » C'est une question légitime, et je l'entends souvent. Le problème, c'est qu'un site n'est pas une plaquette imprimée. C'est un logiciel connecté en permanence à Internet, qui repose sur des dizaines de briques qui vieillissent. Laissé seul, il ne reste pas stable : il se dégrade, lentement, puis d'un coup.",
+      },
+      {
+        type: "h2",
+        text: "Un site n'est pas un objet fini, c'est un logiciel vivant",
+      },
+      {
+        type: "p",
+        text: "Votre site tourne sur un serveur, un langage (PHP, Node), un CMS ou un framework, et souvent une couche de plugins ou de dépendances. Chacune de ces briques publie régulièrement des mises à jour, dont une bonne partie corrige des failles de sécurité. Le jour où vous mettez le site en ligne, tout est à jour. Six mois plus tard, plus rien ne l'est. Et le décalage ne fait que grandir.",
+      },
+      {
+        type: "callout",
+        title: "L'illusion du « ça marche »",
+        text: "Un site peut afficher exactement la même page pendant deux ans tout en étant devenu une passoire de sécurité. Rien ne se voit à l'écran. Le danger est justement qu'il est invisible jusqu'au jour où il ne l'est plus.",
+        tone: "warning",
+      },
+      {
+        type: "h2",
+        text: "Risque n°1 : la faille de sécurité",
+      },
+      {
+        type: "p",
+        text: "C'est le risque le plus concret, surtout sous WordPress qui équipe une large part du web et concentre donc l'attention des attaquants. La plupart des piratages n'ont rien de ciblé : ce sont des robots qui scannent des millions de sites à la recherche d'une version de plugin connue pour être vulnérable. Si la vôtre traîne depuis huit mois, vous êtes une cible facile.",
+      },
+      {
+        type: "p",
+        text: "Les chiffres confirment où se situe le danger. Dans son rapport annuel sur la sécurité WordPress, [Patchstack recense que plus de 90 % des failles de l'écosystème WordPress proviennent des extensions](https://patchstack.com/whitepaper/state-of-wordpress-security-in-2025/), pas du cœur du CMS. Autrement dit, ce sont vos plugins non mis à jour qui ouvrent la porte, bien plus que WordPress lui-même.",
+      },
+      {
+        type: "ul",
+        items: [
+          "Injection de spam : votre site se met à rediriger vers des pages douteuses ou des pharmacies en ligne, à votre insu.",
+          "Défacement : la page d'accueil est remplacée par un message d'attaquant.",
+          "Vol de données : si vous avez des comptes clients ou un formulaire, les données peuvent fuiter.",
+          "Blacklist Google : un site infecté est signalé « site dangereux » dans les résultats, et le trafic s'effondre du jour au lendemain.",
+        ],
+      },
+      {
+        type: "h2",
+        text: "Risque n°2 : la panne au pire moment",
+      },
+      {
+        type: "p",
+        text: "Une mise à jour de PHP côté hébergeur, un plugin qui n'est plus compatible, un certificat SSL expiré : il suffit d'un maillon pour que le site tombe. Et il ne tombe jamais un mardi tranquille. Il tombe pendant une promo, la veille d'un rendez-vous important, ou quand un client cherche justement à vous contacter. Sans maintenance, personne ne surveille, et vous découvrez la panne quand un proche vous prévient que « votre site ne s'ouvre plus ».",
+      },
+      {
+        type: "callout",
+        title: "Le certificat SSL oublié",
+        text: "Un certificat HTTPS non renouvelé affiche un gros avertissement rouge « connexion non sécurisée » à chaque visiteur. Beaucoup de sites vitrines l'ont vécu simplement parce que personne ne surveillait la date d'expiration.",
+        tone: "warning",
+      },
+      {
+        type: "h2",
+        text: "Risque n°3 : le référencement qui glisse",
+      },
+      {
+        type: "p",
+        text: "Google favorise les sites rapides, sûrs et à jour. Un site non maintenu accumule les signaux négatifs : temps de chargement qui augmente à mesure que la base de données gonfle, erreurs techniques non corrigées, [Core Web Vitals](/blog/core-web-vitals-2026-checklist) qui repassent au rouge. La chute n'est pas brutale, elle est progressive, ce qui la rend d'autant plus insidieuse : vous perdez des positions sans jamais avoir de moment déclencheur clair.",
+      },
+      {
+        type: "h2",
+        text: "Risque n°4 : la réparation coûte plus cher que la prévention",
+      },
+      {
+        type: "p",
+        text: "C'est le calcul que beaucoup font à l'envers. Économiser 80 à 150 € par mois de maintenance semble raisonnable, jusqu'au jour où il faut nettoyer un site piraté, restaurer une sauvegarde qui n'existe pas, ou remettre à niveau deux ans de mises à jour d'un coup. À ce stade, la facture de réparation dépasse souvent une année entière de maintenance, et le site reste hors ligne pendant l'opération.",
+      },
+      {
+        type: "quote",
+        text: "La maintenance ne se voit pas quand tout va bien. C'est exactement pour ça qu'elle est efficace : son travail, c'est que rien n'arrive.",
+      },
+      {
+        type: "h2",
+        text: "Ce que couvre une vraie maintenance",
+      },
+      {
+        type: "ol",
+        items: [
+          "Mises à jour régulières du cœur, des extensions et des dépendances, testées avant d'être appliquées.",
+          "Sauvegardes automatiques et vérifiées, avec une restauration possible en quelques minutes.",
+          "Surveillance de la disponibilité et des performances, pour détecter une panne avant vos visiteurs.",
+          "Veille de sécurité et correction des failles connues dès leur publication.",
+          "Renouvellement et vérification des certificats SSL et des accès.",
+        ],
+      },
+      {
+        type: "h2",
+        text: "Faut-il une maintenance pour tous les sites ?",
+      },
+      {
+        type: "p",
+        text: "Non, et il faut être honnête là-dessus. Un site statique en Next.js hébergé sur Vercel, sans base de données ni plugins, demande beaucoup moins de suivi qu'un WordPress bourré d'extensions. C'est d'ailleurs un des arguments du débat [WordPress ou Next.js](/blog/wordpress-ou-nextjs-site-vitrine) : la surface d'attaque et la charge de maintenance ne sont pas les mêmes. Mais « moins » ne veut pas dire « zéro » : même un site simple a besoin de sauvegardes et d'un œil de temps en temps.",
+      },
+      {
+        type: "h2",
+        text: "Pour aller plus loin",
+      },
+      {
+        type: "p",
+        text: "Si vous voulez creuser le sujet par vous-même, voici trois ressources fiables. Les deux premières viennent du dispositif public Cybermalveillance.gouv.fr, la troisième est le rapport de référence sur les failles WordPress.",
+      },
+      {
+        type: "ul",
+        items: [
+          "[Cybermalveillance.gouv.fr — Pourquoi et comment bien gérer ses mises à jour](https://www.cybermalveillance.gouv.fr/tous-nos-contenus/bonnes-pratiques/315) : les bons réflexes pour ne pas laisser un logiciel prendre du retard.",
+          "[Cybermalveillance.gouv.fr — Comment sécuriser son site Internet](https://www.cybermalveillance.gouv.fr/tous-nos-contenus/bonnes-pratiques/securisation-sites-internet) : un guide clair, écrit pour des non-spécialistes.",
+          "[Patchstack — State of WordPress Security](https://patchstack.com/whitepaper/state-of-wordpress-security-in-2025/) : le rapport annuel qui détaille d'où viennent réellement les failles.",
+        ],
+      },
+      {
+        type: "h2",
+        text: "En résumé",
+      },
+      {
+        type: "p",
+        text: "Un site non maintenu ne reste pas dans son état du jour de la livraison. Il vieillit, s'expose et ralentit, sans que rien ne le montre à l'écran. La maintenance n'est pas une rente déguisée : c'est l'assurance que le site pour lequel vous avez payé continue de faire son travail. Si vous ne savez pas dans quel état est le vôtre, [écrivez-moi](/#contact) : je le regarde et je vous dis franchement s'il tient la route ou s'il est en train de vous coûter du trafic en silence.",
+      },
+    ],
+  },
+  {
+    slug: "chatbot-ia-site-web-2026",
+    title: "Faut-il un chatbot IA sur votre site en 2026 ?",
+    excerpt:
+      "Tout le monde veut son assistant IA sur son site. Mais un chatbot mal pensé fait fuir plus de clients qu'il n'en convertit. Voici quand il vaut vraiment le coup, et quand il vous dessert.",
+    date: "2026-08-14",
+    category: "IA",
+    tags: ["IA", "chatbot", "conversion"],
+    readingTime: 7,
+    cover: "/blog/chatbot-ia-site-web-2026.jpg",
+    coverIsEmoji: false,
+    content: [
+      {
+        type: "lead",
+        text: "Depuis que les modèles de langage sont devenus accessibles, la demande a explosé : « je veux un chatbot IA sur mon site ». L'idée est séduisante, un assistant qui répond à tout, 24h/24. Mais entre le fantasme et ce qui aide réellement un visiteur à devenir client, il y a un monde. Voici comment décider sans suivre la mode.",
+      },
+      {
+        type: "h2",
+        text: "Ce qu'un chatbot IA fait bien",
+      },
+      {
+        type: "p",
+        text: "Un assistant branché sur un bon modèle et nourri de vos propres contenus (FAQ, documentation, catalogue) peut répondre instantanément à des questions répétitives, à toute heure. Sur un site qui reçoit beaucoup de demandes similaires, c'est un vrai gain : il désengorge votre boîte mail et donne une réponse immédiate là où un formulaire de contact impose d'attendre.",
+      },
+      {
+        type: "ul",
+        items: [
+          "Répondre aux questions fréquentes (horaires, tarifs, modalités, disponibilité) sans intervention humaine.",
+          "Guider un visiteur vers la bonne page ou le bon produit dans un catalogue large.",
+          "Qualifier une demande avant qu'elle n'arrive chez vous, pour gagner du temps au premier échange.",
+          "Assurer une présence hors de vos heures d'ouverture, quand personne ne peut répondre en direct.",
+        ],
+      },
+      {
+        type: "h2",
+        text: "Ce qu'un chatbot IA fait mal (et qui coûte des clients)",
+      },
+      {
+        type: "p",
+        text: "Le problème n'est pas la technologie, c'est l'usage. Un chatbot posé par défaut sur un site vitrine de cinq pages, où l'information tient déjà à l'écran, n'apporte rien : il ajoute une fenêtre qui s'ouvre toute seule et masque le contenu. Pire, un assistant qui invente des réponses (les fameuses « hallucinations ») peut promettre un prix ou un délai que vous ne tenez pas, et vous engager sur une base fausse.",
+      },
+      {
+        type: "callout",
+        title: "Le piège de la réponse inventée",
+        text: "Un modèle de langage ne « sait » rien de votre entreprise s'il n'est pas explicitement connecté à vos données. Livré à lui-même, il comble les trous avec du plausible. Sur un site commercial, une fausse promesse générée automatiquement peut se retourner contre vous.",
+        tone: "warning",
+      },
+      {
+        type: "p",
+        text: "Le phénomène n'est pas marginal, et il s'aggrave. Selon une analyse de NewsGuard, [le taux de fausses réponses des principaux chatbots est passé de 18 % à 35 % en un an](https://www.vktr.com/ai-technology/ai-hallucinations-nearly-double-heres-why-theyre-getting-worse-not-better/) sur des questions d'actualité, entre août 2024 et août 2025. Un assistant laissé sans garde-fous se trompe donc plus d'une fois sur trois, souvent avec un ton parfaitement assuré.",
+      },
+      {
+        type: "h2",
+        text: "La vraie question : avez-vous un volume de questions répétitives ?",
+      },
+      {
+        type: "p",
+        text: "C'est le seul critère qui tranche vraiment. Un chatbot se justifie quand vous recevez, chaque semaine, les mêmes questions par mail ou par téléphone. Là, l'automatiser vous fait gagner un temps réel et améliore l'expérience du visiteur. Si vous recevez trois demandes par mois, toutes différentes, un bon formulaire de contact et un numéro de téléphone visible feront mieux le travail, pour zéro coût et zéro risque.",
+      },
+      {
+        type: "quote",
+        text: "Un chatbot n'est pas une décoration futuriste. C'est un outil qui a un sens quand il répond à un vrai flux de questions, et qui encombre le reste du temps.",
+      },
+      {
+        type: "h2",
+        text: "Chatbot IA, mais bien fait : les conditions",
+      },
+      {
+        type: "ol",
+        items: [
+          "Il est connecté à vos contenus réels (FAQ, pages, catalogue), pas laissé en roue libre sur un modèle générique.",
+          "Il connaît ses limites : sur une question hors de son périmètre, il propose un contact humain au lieu d'inventer.",
+          "Il ne s'ouvre pas de force et ne masque pas le contenu : le visiteur le sollicite quand il en a besoin.",
+          "Il passe le relais à un humain proprement, avec l'historique de la conversation.",
+          "Il respecte le RGPD : les échanges peuvent contenir des données personnelles, à traiter en conséquence.",
+        ],
+      },
+      {
+        type: "h2",
+        text: "Les alternatives souvent plus efficaces",
+      },
+      {
+        type: "p",
+        text: "Avant d'investir dans un assistant IA, beaucoup de sites gagneraient d'abord à améliorer les fondamentaux. Une page qui explique clairement ce que vous proposez, des tarifs visibles, une FAQ bien écrite et un formulaire de contact simple répondent à 80 % des questions sans aucune IA. C'est aussi ce qui fait qu'un site [convertit ou pas](/blog/j-ai-une-idee-de-site-par-ou-commencer) : la clarté avant la technologie.",
+      },
+      {
+        type: "callout",
+        title: "L'IA a un autre usage, plus discret",
+        text: "Le vrai levier IA pour un site n'est pas toujours le chatbot visible. C'est souvent en coulisses : accélérer la rédaction de contenu, générer des variantes de pages, aider au support interne. Moins spectaculaire, mais plus rentable.",
+        tone: "info",
+      },
+      {
+        type: "h2",
+        text: "Pour aller plus loin",
+      },
+      {
+        type: "p",
+        text: "Un chatbot traite des données personnelles, même s'il ne demande ni nom ni email : adresses IP, cookies, contenu des conversations. Avant de vous lancer, la CNIL a publié des repères clairs. Voici trois ressources utiles.",
+      },
+      {
+        type: "ul",
+        items: [
+          "[CNIL — Chatbots : les conseils pour respecter les droits des personnes](https://www.cnil.fr/fr/chatbots-les-conseils-de-la-cnil-pour-respecter-les-droits-des-personnes) : ce que vous devez prévoir côté transparence et champs de saisie libre.",
+          "[CNIL — IA et RGPD : les recommandations officielles](https://www.cnil.fr/fr/ia-et-rgpd-la-cnil-publie-ses-nouvelles-recommandations-pour-accompagner-une-innovation-responsable) : le cadre à respecter si vous branchez une IA sur vos données.",
+          "[NewsGuard — l'analyse des fausses réponses des chatbots](https://www.vktr.com/ai-technology/ai-hallucinations-nearly-double-heres-why-theyre-getting-worse-not-better/) : pour comprendre pourquoi un assistant non encadré reste risqué.",
+        ],
+      },
+      {
+        type: "h2",
+        text: "Mon conseil concret",
+      },
+      {
+        type: "p",
+        text: "Ne posez pas un chatbot parce que « tout le monde en a un ». Posez-le si vous avez un volume réel de questions répétitives, si vous pouvez le connecter à vos vraies données, et si vous êtes prêt à le maintenir. Sinon, investissez d'abord dans la clarté de votre site : ça coûte moins cher et ça convertit mieux. Si vous hésitez pour votre cas, [parlons-en](/#contact) : je vous dirai honnêtement si un chatbot vaut le coup chez vous, ou si votre budget est mieux placé ailleurs.",
+      },
+    ],
+  },
+  {
+    slug: "seo-ia-etre-cite-chatgpt-perplexity",
+    title: "SEO à l'ère de l'IA : comment être cité par ChatGPT et Perplexity",
+    excerpt:
+      "De plus en plus de gens posent leurs questions à une IA plutôt qu'à Google. Être bien référencé ne suffit plus : il faut être cité dans les réponses. Voici comment s'y prendre concrètement.",
+    date: "2026-08-18",
+    category: "SEO",
+    tags: ["SEO", "IA", "GEO"],
+    readingTime: 8,
+    cover: "/blog/seo-ia-etre-cite-chatgpt-perplexity.jpg",
+    coverIsEmoji: false,
+    content: [
+      {
+        type: "lead",
+        text: "Une part croissante des recherches ne passe plus par une liste de liens bleus, mais par une réponse rédigée directement par une IA : ChatGPT, Perplexity, ou les aperçus générés par Google. Le jeu change. Il ne suffit plus d'être en première page, il faut être la source que l'IA cite dans sa réponse. On appelle ça le GEO (Generative Engine Optimization), et ça se prépare.",
+      },
+      {
+        type: "h2",
+        text: "Ce qui change quand l'IA répond à la place de Google",
+      },
+      {
+        type: "p",
+        text: "Dans un moteur classique, l'utilisateur voit dix résultats et choisit. Dans une réponse générée, il voit une synthèse et, parfois, quelques sources citées. Le trafic ne se répartit plus sur dix liens : il se concentre sur les rares pages que le modèle juge fiables et faciles à citer. Être « quelque part en première page » ne suffit plus, il faut être la référence claire sur une question précise.",
+      },
+      {
+        type: "p",
+        text: "Cette bascule n'est plus théorique. Les analyses de trafic montrent que [les visites envoyées par les IA vers les sites ont explosé en 2025](https://digiday.com/media/in-graphic-detail-the-state-of-ai-referral-traffic-in-2025/), avec une croissance de l'ordre de 500 % sur l'année. Le volume reste petit face à Google, mais la pente est très raide : les pages qui savent se rendre citables prennent de l'avance dès maintenant.",
+      },
+      {
+        type: "callout",
+        title: "Le SEO classique reste la fondation",
+        text: "Le GEO ne remplace pas le référencement traditionnel, il s'ajoute par-dessus. Les IA s'appuient largement sur les mêmes signaux : contenu de qualité, site technique propre, autorité. Vos [7 vérifications SEO de base](/blog/audit-seo-7-verifications-gratuites) restent le point de départ.",
+        tone: "info",
+      },
+      {
+        type: "h2",
+        text: "Comment une IA choisit ce qu'elle cite",
+      },
+      {
+        type: "p",
+        text: "Les modèles ne raisonnent pas comme un lecteur humain. Ils cherchent des passages clairs, autonomes et vérifiables, qu'ils peuvent extraire et reformuler sans risque. Un contenu qui répond directement à une question, en une ou deux phrases nettes, a beaucoup plus de chances d'être repris qu'un long paragraphe qui tourne autour du sujet.",
+      },
+      {
+        type: "ul",
+        items: [
+          "La clarté : une réponse explicite et sans ambiguïté, pas un enrobage marketing.",
+          "La structure : des titres qui posent des questions, des réponses juste en dessous.",
+          "La fraîcheur : une date récente et un contenu à jour rassurent le modèle sur la fiabilité.",
+          "L'autorité : un auteur identifiable, une expertise démontrée, des sources citées.",
+        ],
+      },
+      {
+        type: "h2",
+        text: "Rendre votre site lisible par les IA",
+      },
+      {
+        type: "p",
+        text: "Les robots des IA (GPTBot d'OpenAI, ClaudeBot, PerplexityBot) parcourent le web comme celui de Google. Première étape : vérifier que vous ne les bloquez pas par erreur dans votre robots.txt. Beaucoup de sites, par excès de prudence, interdisent ces robots et se retirent d'eux-mêmes des réponses générées. À l'inverse, si vous voulez y apparaître, il faut les laisser passer.",
+      },
+      {
+        type: "ol",
+        items: [
+          "Autorisez les crawlers IA dans robots.txt si vous voulez être cité (GPTBot, ClaudeBot, PerplexityBot, entre autres).",
+          "Structurez vos pages avec des titres sous forme de questions et des réponses courtes juste après.",
+          "Ajoutez des données structurées Schema.org (FAQ, Article, Person) pour lever toute ambiguïté sur le sens.",
+          "Envisagez un fichier llms.txt qui résume et oriente les IA vers vos contenus clés.",
+          "Datez et mettez à jour vos contenus : une IA préfère une source récente à une page de 2019.",
+        ],
+      },
+      {
+        type: "callout",
+        title: "Le format « question / réponse » gagne",
+        text: "Écrivez un titre qui reprend exactement la question que pose votre client, puis répondez-y en deux phrases dès la première ligne. C'est le format que les IA extraient le plus facilement, et c'est aussi celui que les humains préfèrent.",
+        tone: "success",
+      },
+      {
+        type: "h2",
+        text: "L'autorité compte plus que jamais",
+      },
+      {
+        type: "p",
+        text: "Les IA sont prudentes : elles préfèrent citer des sources qu'elles jugent crédibles pour éviter de propager une erreur. Un contenu signé par une personne réelle, avec une expertise visible, des chiffres sourcés et un site cohérent sur son sujet, inspire davantage confiance qu'une page anonyme. C'est la même logique que le maillage interne en SEO : plus votre site est cohérent et spécialisé sur un thème, plus il fait autorité, que ce soit pour Google ou pour un modèle de langage.",
+      },
+      {
+        type: "quote",
+        text: "Être cité par une IA, ce n'est pas ruser avec un algorithme. C'est produire la réponse la plus claire et la plus fiable à une vraie question. Le reste suit.",
+      },
+      {
+        type: "h2",
+        text: "Faut-il tout miser sur le GEO dès maintenant ?",
+      },
+      {
+        type: "p",
+        text: "Non, et méfiez-vous de ceux qui vous vendent une révolution totale. Le trafic issu des recherches classiques reste massif, et le référencement Google garde toute son importance. Le GEO est un complément qui monte en puissance, pas un remplacement. La bonne stratégie en 2026 : garder des fondations SEO solides, et adapter progressivement votre contenu pour être aussi lisible par les IA. Ce sont largement les mêmes efforts, orientés un cran plus loin.",
+      },
+      {
+        type: "h2",
+        text: "Pour aller plus loin",
+      },
+      {
+        type: "p",
+        text: "Trois sources de première main pour approfondir, directement chez ceux qui font les règles.",
+      },
+      {
+        type: "ul",
+        items: [
+          "[Google Search Central — optimiser pour les fonctionnalités d'IA générative](https://developers.google.com/search/docs/fundamentals/ai-optimization-guide) : la doc officielle de Google, qui confirme qu'un contenu utile et bien structuré reste la base.",
+          "[OpenAI — vue d'ensemble des robots (GPTBot, OAI-SearchBot)](https://developers.openai.com/api/docs/bots) : comment autoriser ou bloquer chaque crawler d'OpenAI dans votre robots.txt.",
+          "[Spécification officielle llms.txt](https://llmstxt.org/) : le format proposé pour guider les IA vers vos contenus clés.",
+        ],
+      },
+      {
+        type: "h2",
+        text: "En résumé",
+      },
+      {
+        type: "p",
+        text: "Les IA deviennent une porte d'entrée vers votre site, en plus de Google. Pour y apparaître : laissez passer leurs robots, structurez vos pages en questions-réponses claires, ajoutez des données structurées, datez vos contenus et démontrez votre expertise. Rien de magique, juste du SEO propre poussé un cran plus loin. Si vous voulez savoir où en est votre site face à cette bascule, [écrivez-moi](/#contact) : je regarde ce qui vous rend citable, et ce qui vous en empêche aujourd'hui.",
+      },
+    ],
+  },
+  {
+    slug: "site-internet-artisan",
+    title: "Site internet pour artisan : est-ce vraiment utile, et combien ça coûte ?",
+    excerpt:
+      "Le bouche-à-oreille ne suffit plus : vos futurs clients vous cherchent sur Google avant de vous appeler. Voici ce dont un artisan a vraiment besoin, et ce qui ne sert à rien.",
+    date: "2026-08-20",
+    category: "Par métier",
+    tags: ["artisan", "création de site", "SEO local"],
+    readingTime: 7,
+    cover: "/blog/site-internet-artisan.jpg",
+    coverIsEmoji: false,
+    content: [
+      {
+        type: "lead",
+        text: "« Moi, je marche au bouche-à-oreille, je n'ai pas besoin de site. » C'est la phrase que j'entends le plus souvent chez les artisans. Le problème, c'est qu'aujourd'hui, même un client qu'on vous a recommandé va taper votre nom sur Google avant de décrocher son téléphone. S'il ne trouve rien, ou un site à l'abandon, le doute s'installe.",
+      },
+      {
+        type: "h2",
+        text: "Pourquoi la question se pose (et pourquoi elle est légitime)",
+      },
+      {
+        type: "p",
+        text: "Beaucoup d'artisans ont construit toute leur activité sans site, au bouche-à-oreille et à la réputation locale. Et ça a marché. Se demander « ai-je vraiment besoin d'un site ? » est donc parfaitement légitime : vous ne voulez pas payer pour un outil qui ne vous rapportera rien. Cet article n'est pas là pour vous vendre un site à tout prix, mais pour vous aider à décider en connaissance de cause.",
+      },
+      {
+        type: "p",
+        text: "Le point de départ, c'est un changement de comportement des clients, y compris les plus fidèles. Selon [France Num, le programme public d'accompagnement à la transformation numérique des entreprises](https://www.francenum.gouv.fr/guides-et-conseils/strategie-numerique/comprendre-le-numerique/transformation-numerique-des), une large majorité de Français se renseignent en ligne avant de faire appel à un professionnel. Concrètement : la première impression ne se joue plus seulement sur le chantier, elle se joue aussi sur un écran, avant même qu'on vous appelle.",
+      },
+      {
+        type: "callout",
+        title: "« Avoir un site » ne veut pas dire « devenir informaticien »",
+        text: "Rassurez-vous tout de suite : vous n'avez rien de technique à gérer. Un site professionnel se conçoit, se met en ligne et se maintient pour vous. Votre rôle se limite à décrire votre métier et à fournir quelques photos. Le reste, c'est le travail du prestataire.",
+        tone: "info",
+      },
+      {
+        type: "h2",
+        text: "Le bouche-à-oreille ne disparaît pas, il passe par Google",
+      },
+      {
+        type: "p",
+        text: "On vous recommande à un ami. Que fait cet ami ? Il cherche votre nom en ligne pour vérifier. Vos réalisations, vos avis, votre sérieux. Sans présence en ligne, vous laissez cette vérification au hasard. Avec un site simple et propre, vous confirmez en dix secondes que vous êtes un pro fiable.",
+      },
+      {
+        type: "callout",
+        title: "Les chiffres qui comptent",
+        text: "88 % des personnes cherchent un prestataire en ligne avant de le contacter, et 62 % évitent une entreprise qui n'a pas de site. Pour un artisan, ne pas être trouvable, c'est perdre des chantiers sans jamais le savoir.",
+        tone: "info",
+      },
+      {
+        type: "h2",
+        text: "Ce dont un artisan a vraiment besoin (et pas plus)",
+      },
+      {
+        type: "p",
+        text: "Inutile de payer pour une usine à gaz. Un [site vitrine](/services/site-vitrine) bien fait suffit largement. Voici ce qui compte vraiment.",
+      },
+      {
+        type: "ul",
+        items: [
+          "Ce que vous faites et où vous intervenez, clair en dix secondes (métier + zone géographique).",
+          "Des photos de vos réalisations, idéalement en avant/après : c'est votre meilleure preuve.",
+          "Des avis clients visibles, qui rassurent immédiatement.",
+          "Vos coordonnées avec un bouton d'appel direct sur mobile, et un formulaire de demande de devis.",
+        ],
+      },
+      {
+        type: "p",
+        text: "Ce dont vous n'avez pas besoin : une boutique en ligne, des comptes clients, un blog quotidien. Payer pour ça, c'est jeter de l'argent sur des fonctions que vous n'utiliserez jamais.",
+      },
+      {
+        type: "h2",
+        text: "Le vrai levier : être trouvé dans votre ville",
+      },
+      {
+        type: "p",
+        text: "Un artisan ne cherche pas à être visible dans toute la France, mais dans sa zone. C'est là que le référencement local change tout : quand quelqu'un tape « plombier + votre ville » ou « menuisier près de moi », vous devez apparaître. Ça passe par un site structuré pour le local et une fiche Google Business complète. Avant de payer un audit, vous pouvez déjà vérifier [7 points SEO vous-même](/blog/audit-seo-7-verifications-gratuites).",
+      },
+      {
+        type: "callout",
+        title: "Votre fiche Google est gratuite et décisive",
+        text: "Pour un artisan, la fiche Google Business est souvent le tout premier point de contact : elle affiche vos horaires, vos avis, votre téléphone et un itinéraire. La créer et la compléter ne coûte rien et vous fait remonter dans les recherches locales.",
+        tone: "success",
+      },
+      {
+        type: "h2",
+        text: "Les avis clients : votre meilleur atout, et il est gratuit",
+      },
+      {
+        type: "p",
+        text: "Le « pack local », ce sont les trois fiches mises en avant par Google sur la carte quand on cherche un artisan près de chez soi. Y figurer, c'est capter l'essentiel des appels. Or plusieurs [analyses de référencement local](https://www.localranker.fr/blog/seo-local-artisan) montrent que le volume et la note de vos avis pèsent lourd : pour espérer y entrer, on vise en général au moins 10 à 20 avis récents avec une moyenne d'au moins 4,3 étoiles. Une fiche qui reçoit régulièrement de nouveaux avis signale à Google que votre activité est bien réelle et vivante.",
+      },
+      {
+        type: "p",
+        text: "La bonne nouvelle, c'est que récolter des avis ne coûte rien et ne demande qu'un réflexe : les demander au bon moment.",
+      },
+      {
+        type: "ol",
+        items: [
+          "Demandez l'avis juste après un chantier réussi, quand le client est satisfait : c'est là que le taux de réponse est le plus élevé.",
+          "Facilitez-lui la vie : un lien direct par SMS, un mail, ou un QR code sur votre facture ou votre carte de visite.",
+          "Répondez à chaque avis, même négatif : ça montre votre sérieux aux futurs clients qui lisent.",
+        ],
+      },
+      {
+        type: "h2",
+        text: "Combien ça coûte",
+      },
+      {
+        type: "p",
+        text: "Un site vitrine d'artisan, propre et bien référencé, se situe dans le bas de la fourchette du marché. Pour des repères précis par type de projet, j'ai détaillé les [vrais prix d'un site en 2026](/blog/combien-coute-site-internet-2026), et une méthode pour [budgéter votre projet](/blog/comment-budgeter-projet-site-web) avant même de demander un devis.",
+      },
+      {
+        type: "h2",
+        text: "Les pièges à éviter",
+      },
+      {
+        type: "ul",
+        items: [
+          "Les solutions « gratuites » ou à 20 €/mois : belles en apparence, mais lentes, mal référencées et bourrées d'abonnements cachés.",
+          "Le site fait par un proche « qui s'y connaît un peu » : souvent jamais fini, jamais mis à jour, invisible sur Google.",
+          "Le site sans aucun SEO : vous avez une belle vitrine, mais dans une rue où personne ne passe.",
+        ],
+      },
+      {
+        type: "quote",
+        text: "Pour un artisan, un site n'a qu'un seul but : qu'on vous trouve dans votre secteur et qu'on vous appelle. Tout le reste est du décor.",
+      },
+      {
+        type: "h2",
+        text: "Pour aller plus loin (ressources utiles et gratuites)",
+      },
+      {
+        type: "p",
+        text: "Avant de vous lancer, quelques ressources officielles et gratuites pour vous faire votre propre idée :",
+      },
+      {
+        type: "ul",
+        items: [
+          "[France Num](https://www.francenum.gouv.fr) — le portail public d'accompagnement à la digitalisation : diagnostic gratuit, conseils et annuaire d'experts près de chez vous.",
+          "[Aide Profil d'établissement Google](https://support.google.com/business) — la documentation officielle pour créer et optimiser votre fiche Google Business, votre premier levier de visibilité locale.",
+          "[Chambre de Métiers et de l'Artisanat (artisanat.fr)](https://www.artisanat.fr) — accompagnement, formations au numérique et aides régionales pour les artisans.",
+        ],
+      },
+      {
+        type: "h2",
+        text: "En pratique",
+      },
+      {
+        type: "p",
+        text: "Si vous êtes artisan et que vous hésitez encore, commencez simple : décrivez votre métier, rassemblez quelques photos et vos avis, et [parlons-en](/#contact). Je vous dis franchement ce qu'il vous faut, ni plus ni moins. Et si votre idée est encore floue, [ce guide pour démarrer](/blog/j-ai-une-idee-de-site-par-ou-commencer) vous met sur les rails.",
+      },
+    ],
+  },
+  {
+    slug: "site-internet-restaurant",
+    title: "Site internet pour restaurant : ce qui compte vraiment en 2026",
+    excerpt:
+      "Instagram et les plateformes ne suffisent pas : sans site ni fiche Google à jour, vous laissez vos réservations et vos marges à des intermédiaires. Voici le minimum vital.",
+    date: "2026-08-23",
+    category: "Par métier",
+    tags: ["restaurant", "création de site", "SEO local"],
+    readingTime: 7,
+    cover: "/blog/site-internet-restaurant.jpg",
+    coverIsEmoji: false,
+    content: [
+      {
+        type: "lead",
+        text: "Beaucoup de restaurateurs pensent qu'entre Instagram et les plateformes de réservation, un site est inutile. En réalité, c'est l'inverse : sans site et sans fiche Google à jour, vous dépendez entièrement d'intermédiaires qui prennent une commission et gardent vos clients. Un site vous redonne la main.",
+      },
+      {
+        type: "h2",
+        text: "D'abord, comprendre comment on choisit un restaurant aujourd'hui",
+      },
+      {
+        type: "p",
+        text: "Pendant longtemps, un bon restaurant se remplissait grâce à son emplacement et au bouche-à-oreille. Ça compte toujours, mais une étape s'est intercalée : avant de pousser votre porte, le client vérifie sur son téléphone. Il regarde vos photos, votre carte, vos avis, et il décide en quelques secondes s'il vous fait confiance. Comprendre ce réflexe, c'est comprendre pourquoi votre présence en ligne est devenue aussi importante que votre cuisine.",
+      },
+      {
+        type: "p",
+        text: "Les chiffres le confirment. Selon plusieurs études du secteur, [environ 62 % des recherches de restaurants passent par Google](https://www.metadosi.fr/62-des-consommateurs-decouvrent-des-restaurants-sur-google/), et près de 9 personnes sur 10 consultent les avis avant de choisir où manger. Autrement dit, votre vitrine numérique travaille pour vous (ou contre vous) 24 h/24, que vous vous en occupiez ou non.",
+      },
+      {
+        type: "callout",
+        title: "Pas besoin d'une usine à gaz",
+        text: "Être présent en ligne pour un restaurant, ça ne veut pas dire un site compliqué. Ça veut dire deux choses simples et complémentaires : une fiche Google à jour, et un site clair avec votre carte et un moyen de réserver. Le reste est du bonus.",
+        tone: "info",
+      },
+      {
+        type: "h2",
+        text: "Vos clients vous cherchent sur Google avant de réserver",
+      },
+      {
+        type: "p",
+        text: "Le réflexe est devenu universel : on entend parler d'un restaurant, on tape son nom sur Google. On veut voir la carte, les horaires, les photos, les avis, et savoir si on peut réserver. Si ces informations sont absentes, fausses ou dispersées sur cinq plateformes, vous perdez le client au moment précis où il était prêt à venir.",
+      },
+      {
+        type: "callout",
+        title: "La fiche Google avant tout",
+        text: "Pour un restaurant, la fiche Google Business est le premier point de contact, avant même votre site. Horaires exacts, photos récentes, avis, menu, bouton d'itinéraire et d'appel : une fiche complète et à jour est non négociable en 2026.",
+        tone: "info",
+      },
+      {
+        type: "h2",
+        text: "Le minimum vital d'un site de restaurant",
+      },
+      {
+        type: "ul",
+        items: [
+          "La carte, à jour et en vraies pages web (pas un PDF), pour qu'elle soit lisible sur mobile et référencée.",
+          "Les horaires et jours de fermeture, cohérents avec votre fiche Google.",
+          "Un module de réservation clair, idéalement en direct sur le site.",
+          "L'adresse avec un plan et l'accès (parking, transports).",
+          "De belles photos récentes des plats et de la salle.",
+        ],
+      },
+      {
+        type: "callout",
+        title: "Le piège du menu en PDF",
+        text: "Un menu en PDF est illisible sur mobile (il faut zoomer, ça pixelise) et totalement invisible pour Google. Or « restaurant + votre plat signature + votre ville » est une recherche fréquente. Une carte en vraies pages web se lit d'un pouce et vous fait ressortir dans les résultats.",
+        tone: "warning",
+      },
+      {
+        type: "h2",
+        text: "Réservation : reprendre la main sur vos marges",
+      },
+      {
+        type: "p",
+        text: "Les plateformes de réservation vous apportent de la visibilité, mais prélèvent une commission sur chaque couvert, et surtout, le client leur appartient, pas à vous. Un module de réservation directement sur votre site vous coûte zéro commission et vous constitue votre propre base de clients, que vous pouvez recontacter. L'idéal n'est pas de tout couper, mais de ne plus dépendre uniquement des plateformes.",
+      },
+      {
+        type: "p",
+        text: "Mettons des chiffres dessus. Sur la principale plateforme du marché, la commission tourne autour de 2,60 € par couvert, en plus d'un abonnement mensuel, d'après [plusieurs analyses de coûts 2026](https://www.restoboard.fr/blog/combien-coute-thefork-restaurant-2026). Sur un service de 40 couverts réservés en ligne, l'addition grimpe vite, tous les soirs. Une partie de ces réservations pourrait passer par vos propres canaux, gratuitement.",
+      },
+      {
+        type: "callout",
+        title: "L'astuce que peu de restaurateurs connaissent",
+        text: "Les réservations qui arrivent via votre fiche Google (le bouton « Réserver » directement dans Google Maps et la recherche) peuvent se faire sans commission. Coupler une fiche Google bien configurée à un module de réservation, c'est capter des réservations gratuites que vous auriez sinon payées à une plateforme.",
+        tone: "success",
+      },
+      {
+        type: "quote",
+        text: "Chaque réservation qui passe par votre site plutôt que par une plateforme, c'est une commission économisée et un client qui devient vraiment le vôtre.",
+      },
+      {
+        type: "h2",
+        text: "Ne pas mettre tous ses œufs dans les plateformes",
+      },
+      {
+        type: "p",
+        text: "TheFork, les réseaux sociaux, les applications de livraison : ce sont des canaux utiles, mais loués, pas possédés. Du jour au lendemain, une plateforme peut changer ses règles, ses commissions ou son algorithme. Votre site et votre fiche Google, eux, vous appartiennent. C'est votre socle, le reste vient s'y ajouter.",
+      },
+      {
+        type: "h2",
+        text: "Combien ça coûte",
+      },
+      {
+        type: "p",
+        text: "Un site de restaurant reste un [site vitrine](/services/site-vitrine) avec, en option, un module de réservation. On est dans une fourchette raisonnable, détaillée dans mon article sur les [prix d'un site en 2026](/blog/combien-coute-site-internet-2026). L'important n'est pas d'y mettre cher, mais d'y mettre juste : carte, réservation, Google Business.",
+      },
+      {
+        type: "h2",
+        text: "Pour aller plus loin (ressources utiles)",
+      },
+      {
+        type: "p",
+        text: "Quelques ressources fiables pour creuser le sujet de votre côté :",
+      },
+      {
+        type: "ul",
+        items: [
+          "[Aide Profil d'établissement Google](https://support.google.com/business) — pour configurer votre fiche, vos photos, votre menu et le bouton de réservation.",
+          "[FEVAD](https://www.fevad.com) — la fédération du e-commerce publie régulièrement des chiffres sur les usages en ligne des Français, réservation comprise.",
+          "[France Num](https://www.francenum.gouv.fr) — accompagnement et aides à la digitalisation, y compris pour la restauration.",
+        ],
+      },
+      {
+        type: "h2",
+        text: "En pratique",
+      },
+      {
+        type: "p",
+        text: "Si vous tenez un restaurant et que votre présence en ligne se résume à un compte Instagram et une fiche à moitié remplie, vous laissez de l'argent sur la table. [Écrivez-moi](/#contact) : on fait le point sur ce qui vous manque et on remet votre établissement en main sur Google.",
+      },
+    ],
+  },
+  {
+    slug: "aides-financer-site-internet-2026",
+    title: "Financer votre site internet en 2026 : les aides qui existent vraiment",
+    excerpt:
+      "Des aides existent pour digitaliser votre entreprise, mais attention aux informations périmées : le fameux chèque France Num à 500 € est fermé depuis 2021. Voici ce qui est réellement disponible.",
+    date: "2026-08-25",
+    category: "Financement",
+    tags: ["aides", "budget", "financement"],
+    readingTime: 7,
+    cover: "/blog/aides-financer-site-internet-2026.jpg",
+    coverIsEmoji: false,
+    content: [
+      {
+        type: "lead",
+        text: "Créer un site internet représente un budget, et pour beaucoup de petites entreprises, c'est justement ce budget qui fait repousser le projet d'année en année. Ce que peu de dirigeants savent, c'est qu'il existe des aides publiques pour financer une partie de cette digitalisation. Encore faut-il s'y retrouver, car une grande partie de ce qu'on lit en ligne à ce sujet est périmée.",
+      },
+      {
+        type: "h2",
+        text: "D'abord, de quoi parle-t-on ?",
+      },
+      {
+        type: "p",
+        text: "Si vous êtes artisan, commerçant, indépendant ou à la tête d'une petite structure, vous n'êtes pas censé connaître le paysage des aides publiques. C'est normal : ce n'est pas votre métier, et ce paysage est mouvant, éclaté entre l'État, les régions, les chambres consulaires. Prenons donc le temps de poser les bases avant d'entrer dans le détail.",
+      },
+      {
+        type: "p",
+        text: "La « digitalisation » d'une entreprise, c'est simplement le fait de se doter d'outils numériques : un site internet, une boutique en ligne, un logiciel de caisse, un système de réservation, etc. Depuis plusieurs années, les pouvoirs publics encouragent cette transition, notamment pour les très petites entreprises (TPE) et les petites et moyennes entreprises (PME), parce qu'une entreprise visible et outillée en ligne résiste mieux. Pour ça, différents dispositifs d'aide financière ont existé, existent encore, ou vont apparaître. Le problème, c'est qu'ils changent souvent, et que beaucoup d'articles continuent de vanter des aides qui n'existent plus.",
+      },
+      {
+        type: "callout",
+        title: "L'idée à retenir",
+        text: "Vous n'êtes pas obligé de financer votre site tout seul, et vous n'avez pas besoin de devenir expert en subventions. Vous avez juste besoin de savoir quelles portes frapper, et dans quel ordre. C'est exactement ce que cet article vous donne.",
+        tone: "info",
+      },
+      {
+        type: "h2",
+        text: "Le mythe du chèque France Num à 500 €",
+      },
+      {
+        type: "p",
+        text: "Vous avez sûrement croisé la promesse d'un « chèque France Num de 500 € » pour financer votre site. C'est l'aide la plus citée… et elle est fermée depuis le 31 juillet 2021. De nombreux articles continuent de la mettre en avant parce que ça fait un bon titre, mais le dispositif national n'existe plus sous cette forme.",
+      },
+      {
+        type: "callout",
+        title: "Méfiez-vous des articles qui datent",
+        text: "Si une page vous promet « 500 € France Num » comme une aide nationale active en 2026, c'est un signal qu'elle n'a pas été mise à jour. Vérifiez toujours la date de l'information et la source officielle.",
+        tone: "warning",
+      },
+      {
+        type: "h2",
+        text: "France Num aujourd'hui : un portail, pas un chèque",
+      },
+      {
+        type: "p",
+        text: "France Num n'est plus une aide unique, c'est le programme public d'orientation vers la transformation numérique. Concrètement, [francenum.gouv.fr](https://www.francenum.gouv.fr) vous propose trois choses : un diagnostic gratuit de votre maturité numérique, un annuaire d'experts référencés (les « Activateurs »), et une orientation vers les aides financières disponibles selon votre profil et votre région.",
+      },
+      {
+        type: "h2",
+        text: "Les vraies aides en 2026 : le niveau régional",
+      },
+      {
+        type: "p",
+        text: "L'argent se trouve aujourd'hui surtout au niveau régional. Selon votre région, des chèques numériques existent, souvent cumulables avec l'accompagnement France Num.",
+      },
+      {
+        type: "ul",
+        items: [
+          "Chèques numériques régionaux : généralement de 500 à 5 000 € selon la région et le projet.",
+          "Aides et accompagnements de votre CCI (Chambre de Commerce et d'Industrie) ou CMA (Chambre de Métiers, pour les artisans).",
+          "Aides sectorielles ou locales ponctuelles (métropole, département) selon votre activité.",
+        ],
+      },
+      {
+        type: "callout",
+        title: "Les montants changent, vérifiez à la source",
+        text: "Les conditions et montants varient d'une région à l'autre et évoluent régulièrement. Ne vous fiez pas à un chiffre lu sur un blog : vérifiez ce qui est actif auprès de votre Région ou de votre CCI/CMA. C'est gratuit et c'est la seule info fiable.",
+        tone: "info",
+      },
+      {
+        type: "h2",
+        text: "Les autres leviers pour alléger la facture",
+      },
+      {
+        type: "p",
+        text: "Au-delà des subventions, il y a des façons concrètes de rendre un site plus abordable.",
+      },
+      {
+        type: "ul",
+        items: [
+          "Étaler le paiement avec votre prestataire (plusieurs échéances plutôt qu'un règlement unique).",
+          "Commencer par une version simple qui couvre l'essentiel, puis enrichir ensuite : c'est le principe même d'un budget maîtrisé, que je détaille dans [comment budgéter votre projet](/blog/comment-budgeter-projet-site-web).",
+          "Ne pas oublier que la création d'un site est une dépense professionnelle déductible (parlez-en à votre comptable).",
+        ],
+      },
+      {
+        type: "h2",
+        text: "Comment vous y prendre concrètement",
+      },
+      {
+        type: "ol",
+        items: [
+          "Faites le diagnostic gratuit sur France Num pour cadrer votre besoin.",
+          "Contactez votre Région et votre CCI/CMA pour connaître les aides actives chez vous.",
+          "Demandez un devis clair à votre prestataire, avec le détail de ce qui est inclus.",
+          "Montez votre dossier d'aide AVANT d'engager la dépense : beaucoup d'aides ne sont pas rétroactives.",
+        ],
+      },
+      {
+        type: "quote",
+        text: "Une aide, c'est un bonus, pas un point de départ. Cadrez d'abord votre projet et son budget réel ; l'aide viendra l'alléger, pas le définir.",
+      },
+      {
+        type: "h2",
+        text: "Pour aller plus loin (sources officielles)",
+      },
+      {
+        type: "p",
+        text: "Ne vous fiez qu'aux sources officielles, qui sont à jour, plutôt qu'aux blogs qui recyclent d'anciennes aides :",
+      },
+      {
+        type: "ul",
+        items: [
+          "[France Num — aides financières](https://www.francenum.gouv.fr/aides-financieres) — le recensement officiel des aides à la digitalisation, filtrable selon votre profil et votre région.",
+          "[Bpifrance](https://www.bpifrance.fr) — financements, prêts et accompagnement des TPE/PME.",
+          "[Le réseau des CCI (cci.fr)](https://www.cci.fr) — pour connaître les aides régionales actives et être accompagné dans vos démarches.",
+        ],
+      },
+      {
+        type: "h2",
+        text: "En pratique",
+      },
+      {
+        type: "p",
+        text: "Si vous voulez financer un site sans vous perdre dans des dispositifs périmés, [écrivez-moi](/#contact) : je vous donne un devis clair et honnête, et je vous oriente vers les bonnes démarches à faire de votre côté avant d'engager quoi que ce soit.",
       },
     ],
   },

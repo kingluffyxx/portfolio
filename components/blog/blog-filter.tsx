@@ -54,7 +54,7 @@ export function BlogFilter({ posts }: { posts: BlogPost[] }) {
           <Link
             key={post.slug}
             href={`/blog/${post.slug}`}
-            className="group block p-6 rounded-2xl border border-border bg-card hover:border-primary/40 hover:shadow-lg hover:shadow-primary/5 transition-all duration-300"
+            className="group block p-6 rounded-2xl bg-card card-offset"
           >
             <div className="flex items-start gap-5">
               {post.coverIsEmoji ? (

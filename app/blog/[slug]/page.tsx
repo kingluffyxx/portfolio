@@ -6,6 +6,7 @@ import { ArrowLeft, ArrowRight, Clock, Calendar } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { BlogContent } from "@/components/blog/blog-content"
+import { yearsOfExperience } from "@/lib/experience"
 import {
   blogPosts,
   getPostBySlug,
@@ -200,7 +201,7 @@ export default async function BlogPostPage({ params }: Params) {
           <div className="flex-1 min-w-0">
             <p className="font-semibold text-base mb-1">Xavier Adda</p>
             <p className="text-sm text-muted-foreground mb-4">
-              Freelance création de sites internet & SEO · 7+ ans d'expérience ·
+              Freelance création de sites internet & SEO · {yearsOfExperience()}+ ans d'expérience ·
               Île-de-France & Remote.
             </p>
             <Button asChild size="sm">

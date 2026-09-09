@@ -81,7 +81,7 @@ export default function BlogIndexPage() {
       {/* Featured article (latest) */}
       <Link
         href={`/blog/${featured.slug}`}
-        className="group block mb-16 p-6 md:p-10 rounded-3xl border border-border bg-card hover:border-primary/50 hover:shadow-xl hover:shadow-primary/5 transition-all duration-300"
+        className="group block mb-16 p-6 md:p-10 rounded-3xl bg-card card-offset"
       >
         <div className="grid md:grid-cols-12 gap-6 md:gap-10 items-center">
           {featured.coverIsEmoji ? (
