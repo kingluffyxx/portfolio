@@ -50,7 +50,7 @@ export default async function OpengraphImage() {
             fontWeight: 800,
             lineHeight: 1.05,
             background:
-              "linear-gradient(90deg, #A78BFA 0%, #22D3EE 100%)",
+              "linear-gradient(90deg, #A78BFA 0%, #6366F1 100%)",
             backgroundClip: "text",
             color: "transparent",
             marginBottom: 24,

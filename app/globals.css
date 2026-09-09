@@ -58,8 +58,8 @@
   --secondary-foreground: 15 15 15;
   --muted: 240 240 245;
   --muted-foreground: 115 115 130;
-  --accent: 34 211 238;
-  --accent-foreground: 15 15 15;
+  --accent: 99 102 241;
+  --accent-foreground: 255 255 255;
   --destructive: 239 68 68;
   --border: 228 228 231;
   --input: 228 228 231;
@@ -92,7 +92,7 @@
   --secondary-foreground: 250 250 250;
   --muted: 39 39 42;
   --muted-foreground: 161 161 170;
-  --accent: 34 211 238;
+  --accent: 129 140 248;
   --accent-foreground: 15 15 15;
   --destructive: 239 68 68;
   --border: 39 39 42;
@@ -125,6 +125,18 @@
 
   body {
     @apply bg-background text-foreground;
+  }
+
+  /* Titres en font d'affichage (Space Grotesk), un peu resserrés. */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display), var(--font-geist-sans), sans-serif;
+    letter-spacing: -0.02em;
+  }
+
+  /* Détail signature : sélection de texte à la couleur de marque. */
+  ::selection {
+    background: rgb(var(--primary));
+    color: rgb(var(--primary-foreground));
   }
 }
 
@@ -215,6 +227,22 @@
   .scroll-animate-scale-visible {
     opacity: 1;
     transform: scale(1);
+  }
+
+  /* Card signature : bordure nette + ombre dure décalée (pas floue).
+     Au hover, l'ombre se réduit et la card "s'enfonce" vers elle.
+     Placée après .scroll-animate pour que sa transition (rapide) gagne. */
+  .card-offset {
+    border-width: 2px;
+    border-color: rgb(var(--primary) / 0.55);
+    box-shadow: 5px 5px 0 0 rgb(var(--primary));
+    transition: box-shadow 0.18s ease, transform 0.18s ease, border-color 0.18s ease;
+  }
+
+  .card-offset:hover {
+    box-shadow: 2px 2px 0 0 rgb(var(--primary));
+    transform: translate(3px, 3px);
+    border-color: rgb(var(--primary));
   }
 
   /* Shopify green color filter */

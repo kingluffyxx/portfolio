@@ -1,4 +1,5 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Inter, Geist_Mono } from "next/font/google";
+import localFont from "next/font/local";
 import { getLocale } from "next-intl/server";
 import { ThemeProvider } from "@/components/theme-provider";
 import { BotIdClient } from "botid/client";
@@ -14,7 +15,7 @@ export const metadata: Metadata = {
     template: "%s",
   },
   description:
-    "Freelance création de sites internet professionnels, boutiques en ligne et applications sur-mesure. SEO inclus, livré rapidement. 7+ ans d'expérience. Île-de-France & Remote.",
+    "Freelance création de sites internet professionnels, boutiques en ligne et applications sur-mesure. SEO inclus, livré rapidement. 9+ ans d'expérience. Île-de-France & Remote.",
   keywords: [
     "création site internet",
     "freelance création site web",
@@ -53,7 +54,7 @@ export const metadata: Metadata = {
     siteName: "Xavier Adda - Portfolio",
     title: "Création de sites internet & SEO · Xavier Adda Freelance",
     description:
-      "Création de sites internet, boutiques en ligne et applications sur-mesure. SEO inclus. Freelance avec 7+ ans d'expérience. Île-de-France & Remote.",
+      "Création de sites internet, boutiques en ligne et applications sur-mesure. SEO inclus. Freelance avec 9+ ans d'expérience. Île-de-France & Remote.",
     images: [
       {
         url: "/opengraph-image",
@@ -67,7 +68,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Création de sites internet & SEO · Xavier Adda Freelance",
     description:
-      "Création de sites internet, e-commerce et applications. SEO inclus. Freelance 7+ ans d'expérience.",
+      "Création de sites internet, e-commerce et applications. SEO inclus. Freelance 9+ ans d'expérience.",
     images: ["/opengraph-image"],
     creator: "@xavier_adda",
   },
@@ -86,9 +87,22 @@ export const metadata: Metadata = {
   category: "technology",
 };
 
-const geistSans = Geist({
+// Inter alimente --font-geist-sans (le texte courant) sans toucher aux consommateurs.
+const inter = Inter({
   variable: "--font-geist-sans",
   subsets: ["latin"],
+});
+
+// Satoshi (Fontshare) = font d'affichage auto-hébergée, appliquée aux titres via globals.css.
+const satoshi = localFont({
+  variable: "--font-display",
+  display: "swap",
+  src: [
+    { path: "../public/fonts/satoshi/Satoshi-400.woff2", weight: "400", style: "normal" },
+    { path: "../public/fonts/satoshi/Satoshi-500.woff2", weight: "500", style: "normal" },
+    { path: "../public/fonts/satoshi/Satoshi-700.woff2", weight: "700", style: "normal" },
+    { path: "../public/fonts/satoshi/Satoshi-900.woff2", weight: "900", style: "normal" },
+  ],
 });
 
 const geistMono = Geist_Mono({
@@ -153,7 +167,7 @@ export default async function RootLayout({
     "@id": `${siteUrl}/#service`,
     name: "Xavier Adda · Création de sites internet & SEO",
     description:
-      "Freelance création de sites internet, e-commerce, intégration IA et SEO. Île-de-France et remote international. Devis sous 48h, 7+ ans d'expérience.",
+      "Freelance création de sites internet, e-commerce, intégration IA et SEO. Île-de-France et remote international. Devis sous 48h, 9+ ans d'expérience.",
     url: siteUrl,
     image: `${siteUrl}/opengraph-image`,
     provider: { "@id": `${siteUrl}/#person` },
@@ -205,7 +219,7 @@ export default async function RootLayout({
         />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${inter.variable} ${satoshi.variable} ${geistMono.variable} antialiased`}
       >
         <ThemeProvider
           attribute="class"

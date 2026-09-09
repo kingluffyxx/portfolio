@@ -52,7 +52,7 @@ export function About() {
                 className={`group relative scroll-animate-scale ${isVisible ? "scroll-animate-scale-visible" : ""}`}
                 style={{ transitionDelay: `${0.2 + index * 0.1}s` }}
               >
-                <div className="flex flex-col items-center bg-card hover:shadow-primary/5 hover:shadow-xl p-8 border hover:border-primary/50 rounded-2xl text-center transition-all duration-300 h-full">
+                <div className="flex flex-col items-center bg-card p-8 rounded-2xl text-center card-offset h-full">
                   {/* Icône avec cercle gradient */}
                   <div className="relative mb-6">
                     <div className="absolute inset-0 bg-linear-to-br from-primary/20 to-accent/20 opacity-0 group-hover:opacity-100 blur-xl rounded-full transition-opacity duration-300" />

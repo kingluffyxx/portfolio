@@ -88,13 +88,13 @@ export function Services() {
               <Link
                 key={slug}
                 href={`/${locale}/services/${localizedSlug}`}
-                className={`group relative scroll-animate ${
+                className={`group relative scroll-animate card-offset ${
                   isVisible ? "scroll-animate-visible" : ""
                 } ${
                   isHero
-                    ? "sm:col-span-2 lg:col-span-1 lg:row-span-2 bg-linear-to-br from-primary/15 via-card to-accent/10 border-primary/30"
-                    : "bg-card border-border"
-                } border rounded-2xl p-6 md:p-8 hover:border-primary/50 hover:shadow-xl hover:shadow-primary/5 transition-all duration-300 flex flex-col`}
+                    ? "sm:col-span-2 lg:col-span-1 lg:row-span-2 bg-linear-to-br from-primary/15 via-card to-accent/10"
+                    : "bg-card"
+                } rounded-2xl p-6 md:p-8 flex flex-col`}
                 style={{ transitionDelay: `${0.15 + idx * 0.05}s` }}
               >
                 {isHero && (
@@ -106,13 +106,10 @@ export function Services() {
                   </div>
                 )}
 
-                <div
-                  className={`mb-4 inline-flex items-center justify-center rounded-xl ${
-                    isHero ? "w-14 h-14 bg-primary/20" : "w-12 h-12 bg-primary/10"
-                  }`}
-                >
+                <div className="mb-4">
                   <Icon
-                    className={`${isHero ? "w-7 h-7" : "w-6 h-6"} text-primary`}
+                    className={`${isHero ? "w-9 h-9" : "w-8 h-8"} text-primary`}
+                    strokeWidth={1.5}
                   />
                 </div>
 

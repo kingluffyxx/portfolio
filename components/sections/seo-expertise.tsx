@@ -69,7 +69,7 @@ export function SeoExpertise() {
             return (
               <div
                 key={p.key}
-                className={`bg-card border border-border rounded-2xl p-6 md:p-8 hover:border-primary/40 hover:shadow-xl hover:shadow-primary/5 transition-all duration-300 scroll-animate ${
+                className={`bg-card rounded-2xl p-6 md:p-8 card-offset scroll-animate ${
                   isVisible ? "scroll-animate-visible" : ""
                 }`}
                 style={{ transitionDelay: `${0.15 + idx * 0.1}s` }}

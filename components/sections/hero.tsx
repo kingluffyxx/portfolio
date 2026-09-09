@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button"
 import { LayoutTextFlip } from "@/src/components/ui/layout-text-flip"
 import { Vortex } from "@/src/components/ui/vortex"
 import { ArrowRight, Calendar } from "lucide-react"
+import { yearsOfExperience } from "@/lib/experience"
 
 export function Hero() {
     const t = useTranslations('hero')
@@ -18,7 +19,7 @@ export function Hero() {
                 backgroundColor="transparent"
                 baseHue={270}
                 rangeY={500}
-                particleCount={500}
+                particleCount={350}
                 baseSpeed={0.1}
                 rangeSpeed={1}
                 baseRadius={1}
@@ -26,7 +27,10 @@ export function Hero() {
                 containerClassName="absolute inset-0"
                 className="w-full h-full"
             >
-                <div className="flex items-start md:items-center pt-8 pb-24 md:py-32 h-full min-h-[calc(100vh-4rem)] container">
+                {/* Scrim : garde le texte lisible au-dessus des particules (règle contraste) */}
+                <div className="pointer-events-none absolute inset-0 hidden md:block bg-linear-to-r from-background/75 via-background/30 to-transparent" />
+                <div className="pointer-events-none absolute inset-0 md:hidden bg-linear-to-t from-background/85 via-background/40 to-transparent" />
+                <div className="relative z-10 flex items-start md:items-center pt-8 pb-24 md:py-32 h-full min-h-[calc(100vh-4rem)] container">
                     <div className="flex md:flex-row flex-col-reverse md:justify-between items-center gap-8 md:gap-16 w-full">
                         {/* Contenu textuel */}
                         <div className="flex flex-col md:flex-1 gap-4 md:text-left text-center animate-slide-in-left">
@@ -40,7 +44,7 @@ export function Hero() {
                                     <span className="font-medium text-green-600 dark:text-green-400 text-sm">{t('available')}</span>
                                 </div>
                                 <div className="inline-flex items-center gap-2 bg-primary/10 px-3 py-1.5 border border-primary/20 rounded-full">
-                                    <span className="font-medium text-primary text-sm">{t('trustBadge')}</span>
+                                    <span className="font-medium text-primary text-sm">{t('trustBadge', { years: yearsOfExperience() })}</span>
                                 </div>
                             </div>
                             <p className="text-muted-foreground text-lg">{t('greeting')}</p>

@@ -71,12 +71,12 @@ export function Testimonials() {
           return (
             <figure
               key={slug}
-              className={`flex flex-col rounded-2xl border border-primary/20 bg-primary/5 p-6 md:p-8 transition-all duration-700 ${
+              className={`flex flex-col rounded-2xl bg-primary/5 p-6 md:p-8 card-offset transition-all duration-700 ${
                 isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
               }`}
               style={{ transitionDelay: `${i * 120}ms` }}
             >
-              <div className="flex gap-1 mb-4" aria-label="5 sur 5">
+              <div className="flex gap-1 mb-4" role="img" aria-label="Note : 5 sur 5">
                 {Array.from({ length: 5 }).map((_, s) => (
                   <Star
                     key={s}

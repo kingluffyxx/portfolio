@@ -42,7 +42,7 @@ export function WhyWebsite() {
             return (
               <div
                 key={card.title}
-                className="group relative bg-card border border-border rounded-2xl p-6 md:p-7 hover:border-primary/40 hover:shadow-lg hover:shadow-primary/5 transition-all duration-300"
+                className="group relative bg-card rounded-2xl p-6 md:p-7 card-offset"
               >
                 <div className="inline-flex items-center justify-center size-11 rounded-xl bg-primary/10 text-primary mb-4 group-hover:bg-primary/15 transition-colors">
                   <Icon className="size-5" />

@@ -110,7 +110,7 @@ export function Skills() {
                         return (
                             <div
                                 key={category.key}
-                                className={`group relative rounded-2xl border bg-card p-6 transition-all duration-300 hover:shadow-xl hover:shadow-primary/5 hover:border-primary/30 scroll-animate-scale ${isVisible ? 'scroll-animate-scale-visible' : ''}`}
+                                className={`group relative rounded-2xl bg-card p-6 card-offset scroll-animate-scale ${isVisible ? 'scroll-animate-scale-visible' : ''}`}
                                 style={{ transitionDelay: `${0.1 + categoryIndex * 0.1}s` }}
                             >
                                 {/* En-tête de catégorie */}
