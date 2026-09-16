@@ -1,4 +1,4 @@
-export type ProjectSlug = "flowsolo" | "steamhunter" | "artedas" | "ilearnromanian" | "theredmaster"
+export type ProjectSlug = "flowsolo" | "steamhunter" | "artedas" | "ilearnromanian" | "theredmaster" | "crse-idf" | "copresen" | "pns"
 export type Locale = "fr" | "en"
 
 /** Locale-sensitive prose for a project */
@@ -381,6 +381,196 @@ export const projects: Record<ProjectSlug, ProjectData> = {
         role: "Founder & tutor, I Learn Romanian",
         authorUrl: "https://www.linkedin.com/in/sefora-geant%C4%83/",
       },
+    },
+  },
+
+  // TODO Xavier : ajouter un screenshot pour chaque projet dans public/images/projects/
+  // (crse-idf.jpg, copresen.jpg, pns.jpg) — placeholders en attendant.
+  "crse-idf": {
+    slug: "crse-idf",
+    image: "/images/projects/crse-idf.jpg",
+    tags: ["Next.js", "Payload CMS", "TypeScript", "PostgreSQL", "Tailwind CSS"],
+    stack: [
+      { category: "CMS & Back", items: ["Payload CMS", "Next.js", "PostgreSQL"] },
+      { category: "Frontend", items: ["React", "TypeScript", "Tailwind CSS"] },
+      { category: "Infra", items: ["Vercel", "Resend", "Matomo"] },
+    ],
+    links: { live: "https://crse-idf.fr" },
+    status: "live",
+    datePublished: "2026-03-05",
+    fr: {
+      title: "CRSE Île-de-France : portail de ressources en santé environnementale",
+      tagline:
+        "Plateforme institutionnelle (Next.js + Payload CMS) qui centralise formations, ressources et dispositifs en santé environnementale pour les professionnels de santé franciliens.",
+      description:
+        "Développement du portail du Centre Régional de Ressources en Santé Environnement d'Île-de-France, co-piloté dans le cadre de l'ARS : site public éditorialisé, espace membre et back-office CMS complet.",
+      longDescription:
+        "Le CRSE Île-de-France accompagne les professionnels de santé face aux enjeux environnementaux (air intérieur, alimentation, contaminants…). La plateforme combine un site public riche, construit par blocs de contenu sur-mesure, et un espace personnel avec authentification (inscription, vérification email, favoris). Le back-office Payload permet à l'équipe de gérer articles, ressources, événements, intervenants et thématiques en autonomie. Le projet intègre un agenda d'événements, des formulaires protégés (Cloudflare Turnstile), l'envoi d'emails transactionnels (Resend), des tâches planifiées et une mesure d'audience RGPD via Matomo auto-hébergé. SEO, recherche interne et redirections sont gérés nativement.",
+      context:
+        "Prestation freelance : conception et développement d'une plateforme institutionnelle de ressources avec CMS headless, pour une structure co-pilotée par l'ARS Île-de-France.",
+      highlights: [
+        "Site public construit par blocs de contenu (page builder sur-mesure)",
+        "Espace membre avec authentification complète et favoris",
+        "Back-office Payload : articles, ressources, événements, intervenants",
+        "Agenda d'événements et formulaires protégés (Turnstile)",
+        "Emails transactionnels (Resend) et tâches planifiées",
+        "SEO, recherche, redirections et analytics RGPD (Matomo auto-hébergé)",
+      ],
+      results: [
+        "Portail en production sur crse-idf.fr",
+        "Équipe autonome sur l'édition de contenu via le CMS",
+        "Ressources et formations centralisées pour les professionnels de santé",
+      ],
+      statusLabel: "En ligne",
+    },
+    en: {
+      title: "CRSE Île-de-France: an environmental health resource portal",
+      tagline:
+        "Institutional platform (Next.js + Payload CMS) centralizing training, resources and support services in environmental health for healthcare professionals in the Paris region.",
+      description:
+        "Development of the portal for the Regional Resource Centre for Environmental Health in Île-de-France, co-led within the regional health agency framework: an editorial public site, a member area and a full CMS back-office.",
+      longDescription:
+        "CRSE Île-de-France supports healthcare professionals facing environmental issues (indoor air, food, contaminants, etc.). The platform combines a rich public site, built from custom content blocks, with a personal area featuring authentication (sign-up, email verification, favourites). The Payload back-office lets the team manage articles, resources, events, speakers and topics autonomously. The project includes an event calendar, protected forms (Cloudflare Turnstile), transactional emails (Resend), scheduled tasks and GDPR-friendly analytics via self-hosted Matomo. SEO, internal search and redirects are handled natively.",
+      context:
+        "Freelance work: design and development of an institutional resource platform with a headless CMS, for an organisation co-led by the Île-de-France regional health agency.",
+      highlights: [
+        "Public site built from content blocks (custom page builder)",
+        "Member area with full authentication and favourites",
+        "Payload back-office: articles, resources, events, speakers",
+        "Event calendar and protected forms (Turnstile)",
+        "Transactional emails (Resend) and scheduled tasks",
+        "SEO, search, redirects and GDPR analytics (self-hosted Matomo)",
+      ],
+      results: [
+        "Portal live in production on crse-idf.fr",
+        "Team autonomous on content editing via the CMS",
+        "Resources and training centralized for healthcare professionals",
+      ],
+      statusLabel: "Live",
+    },
+  },
+
+  copresen: {
+    slug: "copresen",
+    image: "/images/projects/copresen.jpg",
+    tags: ["Next.js", "Payload CMS", "TypeScript", "PostgreSQL", "Tailwind CSS"],
+    stack: [
+      { category: "CMS & Back", items: ["Payload CMS", "Next.js", "PostgreSQL"] },
+      { category: "Frontend", items: ["React", "TypeScript", "Tailwind CSS"] },
+      { category: "Infra", items: ["Vercel", "Resend"] },
+    ],
+    links: { live: "https://copresen.fr" },
+    status: "live",
+    datePublished: "2026-03-22",
+    fr: {
+      title: "Copresen : le site du Lab des intrapreneurs soignants",
+      tagline:
+        "Site de communication et de prévention en santé environnementale d'un collectif de soignants, propulsé par Next.js et Payload CMS.",
+      description:
+        "Développement du site de Copresen, le Lab des intrapreneurs soignants : un groupe de professionnels de santé dédié aux recherches-actions en santé environnementale. Le site diffuse livret, MOOC, vidéos et ressources de prévention.",
+      longDescription:
+        "Copresen réunit des professionnels de santé autour de la prévention des expositions environnementales. Le site met en avant leurs productions : un livret d'accueil du soignant éco-responsable, un MOOC de prévention des risques environnementaux, des vidéos de recommandations pour les futurs parents, ainsi que des articles et outils de communication. Construit sur Next.js et Payload CMS, il s'appuie sur un back-office en français entièrement personnalisé et un front composé de blocs de mise en page sur-mesure. Il inclut un système de ressources téléchargeables avec questionnaire administrable, un formulaire de contact avec stockage des messages, la gestion des intervenants et une base d'espace membre. SEO, recherche, redirections et prévisualisation des brouillons sont intégrés.",
+      context:
+        "Prestation freelance (projet en plusieurs phases) : développement du site du collectif, étroitement lié à l'écosystème CRSE Île-de-France mais avec sa propre identité et ses propres contenus.",
+      highlights: [
+        "CMS headless avec admin en français et page builder à blocs",
+        "Mise en avant du livret, du MOOC et des vidéos de prévention",
+        "Ressources téléchargeables avec questionnaire pré-téléchargement",
+        "Formulaire de contact avec stockage en base et notifications (Resend)",
+        "SEO, recherche, redirections et prévisualisation des brouillons",
+        "Tâches planifiées pour la publication programmée",
+      ],
+      results: [
+        "Site en production sur copresen.fr",
+        "Contenus de prévention centralisés et éditables en autonomie",
+      ],
+      statusLabel: "En ligne",
+    },
+    en: {
+      title: "Copresen: the website of the healthcare intrapreneurs' Lab",
+      tagline:
+        "Communication and prevention website in environmental health for a collective of healthcare professionals, powered by Next.js and Payload CMS.",
+      description:
+        "Development of the Copresen website, the healthcare intrapreneurs' Lab: a group of healthcare professionals dedicated to action research in environmental health. The site distributes a booklet, a MOOC, videos and prevention resources.",
+      longDescription:
+        "Copresen brings together healthcare professionals around the prevention of environmental exposures. The site showcases their work: an eco-responsible caregiver welcome booklet, a MOOC on environmental risk prevention, prevention videos for future parents, plus articles and communication tools. Built on Next.js and Payload CMS, it relies on a fully customized French back-office and a front-end composed of bespoke layout blocks. It includes downloadable resources gated by an editable questionnaire, a contact form storing messages in the database, speaker management and a member-area foundation. SEO, search, redirects and draft preview are built in.",
+      context:
+        "Freelance work (multi-phase project): development of the collective's website, closely tied to the CRSE Île-de-France ecosystem but with its own identity and content.",
+      highlights: [
+        "Headless CMS with a French admin and block-based page builder",
+        "Showcase of the booklet, the MOOC and prevention videos",
+        "Downloadable resources with a pre-download questionnaire",
+        "Contact form with database storage and notifications (Resend)",
+        "SEO, search, redirects and draft preview",
+        "Scheduled tasks for programmed publishing",
+      ],
+      results: [
+        "Live in production on copresen.fr",
+        "Prevention content centralized and editable autonomously",
+      ],
+      statusLabel: "Live",
+    },
+  },
+
+  pns: {
+    slug: "pns",
+    image: "/images/projects/pns.jpg",
+    tags: ["Symfony", "PHP 8", "MySQL", "Doctrine", "Twig"],
+    stack: [
+      { category: "Backend", items: ["Symfony 6.4", "PHP 8", "Doctrine"] },
+      { category: "Frontend", items: ["Twig", "Bootstrap", "Stimulus"] },
+      { category: "Infra", items: ["MySQL", "Sendgrid", "Sentry"] },
+    ],
+    links: { live: "https://www.pns-mooc.com/fr/" },
+    status: "development",
+    datePublished: "2025-02-01",
+    fr: {
+      title: "PNS : plateforme de MOOC en Pédagogie Numérique en Santé",
+      tagline:
+        "Plateforme e-learning (LMS) bilingue pour créer et diffuser des MOOC de formation en santé, en ligne et en cours de refonte technique sous Symfony 6.4.",
+      description:
+        "Refonte d'une plateforme de MOOC dédiée à la formation en santé : parcours composés de modules et de cours, quiz, attestations de réussite et back-office complet. Site bilingue FR/EN.",
+      longDescription:
+        "PNS (Pédagogie Numérique en Santé) est une plateforme de MOOC permettant de créer et diffuser des formations en ligne pour les professionnels et étudiants en santé. Chaque MOOC se compose de modules et de cours, avec teasers, partenaires, équipes et comités scientifiques. Les apprenants s'inscrivent, suivent les modules, passent des quiz (avec système de chances) et obtiennent une attestation de réussite au-delà d'un seuil paramétrable. Un MOOC peut être public, protégé par mot de passe ou réservé aux administrateurs. Le back-office permet de gérer l'ensemble des contenus, médias et utilisateurs, et l'interface est entièrement traduite FR/EN. La plateforme est en ligne (pns-mooc.com) et fait l'objet d'une refonte technique en cours, de Symfony 3.4 vers Symfony 6.4 / PHP 8, avec Doctrine, Sentry et Webpack Encore.",
+      context:
+        "Prestation freelance : refonte technique d'une plateforme LMS/MOOC existante (migration Symfony 3 vers 6.4) tout en conservant les fonctionnalités pédagogiques.",
+      highlights: [
+        "Création et diffusion de MOOC (modules, cours, sessions)",
+        "Quiz et questionnaires avec correction et système de chances",
+        "Attestations de réussite (seuil paramétrable)",
+        "Gestion des accès (public, protégé par mot de passe, admin)",
+        "Back-office d'administration des contenus et utilisateurs",
+        "Site bilingue FR/EN (fichiers de traduction XLIFF)",
+      ],
+      results: [
+        "Plateforme MOOC en ligne sur pns-mooc.com",
+        "Refonte technique vers Symfony 6.4 / PHP 8 en cours",
+      ],
+      statusLabel: "Refonte en cours",
+    },
+    en: {
+      title: "PNS: a MOOC platform for digital education in health",
+      tagline:
+        "Bilingual e-learning platform (LMS) to build and deliver health-training MOOCs, rebuilt on Symfony 6.4.",
+      description:
+        "Rebuild of a MOOC platform dedicated to health training: learning paths made of modules and courses, quizzes, completion certificates and a full back-office. Bilingual FR/EN.",
+      longDescription:
+        "PNS (Digital Education in Health) is a MOOC platform to create and deliver online training for health professionals and students. Each MOOC is made of modules and courses, with teasers, partners, teams and scientific committees. Learners sign up, follow the modules, take quizzes (with an attempts system) and earn a completion certificate above a configurable threshold. A MOOC can be public, password-protected or admin-only. The back-office manages all content, media and users, and the interface is fully translated FR/EN. The platform is live (pns-mooc.com) and is undergoing an ongoing technical rebuild, from Symfony 3.4 to Symfony 6.4 / PHP 8, with Doctrine, Sentry and Webpack Encore.",
+      context:
+        "Freelance work: technical rebuild of an existing LMS/MOOC platform (Symfony 3 to 6.4 migration) while preserving the educational features.",
+      highlights: [
+        "Create and deliver MOOCs (modules, courses, sessions)",
+        "Quizzes and questionnaires with grading and an attempts system",
+        "Completion certificates (configurable threshold)",
+        "Access management (public, password-protected, admin)",
+        "Back-office for content and user administration",
+        "Bilingual FR/EN site (XLIFF translation files)",
+      ],
+      results: [
+        "MOOC platform live on pns-mooc.com",
+        "Technical rebuild to Symfony 6.4 / PHP 8 in progress",
+      ],
+      statusLabel: "Rebuild in progress",
     },
   },
 }
