@@ -36,14 +36,14 @@ export function Hero() {
                         <div className="flex flex-col md:flex-1 gap-4 md:text-left text-center animate-slide-in-left">
                             {/* Badges trust */}
                             <div className="flex flex-wrap justify-center md:justify-start gap-2">
-                                <div className="inline-flex items-center gap-2 bg-green-500/10 px-3 py-1.5 border border-green-500/20 rounded-full">
+                                <div className="inline-flex items-center gap-2 bg-green-500/10 backdrop-blur-md px-3 py-1.5 border border-green-500/20 rounded-full">
                                     <span className="inline-grid *:[grid-area:1/1]">
                                         <span className="animate-ping status status-success"></span>
                                         <span className="status status-success"></span>
                                     </span>
                                     <span className="font-medium text-green-600 dark:text-green-400 text-sm">{t('available')}</span>
                                 </div>
-                                <div className="inline-flex items-center gap-2 bg-primary/10 px-3 py-1.5 border border-primary/20 rounded-full">
+                                <div className="inline-flex items-center gap-2 bg-primary/10 backdrop-blur-md px-3 py-1.5 border border-primary/20 rounded-full">
                                     <span className="font-medium text-primary text-sm">{t('trustBadge', { years: yearsOfExperience() })}</span>
                                 </div>
                             </div>

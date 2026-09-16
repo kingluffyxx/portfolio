@@ -66,16 +66,21 @@ export function SeoExpertise() {
             const items = Array.from({ length: p.itemCount }, (_, i) =>
               t(`${p.key}Item${i + 1}` as Parameters<typeof t>[0])
             )
+            const pillarAccents = [
+              "bg-indigo-500/10 text-indigo-500",
+              "bg-teal-500/10 text-teal-500",
+              "bg-rose-500/10 text-rose-500",
+            ]
             return (
               <div
                 key={p.key}
-                className={`bg-card rounded-2xl p-6 md:p-8 card-offset scroll-animate ${
+                className={`group bg-card rounded-2xl p-6 md:p-8 card-offset scroll-animate ${
                   isVisible ? "scroll-animate-visible" : ""
                 }`}
                 style={{ transitionDelay: `${0.15 + idx * 0.1}s` }}
               >
-                <div className="mb-4 inline-flex items-center justify-center w-12 h-12 rounded-xl bg-primary/10">
-                  <Icon className="w-6 h-6 text-primary" />
+                <div className={`mb-4 inline-flex items-center justify-center w-12 h-12 rounded-xl ${pillarAccents[idx % pillarAccents.length]}`}>
+                  <Icon className="w-6 h-6 transition-transform duration-200 group-hover:scale-110" />
                 </div>
                 <h3 className="font-bold text-xl mb-3">
                   {t(`${p.key}Title` as Parameters<typeof t>[0])}
@@ -122,19 +127,19 @@ export function SeoExpertise() {
             </div>
             <div className="grid grid-cols-2 gap-4">
               <div className="rounded-xl border border-border bg-background/50 p-4 text-center">
-                <div className="text-3xl md:text-4xl font-bold text-primary mb-1">95+</div>
+                <div className="text-3xl md:text-4xl font-bold text-amber-500 mb-1">95+</div>
                 <div className="text-xs text-muted-foreground">{t("statLighthouse")}</div>
               </div>
               <div className="rounded-xl border border-border bg-background/50 p-4 text-center">
-                <div className="text-3xl md:text-4xl font-bold text-primary mb-1">100%</div>
+                <div className="text-3xl md:text-4xl font-bold text-amber-500 mb-1">100%</div>
                 <div className="text-xs text-muted-foreground">{t("statIndexable")}</div>
               </div>
               <div className="rounded-xl border border-border bg-background/50 p-4 text-center">
-                <div className="text-3xl md:text-4xl font-bold text-primary mb-1">3</div>
+                <div className="text-3xl md:text-4xl font-bold text-amber-500 mb-1">3</div>
                 <div className="text-xs text-muted-foreground">{t("statSchemas")}</div>
               </div>
               <div className="rounded-xl border border-border bg-background/50 p-4 text-center">
-                <div className="text-3xl md:text-4xl font-bold text-primary mb-1">2</div>
+                <div className="text-3xl md:text-4xl font-bold text-amber-500 mb-1">2</div>
                 <div className="text-xs text-muted-foreground">{t("statLanguages")}</div>
               </div>
             </div>

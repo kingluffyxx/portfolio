@@ -37,15 +37,20 @@ export function WhyWebsite() {
         </div>
 
         <div className="mx-auto mt-14 grid max-w-5xl grid-cols-1 gap-6 md:grid-cols-3">
-          {cards.map((card) => {
+          {cards.map((card, i) => {
             const Icon = card.icon
+            const accents = [
+              "bg-sky-500/10 text-sky-500",
+              "bg-emerald-500/10 text-emerald-500",
+              "bg-amber-500/10 text-amber-500",
+            ]
             return (
               <div
                 key={card.title}
                 className="group relative bg-card rounded-2xl p-6 md:p-7 card-offset"
               >
-                <div className="inline-flex items-center justify-center size-11 rounded-xl bg-primary/10 text-primary mb-4 group-hover:bg-primary/15 transition-colors">
-                  <Icon className="size-5" />
+                <div className={`inline-flex items-center justify-center size-11 rounded-xl mb-4 transition-colors ${accents[i % accents.length]}`}>
+                  <Icon className="size-5 transition-transform duration-200 group-hover:scale-110" />
                 </div>
                 <h3 className="font-semibold text-lg text-foreground mb-2">
                   {card.title}

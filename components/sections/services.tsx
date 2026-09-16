@@ -32,6 +32,16 @@ const iconMap: Record<ServiceSlug, typeof Globe> = {
   "developpement-nextjs": Code2,
 }
 
+// Palette d'accents pour varier la couleur des icônes (le violet reste la marque).
+const iconAccents = [
+  "text-violet-500",
+  "text-sky-500",
+  "text-emerald-500",
+  "text-amber-500",
+  "text-rose-500",
+  "text-indigo-500",
+]
+
 export function Services() {
   const { elementRef, isVisible } = useScrollAnimation()
   const rawLocale = useLocale()
@@ -108,7 +118,7 @@ export function Services() {
 
                 <div className="mb-4">
                   <Icon
-                    className={`${isHero ? "w-9 h-9" : "w-8 h-8"} text-primary`}
+                    className={`${isHero ? "w-9 h-9" : "w-8 h-8"} ${iconAccents[idx % iconAccents.length]} transition-transform duration-200 group-hover:scale-110`}
                     strokeWidth={1.5}
                   />
                 </div>

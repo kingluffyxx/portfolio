@@ -46,6 +46,12 @@ export function About() {
         <div className="gap-8 grid md:grid-cols-3">
           {values.map((value, index) => {
             const Icon = value.icon;
+            const accents = [
+              { icon: "text-amber-500", bg: "bg-amber-500/10", border: "border-amber-500/20 group-hover:border-amber-500/40", glow: "bg-amber-500/20" },
+              { icon: "text-sky-500", bg: "bg-sky-500/10", border: "border-sky-500/20 group-hover:border-sky-500/40", glow: "bg-sky-500/20" },
+              { icon: "text-emerald-500", bg: "bg-emerald-500/10", border: "border-emerald-500/20 group-hover:border-emerald-500/40", glow: "bg-emerald-500/20" },
+            ];
+            const a = accents[index % accents.length];
             return (
               <div
                 key={value.key}
@@ -53,11 +59,11 @@ export function About() {
                 style={{ transitionDelay: `${0.2 + index * 0.1}s` }}
               >
                 <div className="flex flex-col items-center bg-card p-8 rounded-2xl text-center card-offset h-full">
-                  {/* Icône avec cercle gradient */}
+                  {/* Icône avec cercle teinté */}
                   <div className="relative mb-6">
-                    <div className="absolute inset-0 bg-linear-to-br from-primary/20 to-accent/20 opacity-0 group-hover:opacity-100 blur-xl rounded-full transition-opacity duration-300" />
-                    <div className="relative flex justify-center items-center bg-linear-to-br from-primary/10 to-accent/10 border border-primary/20 group-hover:border-primary/40 rounded-full w-16 h-16 transition-colors duration-300">
-                      <Icon className="w-7 h-7 text-primary" />
+                    <div className={`absolute inset-0 ${a.glow} opacity-0 group-hover:opacity-100 blur-xl rounded-full transition-opacity duration-300`} />
+                    <div className={`relative flex justify-center items-center ${a.bg} border ${a.border} rounded-full w-16 h-16 transition-colors duration-300`}>
+                      <Icon className={`w-7 h-7 ${a.icon} transition-transform duration-200 group-hover:scale-110`} />
                     </div>
                   </div>
                   {/* Contenu */}

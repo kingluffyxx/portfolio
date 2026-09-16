@@ -86,10 +86,16 @@ export function Contact() {
   return (
     <section
       id="contact"
-      className="py-12 md:py-24 lg:py-32 container"
+      className="relative overflow-hidden py-12 md:py-24 lg:py-32 container"
       ref={elementRef as React.RefObject<HTMLElement>}
     >
-      <div className="mx-auto max-w-4xl">
+      {/* Halo radial : attire l'oeil vers l'appel a l'action (spotlight) */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute left-1/2 top-8 z-0 h-[380px] w-[640px] max-w-[90%] -translate-x-1/2 rounded-full blur-3xl"
+        style={{ background: "radial-gradient(circle, rgb(var(--primary) / 0.14), transparent 70%)" }}
+      />
+      <div className="relative z-10 mx-auto max-w-4xl">
         {/* En-tête */}
         <div className="mb-12 text-center">
           <h2
@@ -111,7 +117,7 @@ export function Contact() {
           style={{ transitionDelay: "0.2s" }}
         >
           <div className="flex sm:flex-row flex-col justify-center items-center gap-4">
-            <div className="flex items-center gap-3 bg-card px-4 py-3 border rounded-xl">
+            <div className="flex items-center gap-3 bg-card/60 backdrop-blur-md px-4 py-3 border rounded-xl">
               <div className="flex justify-center items-center bg-primary/10 rounded-full w-10 h-10">
                 <Mail className="w-4 h-4 text-primary" />
               </div>
@@ -123,7 +129,7 @@ export function Contact() {
               </a>
             </div>
 
-            <div className="flex items-center gap-3 bg-card px-4 py-3 border rounded-xl">
+            <div className="flex items-center gap-3 bg-card/60 backdrop-blur-md px-4 py-3 border rounded-xl">
               <div className="flex justify-center items-center bg-primary/10 rounded-full w-10 h-10">
                 <MapPin className="w-4 h-4 text-primary" />
               </div>
