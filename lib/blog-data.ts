@@ -644,9 +644,9 @@ export const blogPosts: BlogPost[] = [
       {
         type: "ul",
         items: [
-          "[Google Search Central — Core Web Vitals](https://developers.google.com/search/docs/appearance/core-web-vitals) : la documentation officielle sur ce que Google mesure et pourquoi.",
-          "[web.dev — Comment les seuils ont été définis](https://web.dev/articles/defining-core-web-vitals-thresholds) : la méthode derrière les 2,5 s, 200 ms et 0,1.",
-          "[Google — Introducing INP to Core Web Vitals](https://developers.google.com/search/blog/2023/05/introducing-inp) : l'annonce officielle du remplacement du FID par l'INP.",
+          "[Google Search Central : Core Web Vitals](https://developers.google.com/search/docs/appearance/core-web-vitals) : la documentation officielle sur ce que Google mesure et pourquoi.",
+          "[web.dev : Comment les seuils ont été définis](https://web.dev/articles/defining-core-web-vitals-thresholds) : la méthode derrière les 2,5 s, 200 ms et 0,1.",
+          "[Google : Introducing INP to Core Web Vitals](https://developers.google.com/search/blog/2023/05/introducing-inp) : l'annonce officielle du remplacement du FID par l'INP.",
         ],
       },
     ],
@@ -992,7 +992,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: "p",
-        text: "Demandez-vous : « Ai-je besoin d'une équipe, ou d'un bon développeur ? » Si votre projet tient dans la tête d'une personne compétente — un site, une app, un SaaS de lancement — le freelance vous fera économiser sans rien perdre en qualité. Si vous devez coordonner plusieurs chantiers en même temps sur des mois, l'agence se justifie.",
+        text: "Demandez-vous : « Ai-je besoin d'une équipe, ou d'un bon développeur ? » Si votre projet tient dans la tête d'une personne compétente (un site, une app, un SaaS de lancement), le freelance vous fera économiser sans rien perdre en qualité. Si vous devez coordonner plusieurs chantiers en même temps sur des mois, l'agence se justifie.",
       },
       {
         type: "quote",
@@ -1020,7 +1020,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: "p",
-        text: "Si votre projet Next.js peut être porté par une personne, un [développeur Next.js freelance](/services/developpement-nextjs) est presque toujours le meilleur rapport qualité-prix : le même niveau technique, un contact direct, un budget maîtrisé. Décrivez-moi votre besoin, je vous dis franchement si un freelance suffit ou si vous avez vraiment besoin d'une agence — [on en parle ici](/#contact).",
+        text: "Si votre projet Next.js peut être porté par une personne, un [développeur Next.js freelance](/services/developpement-nextjs) est presque toujours le meilleur rapport qualité-prix : le même niveau technique, un contact direct, un budget maîtrisé. Décrivez-moi votre besoin, je vous dis franchement si un freelance suffit ou si vous avez vraiment besoin d'une agence : [on en parle ici](/#contact).",
       },
     ],
   },
@@ -1270,9 +1270,9 @@ export const blogPosts: BlogPost[] = [
       {
         type: "ul",
         items: [
-          "[Cybermalveillance.gouv.fr — Pourquoi et comment bien gérer ses mises à jour](https://www.cybermalveillance.gouv.fr/tous-nos-contenus/bonnes-pratiques/315) : les bons réflexes pour ne pas laisser un logiciel prendre du retard.",
-          "[Cybermalveillance.gouv.fr — Comment sécuriser son site Internet](https://www.cybermalveillance.gouv.fr/tous-nos-contenus/bonnes-pratiques/securisation-sites-internet) : un guide clair, écrit pour des non-spécialistes.",
-          "[Patchstack — State of WordPress Security](https://patchstack.com/whitepaper/state-of-wordpress-security-in-2025/) : le rapport annuel qui détaille d'où viennent réellement les failles.",
+          "[Cybermalveillance.gouv.fr : Pourquoi et comment bien gérer ses mises à jour](https://www.cybermalveillance.gouv.fr/tous-nos-contenus/bonnes-pratiques/315) : les bons réflexes pour ne pas laisser un logiciel prendre du retard.",
+          "[Cybermalveillance.gouv.fr : Comment sécuriser son site Internet](https://www.cybermalveillance.gouv.fr/tous-nos-contenus/bonnes-pratiques/securisation-sites-internet) : un guide clair, écrit pour des non-spécialistes.",
+          "[Patchstack : State of WordPress Security](https://patchstack.com/whitepaper/state-of-wordpress-security-in-2025/) : le rapport annuel qui détaille d'où viennent réellement les failles.",
         ],
       },
       {
@@ -1387,9 +1387,9 @@ export const blogPosts: BlogPost[] = [
       {
         type: "ul",
         items: [
-          "[CNIL — Chatbots : les conseils pour respecter les droits des personnes](https://www.cnil.fr/fr/chatbots-les-conseils-de-la-cnil-pour-respecter-les-droits-des-personnes) : ce que vous devez prévoir côté transparence et champs de saisie libre.",
-          "[CNIL — IA et RGPD : les recommandations officielles](https://www.cnil.fr/fr/ia-et-rgpd-la-cnil-publie-ses-nouvelles-recommandations-pour-accompagner-une-innovation-responsable) : le cadre à respecter si vous branchez une IA sur vos données.",
-          "[NewsGuard — l'analyse des fausses réponses des chatbots](https://www.vktr.com/ai-technology/ai-hallucinations-nearly-double-heres-why-theyre-getting-worse-not-better/) : pour comprendre pourquoi un assistant non encadré reste risqué.",
+          "[CNIL : Chatbots : les conseils pour respecter les droits des personnes](https://www.cnil.fr/fr/chatbots-les-conseils-de-la-cnil-pour-respecter-les-droits-des-personnes) : ce que vous devez prévoir côté transparence et champs de saisie libre.",
+          "[CNIL : IA et RGPD : les recommandations officielles](https://www.cnil.fr/fr/ia-et-rgpd-la-cnil-publie-ses-nouvelles-recommandations-pour-accompagner-une-innovation-responsable) : le cadre à respecter si vous branchez une IA sur vos données.",
+          "[NewsGuard : l'analyse des fausses réponses des chatbots](https://www.vktr.com/ai-technology/ai-hallucinations-nearly-double-heres-why-theyre-getting-worse-not-better/) : pour comprendre pourquoi un assistant non encadré reste risqué.",
         ],
       },
       {
@@ -1508,8 +1508,8 @@ export const blogPosts: BlogPost[] = [
       {
         type: "ul",
         items: [
-          "[Google Search Central — optimiser pour les fonctionnalités d'IA générative](https://developers.google.com/search/docs/fundamentals/ai-optimization-guide) : la doc officielle de Google, qui confirme qu'un contenu utile et bien structuré reste la base.",
-          "[OpenAI — vue d'ensemble des robots (GPTBot, OAI-SearchBot)](https://developers.openai.com/api/docs/bots) : comment autoriser ou bloquer chaque crawler d'OpenAI dans votre robots.txt.",
+          "[Google Search Central : optimiser pour les fonctionnalités d'IA générative](https://developers.google.com/search/docs/fundamentals/ai-optimization-guide) : la doc officielle de Google, qui confirme qu'un contenu utile et bien structuré reste la base.",
+          "[OpenAI : vue d'ensemble des robots (GPTBot, OAI-SearchBot)](https://developers.openai.com/api/docs/bots) : comment autoriser ou bloquer chaque crawler d'OpenAI dans votre robots.txt.",
           "[Spécification officielle llms.txt](https://llmstxt.org/) : le format proposé pour guider les IA vers vos contenus clés.",
         ],
       },
@@ -1661,9 +1661,9 @@ export const blogPosts: BlogPost[] = [
       {
         type: "ul",
         items: [
-          "[France Num](https://www.francenum.gouv.fr) — le portail public d'accompagnement à la digitalisation : diagnostic gratuit, conseils et annuaire d'experts près de chez vous.",
-          "[Aide Profil d'établissement Google](https://support.google.com/business) — la documentation officielle pour créer et optimiser votre fiche Google Business, votre premier levier de visibilité locale.",
-          "[Chambre de Métiers et de l'Artisanat (artisanat.fr)](https://www.artisanat.fr) — accompagnement, formations au numérique et aides régionales pour les artisans.",
+          "[France Num](https://www.francenum.gouv.fr) : le portail public d'accompagnement à la digitalisation : diagnostic gratuit, conseils et annuaire d'experts près de chez vous.",
+          "[Aide Profil d'établissement Google](https://support.google.com/business) : la documentation officielle pour créer et optimiser votre fiche Google Business, votre premier levier de visibilité locale.",
+          "[Chambre de Métiers et de l'Artisanat (artisanat.fr)](https://www.artisanat.fr) : accompagnement, formations au numérique et aides régionales pour les artisans.",
         ],
       },
       {
@@ -1793,9 +1793,9 @@ export const blogPosts: BlogPost[] = [
       {
         type: "ul",
         items: [
-          "[Aide Profil d'établissement Google](https://support.google.com/business) — pour configurer votre fiche, vos photos, votre menu et le bouton de réservation.",
-          "[FEVAD](https://www.fevad.com) — la fédération du e-commerce publie régulièrement des chiffres sur les usages en ligne des Français, réservation comprise.",
-          "[France Num](https://www.francenum.gouv.fr) — accompagnement et aides à la digitalisation, y compris pour la restauration.",
+          "[Aide Profil d'établissement Google](https://support.google.com/business) : pour configurer votre fiche, vos photos, votre menu et le bouton de réservation.",
+          "[FEVAD](https://www.fevad.com) : la fédération du e-commerce publie régulièrement des chiffres sur les usages en ligne des Français, réservation comprise.",
+          "[France Num](https://www.francenum.gouv.fr) : accompagnement et aides à la digitalisation, y compris pour la restauration.",
         ],
       },
       {
@@ -1930,9 +1930,9 @@ export const blogPosts: BlogPost[] = [
       {
         type: "ul",
         items: [
-          "[France Num — aides financières](https://www.francenum.gouv.fr/aides-financieres) — le recensement officiel des aides à la digitalisation, filtrable selon votre profil et votre région.",
-          "[Bpifrance](https://www.bpifrance.fr) — financements, prêts et accompagnement des TPE/PME.",
-          "[Le réseau des CCI (cci.fr)](https://www.cci.fr) — pour connaître les aides régionales actives et être accompagné dans vos démarches.",
+          "[France Num : aides financières](https://www.francenum.gouv.fr/aides-financieres) : le recensement officiel des aides à la digitalisation, filtrable selon votre profil et votre région.",
+          "[Bpifrance](https://www.bpifrance.fr) : financements, prêts et accompagnement des TPE/PME.",
+          "[Le réseau des CCI (cci.fr)](https://www.cci.fr) : pour connaître les aides régionales actives et être accompagné dans vos démarches.",
         ],
       },
       {
@@ -1942,6 +1942,284 @@ export const blogPosts: BlogPost[] = [
       {
         type: "p",
         text: "Si vous voulez financer un site sans vous perdre dans des dispositifs périmés, [écrivez-moi](/#contact) : je vous donne un devis clair et honnête, et je vous oriente vers les bonnes démarches à faire de votre côté avant d'engager quoi que ce soit.",
+      },
+    ],
+  },
+  {
+    slug: "bonnes-pratiques-seo-2026",
+    title: "Les bonnes pratiques SEO en 2026 : le guide clair pour être visible sur Google",
+    excerpt:
+      "Technique, contenu, popularité : les 3 piliers du référencement, sans jargon. Ce qui compte vraiment pour remonter sur Google en 2026, et les promesses dont il faut se méfier.",
+    date: "2026-09-09",
+    category: "SEO",
+    tags: ["SEO", "référencement", "guide"],
+    readingTime: 10,
+    cover: "/blog/bonnes-pratiques-seo-2026.jpg",
+    coverIsEmoji: false,
+    content: [
+      {
+        type: "lead",
+        text: "« Je veux être premier sur Google. » C'est une demande légitime, mais derrière elle se cache un ensemble de bonnes pratiques que beaucoup de sites ignorent. Le référencement naturel (SEO) n'est ni de la magie ni une recette secrète : ce sont des fondamentaux clairs, que Google explique lui-même publiquement. Voici l'essentiel, sans jargon, pour comprendre ce qui vous rend visible et repérer les promesses trop belles pour être vraies.",
+      },
+      {
+        type: "h2",
+        text: "D'abord, comment Google classe un site",
+      },
+      {
+        type: "p",
+        text: "Avant les techniques, le principe. Google fait trois choses : il explore vos pages (crawl), il essaie de les comprendre (de quoi parlent-elles ?), puis il les classe selon leur pertinence et leur qualité pour chaque recherche. Le SEO, c'est simplement l'ensemble des bonnes pratiques qui facilitent ces trois étapes. Rien de plus, rien de moins.",
+      },
+      {
+        type: "p",
+        text: "Et l'enjeu est concret : d'après les [études de taux de clic par position (First Page Sage, 2026)](https://firstpagesage.com/reports/google-click-through-rates-ctrs-by-ranking-position/), les trois premiers résultats captent environ 69 % des clics, et moins de 1 % des internautes vont jusqu'à la deuxième page. Être « quelque part dans Google » ne suffit pas : tout se joue dans le haut de la première page.",
+      },
+      {
+        type: "callout",
+        title: "Un canal qui ne s'éteint pas quand vous arrêtez de payer",
+        text: "Contrairement à la publicité, qui s'arrête dès que vous cessez de payer, une position gagnée en SEO continue de vous apporter du trafic gratuit mois après mois. C'est long à construire, mais ça dure.",
+        tone: "info",
+      },
+      {
+        type: "h2",
+        text: "Les 3 piliers du SEO",
+      },
+      {
+        type: "p",
+        text: "Tout le référencement tient en trois piliers. Un site qui néglige l'un des trois plafonne, quelle que soit la qualité des deux autres.",
+      },
+      {
+        type: "ol",
+        items: [
+          "La technique : Google peut-il explorer, lire et comprendre votre site facilement, et se charge-t-il vite ?",
+          "Le contenu : vos pages répondent-elles vraiment aux questions que se posent vos clients ?",
+          "La popularité : d'autres sites fiables vous recommandent-ils (liens, citations) ?",
+        ],
+      },
+      {
+        type: "h2",
+        text: "Pilier 1 : la technique",
+      },
+      {
+        type: "p",
+        text: "C'est le socle. Si Google a du mal à lire votre site, le meilleur contenu du monde ne rankera pas. Les fondamentaux techniques en 2026 :",
+      },
+      {
+        type: "ul",
+        items: [
+          "HTTPS (site sécurisé) : non négociable, Google le considère comme un prérequis.",
+          "Vitesse : visez un affichage sous 2,5 secondes sur mobile. Les détails dans ma [checklist Core Web Vitals](/blog/core-web-vitals-2026-checklist).",
+          "Mobile d'abord : plus de 70 % des recherches se font sur smartphone, et Google indexe la version mobile en priorité.",
+          "Structure propre : titres hiérarchisés, URL claires, sitemap, balises title et meta description uniques par page.",
+        ],
+      },
+      {
+        type: "p",
+        text: "Avant de payer un audit, vous pouvez déjà contrôler l'essentiel vous-même : j'ai listé [7 vérifications SEO gratuites](/blog/audit-seo-7-verifications-gratuites) à faire en une demi-heure.",
+      },
+      {
+        type: "h2",
+        text: "Pilier 2 : le contenu (le plus important en 2026)",
+      },
+      {
+        type: "p",
+        text: "C'est ici que Google a le plus durci ses exigences. Depuis plusieurs mises à jour, son système de classement récompense le « contenu utile, orienté personnes » et écarte le contenu écrit uniquement pour les moteurs. Concrètement, une page doit répondre clairement et honnêtement à une vraie question de votre audience.",
+      },
+      {
+        type: "p",
+        text: "Le cadre officiel s'appelle l'E-E-A-T : Expérience, Expertise, Autorité, Confiance. Google le dit lui-même, la [confiance est le critère le plus important](https://developers.google.com/search/docs/fundamentals/creating-helpful-content). Pour une TPE ou un artisan, ça veut dire des choses simples : un auteur identifiable, une expertise réelle qui transparaît, des informations exactes et à jour, des avis clients.",
+      },
+      {
+        type: "ul",
+        items: [
+          "Écrivez pour vos clients d'abord, pour Google ensuite : répondez à leurs vraies questions.",
+          "Un sujet = une page dédiée, avec un titre qui reprend la recherche de votre client.",
+          "Structurez en titres (H2/H3), idéalement sous forme de questions, avec la réponse juste en dessous.",
+          "Montrez qui vous êtes : page à propos, auteur, preuves, avis. C'est la confiance qui fait la différence.",
+        ],
+      },
+      {
+        type: "quote",
+        text: "La meilleure optimisation SEO en 2026, c'est d'être réellement la meilleure réponse à la question posée. Le reste n'est que de la mise en forme pour aider Google à le voir.",
+      },
+      {
+        type: "h2",
+        text: "Pilier 3 : la popularité (les liens)",
+      },
+      {
+        type: "p",
+        text: "Google considère un lien d'un autre site vers le vôtre comme un vote de confiance. Mais la qualité prime largement sur la quantité : quelques liens depuis des sites reconnus de votre secteur valent bien plus que des centaines de liens douteux (qui, eux, peuvent vous pénaliser).",
+      },
+      {
+        type: "ul",
+        items: [
+          "Obtenez des liens naturels : contenu utile qu'on a envie de citer, partenaires, annuaires sérieux de votre métier.",
+          "Pour une activité locale : fiche Google Business complète et citations cohérentes (nom, adresse, téléphone).",
+          "Fuyez l'achat de liens en masse : c'est le meilleur moyen de vous faire sanctionner.",
+        ],
+      },
+      {
+        type: "h2",
+        text: "Le SEO à l'ère des réponses IA",
+      },
+      {
+        type: "p",
+        text: "Nouveauté majeure : une part croissante des recherches reçoit une réponse rédigée par une IA (aperçus Google, ChatGPT, Perplexity), souvent sans clic. Mais être cité par ces IA renvoie du trafic très qualifié. Bonne nouvelle : les efforts sont largement les mêmes que le SEO classique. J'explique comment s'y prendre dans [SEO à l'ère de l'IA : être cité par ChatGPT et Perplexity](/blog/seo-ia-etre-cite-chatgpt-perplexity).",
+      },
+      {
+        type: "callout",
+        title: "Méfiez-vous des promesses de résultats immédiats",
+        text: "Un SEO sérieux met généralement 6 à 12 mois à produire des résultats significatifs sur un site récent. Quiconque vous promet « la première place en une semaine » vend du vent, ou des techniques qui finiront par vous faire pénaliser.",
+        tone: "warning",
+      },
+      {
+        type: "h2",
+        text: "Les erreurs qui plombent un site",
+      },
+      {
+        type: "ul",
+        items: [
+          "Contenu dupliqué ou copié d'ailleurs : Google ne sait pas quelle version classer.",
+          "Bourrage de mots-clés : répéter un mot à outrance nuit au lieu d'aider.",
+          "Ignorer le mobile ou la vitesse : vous perdez la majorité de vos visiteurs.",
+          "Ne rien mesurer : sans Google Search Console, vous avancez à l'aveugle.",
+          "Acheter des liens douteux : un risque de pénalité durable.",
+        ],
+      },
+      {
+        type: "h2",
+        text: "Pour aller plus loin (sources officielles)",
+      },
+      {
+        type: "p",
+        text: "Les meilleures ressources sont gratuites et viennent directement de Google :",
+      },
+      {
+        type: "ul",
+        items: [
+          "[Guide de démarrage SEO (Google Search Central)](https://developers.google.com/search/docs/fundamentals/seo-starter-guide) : les bases officielles, claires et à jour.",
+          "[Créer du contenu utile et fiable (Google)](https://developers.google.com/search/docs/fundamentals/creating-helpful-content) : le cadre E-E-A-T expliqué par Google.",
+          "[Google Search Essentials](https://developers.google.com/search/docs/essentials) : les règles de base pour apparaître dans Google.",
+          "[Guide du référencement de France Num](https://www.francenum.gouv.fr/guides-et-conseils/communication-et-publicite/referencement) : les fondamentaux côté institution publique, pensés pour les TPE/PME.",
+        ],
+      },
+      {
+        type: "h2",
+        text: "En résumé",
+      },
+      {
+        type: "p",
+        text: "Le SEO tient en trois piliers : un site techniquement sain, un contenu réellement utile, et une popularité méritée. Aucune magie là-dedans, juste des fondamentaux que vous pouvez comprendre et exiger de votre prestataire. Si vous voulez savoir où se situe votre site sur ces trois piliers, [écrivez-moi](/#contact) : je vous dis franchement ce qui bloque et ce qui a le plus de chance de payer dans les six prochains mois.",
+      },
+    ],
+  },
+  {
+    slug: "site-trop-lent-vitesse-chargement",
+    title: "Votre site est-il trop lent ? Ce que ça vous coûte, et comment le vérifier",
+    excerpt:
+      "Un site lent fait fuir vos visiteurs avant même qu'ils voient votre offre. Voici l'impact réel de la vitesse sur vos ventes, et comment mesurer la vôtre en deux minutes, gratuitement.",
+    date: "2026-09-09",
+    category: "Performance",
+    tags: ["performance", "vitesse", "conversion"],
+    readingTime: 7,
+    cover: "/blog/site-trop-lent-vitesse-chargement.jpg",
+    coverIsEmoji: false,
+    content: [
+      {
+        type: "lead",
+        text: "On parle beaucoup de design et de référencement, rarement de vitesse. Pourtant, c'est souvent le premier filtre : si votre site met trop de temps à s'afficher, une partie de vos visiteurs repart avant même d'avoir vu votre offre. Et ils ne reviennent pas. Voyons concrètement ce que la lenteur vous coûte, et comment vérifier où en est votre site.",
+      },
+      {
+        type: "h2",
+        text: "Pourquoi la vitesse compte autant",
+      },
+      {
+        type: "p",
+        text: "Un visiteur qui attend s'impatiente, et sur mobile encore plus. Ce n'est pas une impression : c'est mesuré. Une étude de Google portant sur des centaines de milliers de pages a établi des repères devenus des références du secteur.",
+      },
+      {
+        type: "callout",
+        title: "Ce que dit la donnée",
+        text: "D'après Google, quand le temps de chargement passe de 1 à 3 secondes, la probabilité qu'un visiteur mobile reparte augmente de 32 %. De 1 à 10 secondes, elle grimpe de 123 %. Et le taux de conversion chute en moyenne de 4,4 % par seconde de chargement supplémentaire.",
+        tone: "warning",
+      },
+      {
+        type: "p",
+        text: "Autrement dit : chaque seconde gagnée se traduit en visiteurs retenus et en contacts ou ventes en plus. La vitesse n'est pas un détail technique réservé aux développeurs, c'est un levier commercial direct. Source : [les repères de vitesse mobile de Think with Google](https://business.google.com/think/marketing-strategies/mobile-page-speed-new-industry-benchmarks/).",
+      },
+      {
+        type: "h2",
+        text: "Comment mesurer la vitesse de votre site (gratuit, 2 minutes)",
+      },
+      {
+        type: "p",
+        text: "Pas besoin d'outil payant pour avoir une première photo fiable. Deux ressources gratuites suffisent.",
+      },
+      {
+        type: "ol",
+        items: [
+          "PageSpeed Insights de Google : collez l'adresse de votre site, regardez l'onglet mobile. Visez un LCP (affichage du plus gros élément) sous 2,5 secondes.",
+          "Google Search Console, section « Signaux web essentiels » : elle montre la vitesse réellement vécue par vos vrais visiteurs, pas juste un test ponctuel.",
+        ],
+      },
+      {
+        type: "p",
+        text: "Si vous voulez comprendre le détail des métriques (LCP, INP, CLS) et comment les corriger une par une, j'ai écrit une [checklist Core Web Vitals complète](/blog/core-web-vitals-2026-checklist). Le présent article vise surtout à vous faire poser le bon diagnostic.",
+      },
+      {
+        type: "h2",
+        text: "Ce qui rend un site lent",
+      },
+      {
+        type: "ul",
+        items: [
+          "Des images trop lourdes, non compressées et non servies au bon format (WebP/AVIF).",
+          "Trop de scripts tiers : chat, trackers, pixels publicitaires, plugins en excès.",
+          "Un hébergement inadapté ou saturé, surtout aux heures de pointe.",
+          "Pas de cache : le serveur recalcule tout à chaque visite.",
+          "Sur WordPress : un thème surchargé et une accumulation d'extensions.",
+        ],
+      },
+      {
+        type: "h2",
+        text: "Le vrai test se fait sur mobile",
+      },
+      {
+        type: "p",
+        text: "Plus de 70 % des recherches se font sur smartphone, souvent en 4G et sur des appareils moins puissants qu'un ordinateur. Un site peut sembler rapide sur votre écran de bureau et ramer chez votre client dans le métro. Testez toujours la version mobile, c'est elle que Google mesure en priorité et c'est là que se joue l'essentiel de votre trafic.",
+      },
+      {
+        type: "callout",
+        title: "Un beau site lent reste un site qui perd des clients",
+        text: "La vitesse ne remplace pas le design ni le contenu, elle les rend utiles. Le plus beau des sites ne sert à rien si le visiteur est parti avant de le voir s'afficher.",
+        tone: "info",
+      },
+      {
+        type: "quote",
+        text: "La page la plus rapide, c'est celle qui montre l'essentiel tout de suite. Tout ce qui retarde ce premier affichage vous coûte des visiteurs.",
+      },
+      {
+        type: "h2",
+        text: "Pour aller plus loin (outils et sources)",
+      },
+      {
+        type: "p",
+        text: "Trois ressources gratuites et fiables pour mesurer et comprendre la vitesse :",
+      },
+      {
+        type: "ul",
+        items: [
+          "[PageSpeed Insights (Google)](https://pagespeed.web.dev/) : l'outil officiel pour tester une page et obtenir des recommandations.",
+          "[web.dev : Core Web Vitals](https://web.dev/articles/vitals) : les seuils de performance expliqués par l'équipe performance de Google.",
+          "[Think with Google : vitesse mobile](https://business.google.com/think/marketing-strategies/mobile-page-speed-new-industry-benchmarks/) : l'impact business de la vitesse, chiffres à l'appui.",
+        ],
+      },
+      {
+        type: "h2",
+        text: "En résumé",
+      },
+      {
+        type: "p",
+        text: "La vitesse de votre site influence directement combien de visiteurs restent et combien vous contactent. Mesurez-la sur mobile avec PageSpeed Insights, surveillez-la dans la Search Console, et corrigez en priorité les images et les scripts. Si votre site vous semble lent ou que votre score est au rouge, [écrivez-moi](/#contact) : je le teste et je vous dis ce qui le ralentit vraiment.",
       },
     ],
   },
