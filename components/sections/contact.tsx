@@ -6,7 +6,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import Link from "next/link";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import dynamic from "next/dynamic";
 import {
   Mail,
@@ -37,6 +37,7 @@ const BookingWidget = dynamic(
 
 export function Contact() {
   const t = useTranslations("contact");
+  const locale = useLocale();
   const { elementRef, isVisible } = useScrollAnimation();
   const [formState, setFormState] = useState<
     "idle" | "loading" | "success" | "error"
@@ -59,7 +60,7 @@ export function Contact() {
       const response = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({ ...formData, locale }),
       });
 
       if (!response.ok) {

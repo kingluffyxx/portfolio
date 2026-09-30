@@ -35,6 +35,17 @@ export function tooLong(value: string, max: number): boolean {
   return value.length > max;
 }
 
+/** Locales supportées par le site (doit rester aligné sur i18n/routing.ts). */
+export const LOCALES = ["fr", "en"] as const;
+export type Locale = (typeof LOCALES)[number];
+
+/** Normalise une locale reçue du client, avec repli sur le défaut du site. */
+export function normalizeLocale(value: unknown): Locale {
+  return typeof value === "string" && (LOCALES as readonly string[]).includes(value)
+    ? (value as Locale)
+    : "fr";
+}
+
 // ponytail: rate limit en mémoire, suffisant pour un portfolio mono-instance.
 // Passer à @upstash/ratelimit si le site scale sur plusieurs lambdas.
 const hits = new Map<string, number[]>();

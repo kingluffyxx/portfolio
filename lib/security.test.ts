@@ -3,7 +3,12 @@
  * Lancer : npx tsx lib/security.test.ts
  */
 import assert from "node:assert/strict";
-import { escapeHtml, isRateLimited, isValidEmail } from "./security";
+import {
+  escapeHtml,
+  isRateLimited,
+  isValidEmail,
+  normalizeLocale,
+} from "./security";
 
 // escapeHtml neutralise les vecteurs d'injection HTML
 assert.equal(
@@ -43,5 +48,18 @@ assert.equal(isRateLimited(`other:${Math.random()}`, 3, 60_000), false);
 const k2 = `win:${Math.random()}`;
 assert.equal(isRateLimited(k2, 1, 0), false);
 assert.equal(isRateLimited(k2, 1, 0), false, "fenetre expiree doit reautoriser");
+
+// normalizeLocale : seules fr et en passent, tout le reste retombe sur fr
+assert.equal(normalizeLocale("fr"), "fr");
+assert.equal(normalizeLocale("en"), "en");
+assert.equal(normalizeLocale("de"), "fr", "locale inconnue -> defaut");
+assert.equal(normalizeLocale(""), "fr");
+assert.equal(normalizeLocale(undefined), "fr");
+assert.equal(normalizeLocale(null), "fr");
+assert.equal(normalizeLocale(42), "fr");
+assert.equal(normalizeLocale({ toString: () => "en" }), "fr", "objet -> defaut");
+assert.equal(normalizeLocale("EN"), "fr", "casse differente -> defaut");
+// pas d'acces a une propriete heritee d'Object
+assert.equal(normalizeLocale("constructor"), "fr");
 
 console.log("OK - tous les checks security passent");

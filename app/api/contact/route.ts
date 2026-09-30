@@ -7,7 +7,9 @@ import {
   isRateLimited,
   isValidEmail,
   LIMITS,
+  normalizeLocale,
   tooLong,
+  type Locale,
 } from "@/lib/security";
 
 interface ContactFormData {
@@ -15,7 +17,43 @@ interface ContactFormData {
   email: string;
   subject: string;
   message: string;
+  locale?: string;
 }
+
+// ponytail: copie inline plutot que messages/*.json — ces chaines sont
+// serveur-only, les mettre dans les traductions les enverrait au bundle client.
+const CONFIRMATION: Record<Locale, { subject: string; body: (name: string) => string }> = {
+  fr: {
+    subject: "Message bien reçu - Xavier Adda",
+    body: (name) =>
+      [
+        `Bonjour ${name},`,
+        "",
+        "J'ai bien reçu votre message et je vous réponds dès que possible.",
+        "",
+        "Bien à vous,",
+        "Xavier Adda",
+        "",
+        "---",
+        "Ceci est un email de confirmation automatique.",
+      ].join("\n"),
+  },
+  en: {
+    subject: "Message received - Xavier Adda",
+    body: (name) =>
+      [
+        `Hi ${name},`,
+        "",
+        "I have received your message and will get back to you as soon as possible.",
+        "",
+        "Best regards,",
+        "Xavier Adda",
+        "",
+        "---",
+        "This is an automated confirmation email.",
+      ].join("\n"),
+  },
+};
 
 export async function POST(request: NextRequest) {
   try {
@@ -39,6 +77,7 @@ export async function POST(request: NextRequest) {
 
     const body: ContactFormData = await request.json();
     const { name, email, subject, message } = body;
+    const locale = normalizeLocale(body.locale);
 
     // Validation
     if (!name || !email || !subject || !message) {
@@ -144,18 +183,8 @@ export async function POST(request: NextRequest) {
           process.env.RESEND_FROM_EMAIL ||
           "Xavier Adda <onboarding@resend.dev>",
         to: email,
-        subject: "Message received - Xavier Adda",
-        text: [
-          `Hi ${name.slice(0, LIMITS.name)},`,
-          "",
-          "I have received your message and will get back to you as soon as possible.",
-          "",
-          "Best regards,",
-          "Xavier Adda",
-          "",
-          "---",
-          "This is an automated confirmation email.",
-        ].join("\n"),
+        subject: CONFIRMATION[locale].subject,
+        text: CONFIRMATION[locale].body(name.slice(0, LIMITS.name)),
       })
       .catch((err) => {
         // Don't fail the main request if confirmation email fails
