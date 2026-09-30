@@ -1,9 +1,20 @@
 import { NextRequest, NextResponse } from "next/server"
+import { clientIp, isRateLimited } from "@/lib/security"
 
 const CALCOM_API_KEY = process.env.CALCOM_API_KEY
 const CALCOM_API_URL = "https://api.cal.com/v2"
 
+const DATE_RE = /^\d{4}-\d{2}-\d{2}$/
+
 export async function GET(request: NextRequest) {
+  // Proxy public vers Cal.com avec notre clé : sans limite, on brûle le quota.
+  if (isRateLimited(`slots:${clientIp(request)}`, 60, 60 * 1000)) {
+    return NextResponse.json(
+      { error: "Too many requests, please try again later" },
+      { status: 429 }
+    )
+  }
+
   const searchParams = request.nextUrl.searchParams
   const eventTypeId = searchParams.get("eventTypeId")
   const startTime = searchParams.get("startTime")
@@ -15,6 +26,22 @@ export async function GET(request: NextRequest) {
       { error: "Missing required parameters" },
       { status: 400 }
     )
+  }
+
+  if (!/^\d+$/.test(eventTypeId)) {
+    return NextResponse.json({ error: "Invalid eventTypeId" }, { status: 400 })
+  }
+
+  // Les dates sont concaténées avec un suffixe horaire : on impose le format.
+  if (!DATE_RE.test(startTime) || !DATE_RE.test(endTime)) {
+    return NextResponse.json(
+      { error: "Invalid date format, expected YYYY-MM-DD" },
+      { status: 400 }
+    )
+  }
+
+  if (timeZone && timeZone.length > 64) {
+    return NextResponse.json({ error: "Invalid timeZone" }, { status: 400 })
   }
 
   if (!CALCOM_API_KEY) {

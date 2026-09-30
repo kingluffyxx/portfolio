@@ -1,4 +1,12 @@
 import { NextRequest, NextResponse } from "next/server"
+import { checkBotId } from "botid/server"
+import {
+  clientIp,
+  isRateLimited,
+  isValidEmail,
+  LIMITS,
+  tooLong
+} from "@/lib/security"
 
 const CALCOM_API_KEY = process.env.CALCOM_API_KEY
 const CALCOM_API_URL = "https://api.cal.com/v2"
@@ -12,6 +20,23 @@ export async function POST(request: NextRequest) {
   }
 
   try {
+    const botIdResult = await checkBotId()
+
+    if (botIdResult.isBot && !botIdResult.isVerifiedBot) {
+      return NextResponse.json(
+        { error: "Bot detection triggered" },
+        { status: 403 }
+      )
+    }
+
+    // 3 réservations / heure par IP : sans ça, on peut remplir l'agenda.
+    if (isRateLimited(`book:${clientIp(request)}`, 3, 60 * 60 * 1000)) {
+      return NextResponse.json(
+        { error: "Too many requests, please try again later" },
+        { status: 429 }
+      )
+    }
+
     const body = await request.json()
     const { eventTypeId, start, name, email, notes, timeZone, language } = body
 
@@ -22,9 +47,35 @@ export async function POST(request: NextRequest) {
       )
     }
 
+    if (typeof name !== "string" || typeof email !== "string") {
+      return NextResponse.json({ error: "Invalid payload" }, { status: 400 })
+    }
+
+    if (
+      tooLong(name, LIMITS.name) ||
+      (typeof notes === "string" && tooLong(notes, LIMITS.notes))
+    ) {
+      return NextResponse.json({ error: "Field too long" }, { status: 400 })
+    }
+
+    if (!isValidEmail(email)) {
+      return NextResponse.json(
+        { error: "Invalid email format" },
+        { status: 400 }
+      )
+    }
+
+    const parsedEventTypeId = parseInt(String(eventTypeId), 10)
+    if (!Number.isInteger(parsedEventTypeId) || parsedEventTypeId <= 0) {
+      return NextResponse.json(
+        { error: "Invalid eventTypeId" },
+        { status: 400 }
+      )
+    }
+
     // Build request body
     const bookingBody: Record<string, unknown> = {
-      eventTypeId: parseInt(eventTypeId),
+      eventTypeId: parsedEventTypeId,
       start,
       attendee: {
         name,

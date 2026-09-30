@@ -227,7 +227,12 @@ export default async function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <BotIdClient protect={[{ path: "/api/contact", method: "POST" }]} />
+          <BotIdClient
+            protect={[
+              { path: "/api/contact", method: "POST" },
+              { path: "/api/booking-calendar/book", method: "POST" },
+            ]}
+          />
           <div className="relative flex flex-col min-h-screen">{children}</div>
         </ThemeProvider>
       </body>

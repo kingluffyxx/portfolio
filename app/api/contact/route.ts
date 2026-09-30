@@ -1,6 +1,14 @@
 import { NextRequest, NextResponse } from "next/server";
 import { Resend } from "resend";
 import { checkBotId } from "botid/server";
+import {
+  clientIp,
+  escapeHtml,
+  isRateLimited,
+  isValidEmail,
+  LIMITS,
+  tooLong,
+} from "@/lib/security";
 
 interface ContactFormData {
   name: string;
@@ -21,6 +29,14 @@ export async function POST(request: NextRequest) {
       );
     }
 
+    // 3 messages / 10 min par IP : BotID ne filtre que les bots, pas les humains.
+    if (isRateLimited(`contact:${clientIp(request)}`, 3, 10 * 60 * 1000)) {
+      return NextResponse.json(
+        { error: "Too many requests, please try again later" },
+        { status: 429 },
+      );
+    }
+
     const body: ContactFormData = await request.json();
     const { name, email, subject, message } = body;
 
@@ -32,9 +48,25 @@ export async function POST(request: NextRequest) {
       );
     }
 
+    if (
+      typeof name !== "string" ||
+      typeof email !== "string" ||
+      typeof subject !== "string" ||
+      typeof message !== "string"
+    ) {
+      return NextResponse.json({ error: "Invalid payload" }, { status: 400 });
+    }
+
+    if (
+      tooLong(name, LIMITS.name) ||
+      tooLong(subject, LIMITS.subject) ||
+      tooLong(message, LIMITS.message)
+    ) {
+      return NextResponse.json({ error: "Field too long" }, { status: 400 });
+    }
+
     // Validate email format
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email)) {
+    if (!isValidEmail(email)) {
       return NextResponse.json(
         { error: "Invalid email format" },
         { status: 400 },
@@ -54,13 +86,21 @@ export async function POST(request: NextRequest) {
     // Send email to yourself
     const toEmail = process.env.CONTACT_EMAIL || "xavier.adda@gmail.com";
 
+    // Tout ce qui vient du visiteur est échappé avant interpolation HTML.
+    const safe = {
+      name: escapeHtml(name),
+      email: escapeHtml(email),
+      subject: escapeHtml(subject),
+      message: escapeHtml(message),
+    };
+
     const { error } = await resend.emails.send({
       from:
         process.env.RESEND_FROM_EMAIL ||
         "Portfolio Contact <onboarding@resend.dev>",
       to: toEmail,
       replyTo: email,
-      subject: `[Portfolio] ${subject}`,
+      subject: `[Portfolio] ${subject.slice(0, LIMITS.subject)}`,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
           <h2 style="color: #7c3aed; border-bottom: 2px solid #7c3aed; padding-bottom: 10px;">
@@ -68,14 +108,14 @@ export async function POST(request: NextRequest) {
           </h2>
 
           <div style="margin: 20px 0;">
-            <p><strong>From:</strong> ${name}</p>
-            <p><strong>Email:</strong> <a href="mailto:${email}">${email}</a></p>
-            <p><strong>Subject:</strong> ${subject}</p>
+            <p><strong>From:</strong> ${safe.name}</p>
+            <p><strong>Email:</strong> <a href="mailto:${safe.email}">${safe.email}</a></p>
+            <p><strong>Subject:</strong> ${safe.subject}</p>
           </div>
 
           <div style="background-color: #f4f4f5; padding: 20px; border-radius: 8px; margin: 20px 0;">
             <h3 style="margin-top: 0; color: #27272a;">Message:</h3>
-            <p style="white-space: pre-wrap; color: #3f3f46;">${message}</p>
+            <p style="white-space: pre-wrap; color: #3f3f46;">${safe.message}</p>
           </div>
 
           <hr style="border: none; border-top: 1px solid #e4e4e7; margin: 20px 0;" />
@@ -95,7 +135,9 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Send confirmation email to the sender
+    // Accusé de réception. Volontairement sans le corps du message : cet email
+    // part vers une adresse fournie par le visiteur, donc tout contenu qu'il
+    // contrôle ferait du formulaire un relais de phishing depuis notre domaine.
     await resend.emails
       .send({
         from:
@@ -103,29 +145,17 @@ export async function POST(request: NextRequest) {
           "Xavier Adda <onboarding@resend.dev>",
         to: email,
         subject: "Message received - Xavier Adda",
-        html: `
-        <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
-          <h2 style="color: #7c3aed;">Thank you for your message!</h2>
-
-          <p>Hi ${name},</p>
-
-          <p>I have received your message and will get back to you as soon as possible.</p>
-
-          <div style="background-color: #f4f4f5; padding: 20px; border-radius: 8px; margin: 20px 0;">
-            <h3 style="margin-top: 0; color: #27272a;">Your message:</h3>
-            <p><strong>Subject:</strong> ${subject}</p>
-            <p style="white-space: pre-wrap; color: #3f3f46;">${message}</p>
-          </div>
-
-          <p>Best regards,<br/>Xavier Adda</p>
-
-          <hr style="border: none; border-top: 1px solid #e4e4e7; margin: 20px 0;" />
-
-          <p style="color: #71717a; font-size: 12px;">
-            This is an automated confirmation email.
-          </p>
-        </div>
-      `,
+        text: [
+          `Hi ${name.slice(0, LIMITS.name)},`,
+          "",
+          "I have received your message and will get back to you as soon as possible.",
+          "",
+          "Best regards,",
+          "Xavier Adda",
+          "",
+          "---",
+          "This is an automated confirmation email.",
+        ].join("\n"),
       })
       .catch((err) => {
         // Don't fail the main request if confirmation email fails
